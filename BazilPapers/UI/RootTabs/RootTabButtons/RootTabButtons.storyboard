@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="co7-ST-UaY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFUIText-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Root Tab Buttons View Controller-->
+        <scene sceneID="ZCD-1p-drV">
+            <objects>
+                <viewController id="co7-ST-UaY" customClass="RootTabButtonsViewController" customModule="BazilPapers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NyC-Cf-v9o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGW-OO-WkA" userLabel="Separator View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.91764705879999997" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="6Zv-Sa-UcM"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lgB-4i-D8m">
+                                <rect key="frame" x="0.0" y="44" width="414" height="256"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NIP-xg-b40">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="256"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8A-NW-uqC">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="243"/>
+                                                <color key="tintColor" red="0.52941176469999995" green="0.56078431370000004" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="square.and.arrow.down" catalog="system"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDf-AZ-Moa">
+                                                <rect key="frame" x="0.0" y="243" width="207" height="13"/>
+                                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="11"/>
+                                                <color key="textColor" red="0.52941176469999995" green="0.56078431370000004" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6gU-nf-aYD">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="256"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-pO-5J1">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="243"/>
+                                                <color key="tintColor" red="0.52941176469999995" green="0.56078431370000004" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="square.and.arrow.down.fill" catalog="system"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6T0-NI-yfg">
+                                                <rect key="frame" x="0.0" y="243" width="207" height="13"/>
+                                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="11"/>
+                                                <color key="textColor" red="0.52941176469999995" green="0.56078431370000004" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lgB-4i-D8m" firstAttribute="top" secondItem="6rt-x4-uyB" secondAttribute="top" id="29a-LS-YN1"/>
+                            <constraint firstItem="YGW-OO-WkA" firstAttribute="leading" secondItem="NyC-Cf-v9o" secondAttribute="leading" id="9pS-dP-c0y"/>
+                            <constraint firstItem="lgB-4i-D8m" firstAttribute="leading" secondItem="6rt-x4-uyB" secondAttribute="leading" id="FSL-CK-2pB"/>
+                            <constraint firstAttribute="trailing" secondItem="YGW-OO-WkA" secondAttribute="trailing" id="QM2-sq-9o4"/>
+                            <constraint firstItem="6rt-x4-uyB" firstAttribute="trailing" secondItem="lgB-4i-D8m" secondAttribute="trailing" id="ViD-0j-P9D"/>
+                            <constraint firstItem="6rt-x4-uyB" firstAttribute="bottom" secondItem="lgB-4i-D8m" secondAttribute="bottom" id="jwv-Im-PVj"/>
+                            <constraint firstItem="YGW-OO-WkA" firstAttribute="top" secondItem="NyC-Cf-v9o" secondAttribute="top" id="mJA-SV-9dG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6rt-x4-uyB"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="300"/>
+                    <connections>
+                        <outletCollection property="buttons" destination="T8A-NW-uqC" collectionClass="NSMutableArray" id="LtY-b1-8cT"/>
+                        <outletCollection property="buttons" destination="H5j-pO-5J1" collectionClass="NSMutableArray" id="aB9-wy-gVe"/>
+                        <outletCollection property="titleLabels" destination="uDf-AZ-Moa" collectionClass="NSMutableArray" id="qYy-iF-IOX"/>
+                        <outletCollection property="titleLabels" destination="6T0-NI-yfg" collectionClass="NSMutableArray" id="qXd-Ho-Y6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNY-sr-Rxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="67"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
+        <image name="square.and.arrow.down.fill" catalog="system" width="60" height="64"/>
+    </resources>
+</document>

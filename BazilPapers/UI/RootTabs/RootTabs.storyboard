@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Naj-wa-od2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root Tabs View Controller-->
+        <scene sceneID="vpH-Gn-lnP">
+            <objects>
+                <viewController id="Naj-wa-od2" customClass="RootTabsViewController" customModule="BazilPapers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TYM-Da-V9P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-q5-tU4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="814"/>
+                                <connections>
+                                    <segue destination="6g3-C4-XXJ" kind="embed" id="qXo-oQ-OmQ"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-sy-Mvh">
+                                <rect key="frame" x="0.0" y="814" width="414" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="MyI-qj-zLf"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="lm5-3j-tR4" kind="embed" id="PCf-aY-mWn"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sjv-sy-Mvh" firstAttribute="top" secondItem="2Cp-q5-tU4" secondAttribute="bottom" id="6Mz-1a-OfA"/>
+                            <constraint firstItem="sjv-sy-Mvh" firstAttribute="leading" secondItem="MEh-EC-Laj" secondAttribute="leading" id="AZ9-QA-Qbm"/>
+                            <constraint firstItem="2Cp-q5-tU4" firstAttribute="leading" secondItem="MEh-EC-Laj" secondAttribute="leading" id="Czm-wF-afA"/>
+                            <constraint firstItem="MEh-EC-Laj" firstAttribute="bottom" secondItem="sjv-sy-Mvh" secondAttribute="bottom" id="Qdw-j0-lnD"/>
+                            <constraint firstItem="MEh-EC-Laj" firstAttribute="trailing" secondItem="2Cp-q5-tU4" secondAttribute="trailing" id="SOn-Vx-K61"/>
+                            <constraint firstItem="MEh-EC-Laj" firstAttribute="trailing" secondItem="sjv-sy-Mvh" secondAttribute="trailing" id="tFK-V7-UyH"/>
+                            <constraint firstItem="2Cp-q5-tU4" firstAttribute="top" secondItem="TYM-Da-V9P" secondAttribute="top" id="uYh-D8-mNW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MEh-EC-Laj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jaY-SH-AOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="99"/>
+        </scene>
+        <!--RootTabButtons-->
+        <scene sceneID="jf3-eL-EHu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RootTabButtons" id="lm5-3j-tR4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nom-qc-nfa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="525"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nPj-Ua-tNB">
+            <objects>
+                <tabBarController id="6g3-C4-XXJ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DL1-dF-1nh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aAk-Kf-3tG" kind="relationship" relationship="viewControllers" id="zqA-l9-OxB"/>
+                        <segue destination="gJC-hh-vhq" kind="relationship" relationship="viewControllers" id="YN3-ro-ZpG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kef-Id-F74" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="-151"/>
+        </scene>
+        <!--LikedWallpapers-->
+        <scene sceneID="6je-4C-bxY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LikedWallpapers" id="gJC-hh-vhq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="R0j-6R-mlA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WG5-vf-Lik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1622" y="408"/>
+        </scene>
+        <!--WallpapersList-->
+        <scene sceneID="14n-kp-zzI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WallpapersList" id="aAk-Kf-3tG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Ar4-cQ-NrH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XSB-6R-cgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1259" y="409"/>
+        </scene>
+    </scenes>
+</document>
