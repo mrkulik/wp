@@ -9,9 +9,8 @@
         <!--Root Navigation Controller-->
         <scene sceneID="ntY-AS-QfX">
             <objects>
-                <navigationController id="8s9-gM-27a" customClass="RootNavigationController" customModule="BazilPapers" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="8s9-gM-27a" customClass="RootNavigationController" customModule="BazilPapers" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uxG-nt-ReW">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>

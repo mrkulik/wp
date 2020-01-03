@@ -413,9 +413,9 @@
 		0064926B23BFC32600DE8E71 /* RootNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				0064926923BFC25600DE8E71 /* RootNavigation.swift */,
 				0064926523BFC16100DE8E71 /* RootNavigation.storyboard */,
 				0064926723BFC17300DE8E71 /* RootNavigationViewController.swift */,
+				0064926923BFC25600DE8E71 /* RootNavigation.swift */,
 			);
 			path = RootNavigation;
 			sourceTree = "<group>";

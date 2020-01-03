@@ -31,7 +31,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sjv-sy-Mvh" firstAttribute="top" secondItem="2Cp-q5-tU4" secondAttribute="bottom" id="6Mz-1a-OfA"/>
                             <constraint firstItem="sjv-sy-Mvh" firstAttribute="leading" secondItem="MEh-EC-Laj" secondAttribute="leading" id="AZ9-QA-Qbm"/>
