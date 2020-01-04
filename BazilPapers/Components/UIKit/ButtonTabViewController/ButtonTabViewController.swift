@@ -1,6 +1,6 @@
 //
 //  ButtonTabViewController.swift
-//  BazilPapers
+//  Internal
 //
 //  Created by Kulik on 1/4/20.
 //  Copyright © 2020 Kulik. All rights reserved.
