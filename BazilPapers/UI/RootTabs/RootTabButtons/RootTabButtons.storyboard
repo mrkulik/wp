@@ -36,7 +36,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8A-NW-uqC">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="243"/>
                                                 <color key="tintColor" red="0.52941176469999995" green="0.56078431370000004" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="square.and.arrow.down" catalog="system"/>
+                                                <state key="normal" image="list.bullet" catalog="system"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDf-AZ-Moa">
                                                 <rect key="frame" x="0.0" y="243" width="207" height="13"/>
@@ -52,7 +52,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-pO-5J1">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="243"/>
                                                 <color key="tintColor" red="0.52941176469999995" green="0.56078431370000004" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="square.and.arrow.down.fill" catalog="system"/>
+                                                <state key="normal" image="heart" catalog="system"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6T0-NI-yfg">
                                                 <rect key="frame" x="0.0" y="243" width="207" height="13"/>
@@ -92,7 +92,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
-        <image name="square.and.arrow.down.fill" catalog="system" width="60" height="64"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="list.bullet" catalog="system" width="64" height="44"/>
     </resources>
 </document>
