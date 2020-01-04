@@ -70,7 +70,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
         // the spaces between the cells, and then divide by N to find the final
         // dimension for the cell's width and height.
         let itemHeight = view.frame.height
-        let itemWidth = itemHeight * 0.56
+        let itemWidth = itemHeight * Constant.iphoneScreenAspectRatio
         
         return CGSize(width: itemWidth, height: itemHeight)
     }
@@ -80,11 +80,11 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-         return 10;
+        return Constant.itemSpacing
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10;
+        return Constant.itemSpacing
     }
     
     
@@ -125,5 +125,6 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
 
 private struct Constant {
     static let collectionMargin: CGFloat = 16.0
-    static let itemSpacing: CGFloat = 8.0
+    static let itemSpacing: CGFloat = 16.0
+    static let iphoneScreenAspectRatio: CGFloat = 0.56
 }
