@@ -14,6 +14,7 @@
 		0048C3E723C0D6C70086D9D3 /* WallpapersCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0048C3E623C0D6C70086D9D3 /* WallpapersCollection.storyboard */; };
 		0048C3E923C0E9B40086D9D3 /* WallpapersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3E823C0E9B30086D9D3 /* WallpapersListTableViewCell.swift */; };
 		0048C3EB23C0EA020086D9D3 /* WallpapersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3EA23C0EA020086D9D3 /* WallpapersCollectionViewController.swift */; };
+		0048C3F123C0F7130086D9D3 /* ButtonTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3F023C0F7130086D9D3 /* ButtonTabViewController.swift */; };
 		0064923623BFC02800DE8E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064923523BFC02800DE8E71 /* AppDelegate.swift */; };
 		0064923823BFC02800DE8E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064923723BFC02800DE8E71 /* SceneDelegate.swift */; };
 		0064923F23BFC02E00DE8E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0064923E23BFC02E00DE8E71 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		0048C3E623C0D6C70086D9D3 /* WallpapersCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WallpapersCollection.storyboard; sourceTree = "<group>"; };
 		0048C3E823C0E9B30086D9D3 /* WallpapersListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpapersListTableViewCell.swift; sourceTree = "<group>"; };
 		0048C3EA23C0EA020086D9D3 /* WallpapersCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpapersCollectionViewController.swift; sourceTree = "<group>"; };
+		0048C3F023C0F7130086D9D3 /* ButtonTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTabViewController.swift; sourceTree = "<group>"; };
 		0064923223BFC02800DE8E71 /* BazilPapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BazilPapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0064923523BFC02800DE8E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0064923723BFC02800DE8E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		0048C3EC23C0F67B0086D9D3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0048C3EE23C0F6F30086D9D3 /* UIKit */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -164,6 +167,22 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0048C3EE23C0F6F30086D9D3 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				0048C3EF23C0F6FD0086D9D3 /* ButtonTabViewController */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		0048C3EF23C0F6FD0086D9D3 /* ButtonTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0048C3F023C0F7130086D9D3 /* ButtonTabViewController.swift */,
+			);
+			path = ButtonTabViewController;
 			sourceTree = "<group>";
 		};
 		0064922923BFC02800DE8E71 = {
@@ -558,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0048C3F123C0F7130086D9D3 /* ButtonTabViewController.swift in Sources */,
 				0064926A23BFC25600DE8E71 /* RootNavigation.swift in Sources */,
 				0064926823BFC17300DE8E71 /* RootNavigationViewController.swift in Sources */,
 				00F4C72623BFDE5A00239BAA /* WallpapersListViewController.swift in Sources */,
