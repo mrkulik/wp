@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0048C3D123C0CE450086D9D3 /* WallpapersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3D023C0CE450086D9D3 /* WallpapersListTableViewController.swift */; };
+		0048C3D623C0D0350086D9D3 /* WallpapersListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0048C3D423C0D0350086D9D3 /* WallpapersListTableViewCell.xib */; };
+		0048C3E423C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3E223C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift */; };
+		0048C3E523C0D5A90086D9D3 /* WallpaperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0048C3E323C0D5A90086D9D3 /* WallpaperCollectionViewCell.xib */; };
+		0048C3E723C0D6C70086D9D3 /* WallpapersCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0048C3E623C0D6C70086D9D3 /* WallpapersCollection.storyboard */; };
+		0048C3E923C0E9B40086D9D3 /* WallpapersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3E823C0E9B30086D9D3 /* WallpapersListTableViewCell.swift */; };
+		0048C3EB23C0EA020086D9D3 /* WallpapersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3EA23C0EA020086D9D3 /* WallpapersCollectionViewController.swift */; };
 		0064923623BFC02800DE8E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064923523BFC02800DE8E71 /* AppDelegate.swift */; };
 		0064923823BFC02800DE8E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064923723BFC02800DE8E71 /* SceneDelegate.swift */; };
 		0064923F23BFC02E00DE8E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0064923E23BFC02E00DE8E71 /* Assets.xcassets */; };
@@ -172,6 +179,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0048C3D023C0CE450086D9D3 /* WallpapersListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpapersListTableViewController.swift; sourceTree = "<group>"; };
+		0048C3D423C0D0350086D9D3 /* WallpapersListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpapersListTableViewCell.xib; sourceTree = "<group>"; };
+		0048C3E223C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCollectionViewCell.swift; sourceTree = "<group>"; };
+		0048C3E323C0D5A90086D9D3 /* WallpaperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperCollectionViewCell.xib; sourceTree = "<group>"; };
+		0048C3E623C0D6C70086D9D3 /* WallpapersCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WallpapersCollection.storyboard; sourceTree = "<group>"; };
+		0048C3E823C0E9B30086D9D3 /* WallpapersListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpapersListTableViewCell.swift; sourceTree = "<group>"; };
+		0048C3EA23C0EA020086D9D3 /* WallpapersCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpapersCollectionViewController.swift; sourceTree = "<group>"; };
 		0064923223BFC02800DE8E71 /* BazilPapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BazilPapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0064923523BFC02800DE8E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0064923723BFC02800DE8E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -359,6 +373,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0048C3D223C0D0150086D9D3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0048C3DC23C0D44D0086D9D3 /* Collection */,
+				0048C3D423C0D0350086D9D3 /* WallpapersListTableViewCell.xib */,
+				0048C3E823C0E9B30086D9D3 /* WallpapersListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0048C3DC23C0D44D0086D9D3 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				0048C3E123C0D5810086D9D3 /* Cell */,
+				0048C3E623C0D6C70086D9D3 /* WallpapersCollection.storyboard */,
+				0048C3EA23C0EA020086D9D3 /* WallpapersCollectionViewController.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		0048C3E123C0D5810086D9D3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0048C3E223C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift */,
+				0048C3E323C0D5A90086D9D3 /* WallpaperCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		0064922923BFC02800DE8E71 = {
 			isa = PBXGroup;
 			children = (
@@ -940,8 +983,10 @@
 		00F4C72123BFDE2700239BAA /* WallpapersList */ = {
 			isa = PBXGroup;
 			children = (
+				0048C3D223C0D0150086D9D3 /* Cell */,
 				00F4C72323BFDE4E00239BAA /* WallpapersList.storyboard */,
 				00F4C72523BFDE5A00239BAA /* WallpapersListViewController.swift */,
+				0048C3D023C0CE450086D9D3 /* WallpapersListTableViewController.swift */,
 			);
 			path = WallpapersList;
 			sourceTree = "<group>";
@@ -1090,13 +1135,16 @@
 				0064926623BFC16100DE8E71 /* RootNavigation.storyboard in Resources */,
 				00F4C70A23BFDAB900239BAA /* KeyboardDoneHeaderView.xib in Resources */,
 				00F4C71D23BFDC0400239BAA /* RootTabs.storyboard in Resources */,
+				0048C3D623C0D0350086D9D3 /* WallpapersListTableViewCell.xib in Resources */,
 				0064924223BFC02E00DE8E71 /* LaunchScreen.storyboard in Resources */,
 				00F4C6E223BFDAB900239BAA /* ChainPerformingResultActivity.storyboard in Resources */,
 				00F4C72823BFDE6A00239BAA /* LikedWallpapers.storyboard in Resources */,
 				00F4C65F23BFD98E00239BAA /* RootTabButtons.storyboard in Resources */,
 				00F4C6EC23BFDAB900239BAA /* ActionSheetContainer.storyboard in Resources */,
 				00F4C6FE23BFDAB900239BAA /* ActivityIndicator.storyboard in Resources */,
+				0048C3E723C0D6C70086D9D3 /* WallpapersCollection.storyboard in Resources */,
 				00F4C72423BFDE4E00239BAA /* WallpapersList.storyboard in Resources */,
+				0048C3E523C0D5A90086D9D3 /* WallpaperCollectionViewCell.xib in Resources */,
 				0064923F23BFC02E00DE8E71 /* Assets.xcassets in Resources */,
 				00F4C6F323BFDAB900239BAA /* KeyboardScroll.storyboard in Resources */,
 			);
@@ -1262,6 +1310,7 @@
 				006492BE23BFC5DF00DE8E71 /* UIView+Utils.swift in Sources */,
 				00F4C6E323BFDAB900239BAA /* ChainPerformingResultActivityViewController.swift in Sources */,
 				00F4C6F023BFDAB900239BAA /* KeyboardBottomOffsetController.swift in Sources */,
+				0048C3E423C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift in Sources */,
 				006492E923BFC5DF00DE8E71 /* NSOrderedSet+Utils.swift in Sources */,
 				006492BB23BFC5DF00DE8E71 /* UITableViewController+Utils.swift in Sources */,
 				006492DE23BFC5DF00DE8E71 /* URLRequest+MultipartFormData.swift in Sources */,
@@ -1326,6 +1375,7 @@
 				006492E623BFC5DF00DE8E71 /* String+MakeCodeChallenge.swift in Sources */,
 				00F4C6E723BFDAB900239BAA /* ButtonTabViewController.swift in Sources */,
 				006492C023BFC5DF00DE8E71 /* UIView+Inspectable.swift in Sources */,
+				0048C3EB23C0EA020086D9D3 /* WallpapersCollectionViewController.swift in Sources */,
 				00F4C71B23BFDBFB00239BAA /* RootTabsViewController.swift in Sources */,
 				00F4C6D523BFDAB900239BAA /* ChainController+Logging.swift in Sources */,
 				00F4C6F523BFDAB900239BAA /* LayoutingFixTextFieldController.swift in Sources */,
@@ -1343,6 +1393,7 @@
 				00F4C70723BFDAB900239BAA /* KeyboardHeaderButtonView.swift in Sources */,
 				006492D323BFC5DF00DE8E71 /* NSManagedObject+Instance.swift in Sources */,
 				00F4C6DE23BFDAB900239BAA /* CommonButtonViewController.swift in Sources */,
+				0048C3D123C0CE450086D9D3 /* WallpapersListTableViewController.swift in Sources */,
 				00F4C71623BFDAB900239BAA /* ChainControllerHandler.swift in Sources */,
 				00F4C70523BFDAB900239BAA /* BottomPresentationController.swift in Sources */,
 				006492E423BFC5DF00DE8E71 /* String+Regex.swift in Sources */,
@@ -1353,6 +1404,7 @@
 				00F4C70223BFDAB900239BAA /* BottomTransitionController.swift in Sources */,
 				00F4C6E523BFDAB900239BAA /* UIApplicationChainController.swift in Sources */,
 				00F4C70023BFDAB900239BAA /* BadgeLabel.swift in Sources */,
+				0048C3E923C0E9B40086D9D3 /* WallpapersListTableViewCell.swift in Sources */,
 				00F4C6D623BFDAB900239BAA /* ChainController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
