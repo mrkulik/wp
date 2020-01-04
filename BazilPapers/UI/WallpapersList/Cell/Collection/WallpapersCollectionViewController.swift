@@ -69,9 +69,9 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
         // cells.  Take the collection view's width, subtract (N-1)*S points for
         // the spaces between the cells, and then divide by N to find the final
         // dimension for the cell's width and height.
-
-        let itemWidth = view.frame.width / 3
         let itemHeight = view.frame.height
+        let itemWidth = itemHeight * 0.56
+        
         return CGSize(width: itemWidth, height: itemHeight)
     }
     
