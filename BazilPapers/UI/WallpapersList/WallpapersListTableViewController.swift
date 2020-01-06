@@ -40,7 +40,7 @@ class WallpapersListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = WallpapersListTableViewCell.dequeueReusableCell(in: self.tableView, for: indexPath)
-
+        cell.selectionStyle = .none
         let vc = WallpapersCollectionViewController.initial()
         cell.containerController = vc
         self.addChildContainer(vc, containerSubview: cell.collectionContainerView)
