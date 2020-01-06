@@ -15,8 +15,19 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mf0-Tb-uGe">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </subviews>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Mf0-Tb-uGe" secondAttribute="trailing" id="0Qn-6b-Rre"/>
+                <constraint firstItem="Mf0-Tb-uGe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b2R-zQ-aAx"/>
+                <constraint firstItem="Mf0-Tb-uGe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hf6-4g-Z4S"/>
+                <constraint firstAttribute="bottom" secondItem="Mf0-Tb-uGe" secondAttribute="bottom" id="u0U-Gl-stU"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <point key="canvasLocation" x="139" y="120"/>
         </collectionViewCell>

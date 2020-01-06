@@ -12,7 +12,13 @@ class WallpaperCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.layer.cornerRadius = Constant.cornerRadius
+        self.layer.masksToBounds = true
     }
 
+}
+
+
+private struct Constant {
+    static let cornerRadius: CGFloat = 12
 }
