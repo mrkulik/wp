@@ -5,6 +5,9 @@ workspace 'BazilPapers'
 def external_pods
   pod 'Alamofire', '~> 5.0.0-rc.3'
   pod 'AlamofireNetworkActivityLogger'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
 end
 
 target 'BazilPapers' do
