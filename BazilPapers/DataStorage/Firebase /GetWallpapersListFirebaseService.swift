@@ -27,27 +27,7 @@ class GetWallpapersListFirebaseService {
     private let catalogContext = DataStorageProvider.sharedCatalogModelController.container.viewContext
     
     private func syncWithLocal(_ snapshot: [[String : Any]]) {
-        var storedCategories = self.moWallpapers
         
-//        snapshot.forEach { [weak self] (snapshotCategory) in
-//            let remoteWallpaper = RemoteCategory(from: snapshotCategory)
-//
-//            guard let storedCategory = storedCategories.first(where: { (c) -> Bool in
-//                return c.id == remoteCategory.id
-//            }) else {
-//                let moCategory = MOCategory.makeInContext(of: self?.moCatalog)
-//                moCategory?.id = remoteCategory.id
-//                moCategory?.key = remoteCategory.title
-//                return
-//            }
-//            storedCategory.id = remoteCategory.id
-//            storedCategory.key = remoteCategory.title
-//            storedCategories.removeAll(where: { (c) -> Bool in
-//                return c === storedCategory
-//            })
-//        }
-        self.catalogContext.delete(storedCategories)
-        try? self.catalogContext.save()
     }
     
     

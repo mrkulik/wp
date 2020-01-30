@@ -11,8 +11,10 @@ import CoreData
 
 class DataStorageProvider {
     static let sharedCatalogModelController = PersistentContainerController(modelName: "Catalog")
+    static let sharedFormFactorsModelController = PersistentContainerController(modelName: "FormFactors")
     
     class func loadSharedStores() {
         self.sharedCatalogModelController.loadStores()
+        self.sharedFormFactorsModelController.loadStores()
     }
 }
