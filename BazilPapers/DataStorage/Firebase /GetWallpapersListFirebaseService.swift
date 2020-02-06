@@ -18,8 +18,8 @@ class GetWallpapersListFirebaseService {
         return dbConfigsCatalogReference.child("catalog").child("pictures")
     }
     
-    private var moWallpapers: [MOWallpaper] {
-        let request: NSFetchRequest<MOWallpaper> = MOWallpaper.fetchRequest()
+    private var moWallpapersInfo: [MOWallpaperInfo] {
+        let request: NSFetchRequest<MOWallpaperInfo> = MOWallpaperInfo.fetchRequest()
         let result = try? self.catalogContext.fetch(request)
         return result ?? []
     }

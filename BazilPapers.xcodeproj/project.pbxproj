@@ -50,6 +50,7 @@
 		00A9650223E32828005E0417 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A9650023E32828005E0417 /* Main.storyboard */; };
 		00A9650423E3282F005E0417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A9650323E3282F005E0417 /* Assets.xcassets */; };
 		00A9650723E3282F005E0417 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A9650523E3282F005E0417 /* LaunchScreen.storyboard */; };
+		00A9652923EA1A39005E0417 /* GetFormfactorsFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9652823EA1A39005E0417 /* GetFormfactorsFirebaseService.swift */; };
 		00BEBAA523C91F7C007EE66D /* NSFetchedResultsController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BEBAA123C91F7B007EE66D /* NSFetchedResultsController+Utils.swift */; };
 		00BEBAA623C91F7C007EE66D /* NSManagedObject+Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BEBAA223C91F7B007EE66D /* NSManagedObject+Instance.swift */; };
 		00BEBAA723C91F7C007EE66D /* NSManagedObjectContext+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BEBAA323C91F7B007EE66D /* NSManagedObjectContext+Utils.swift */; };
@@ -153,6 +154,7 @@
 		00A9650823E3282F005E0417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00A9650D23E3282F005E0417 /* PlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A9651823E3282F005E0417 /* PlaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaygroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A9652823EA1A39005E0417 /* GetFormfactorsFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFormfactorsFirebaseService.swift; sourceTree = "<group>"; };
 		00BEBA9F23C91EC6007EE66D /* Catalog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catalog.xcdatamodel; sourceTree = "<group>"; };
 		00BEBAA123C91F7B007EE66D /* NSFetchedResultsController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFetchedResultsController+Utils.swift"; sourceTree = "<group>"; };
 		00BEBAA223C91F7B007EE66D /* NSManagedObject+Instance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Instance.swift"; sourceTree = "<group>"; };
@@ -370,7 +372,6 @@
 				0064925623BFC02E00DE8E71 /* BazilPapersUITests */,
 				00A964F923E32828005E0417 /* Playground */,
 				0064923323BFC02800DE8E71 /* Products */,
-				0064926C23BFC33500DE8E71 /* UI */,
 				28D546C531A7755234C7E4CE /* Pods */,
 				515FEBC74859BC2F6E5832D8 /* Frameworks */,
 			);
@@ -392,6 +393,7 @@
 		0064923423BFC02800DE8E71 /* BazilPapers */ = {
 			isa = PBXGroup;
 			children = (
+				0064926C23BFC33500DE8E71 /* UI */,
 				00BEBA9923C90DBE007EE66D /* DataStorage */,
 				0048C3ED23C0F6840086D9D3 /* Helpers */,
 				0048C3EC23C0F67B0086D9D3 /* Components */,
@@ -481,6 +483,7 @@
 				004CD87923CD1748002B8092 /* Models */,
 				004CD87623CD1730002B8092 /* GetCategoriesFirebaseService.swift */,
 				004CD87C23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift */,
+				00A9652823EA1A39005E0417 /* GetFormfactorsFirebaseService.swift */,
 			);
 			path = "Firebase ";
 			sourceTree = "<group>";
@@ -929,6 +932,7 @@
 				0048C3EB23C0EA020086D9D3 /* WallpapersCollectionViewController.swift in Sources */,
 				00F4C71B23BFDBFB00239BAA /* RootTabsViewController.swift in Sources */,
 				00138DE923D8E97B00EBD787 /* RemoteWallpaperSource.swift in Sources */,
+				00A9652923EA1A39005E0417 /* GetFormfactorsFirebaseService.swift in Sources */,
 				0048C3F323C0F7A40086D9D3 /* TintButtonTabViewController.swift in Sources */,
 				0048C3FF23C3E02E0086D9D3 /* UITableViewCell+Table.swift in Sources */,
 				004CD87D23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift in Sources */,

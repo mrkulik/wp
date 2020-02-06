@@ -19,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         DataStorageProvider.loadSharedStores()
+        let getFormfactorsFirebaseService = GetFormfactorsFirebaseService()
+        getFormfactorsFirebaseService.observeConfigsCatalogtWithSingleEvent()
+        
         let catalogFirebaseService = GetCategoriesFirebaseService()
         catalogFirebaseService.observeConfigsCatalogtWithSingleEvent()
-        print(deviceName())
         return true
     }
 
