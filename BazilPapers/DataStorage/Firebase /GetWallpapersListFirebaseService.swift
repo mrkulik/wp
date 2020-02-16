@@ -24,20 +24,60 @@ class GetWallpapersListFirebaseService {
         return result ?? []
     }
     
+    private var moCategories: [MOCategory] {
+        let request: NSFetchRequest<MOCategory> = MOCategory.fetchRequest()
+        let result = try? self.catalogContext.fetch(request)
+        return result ?? []
+    }
+    
     private let catalogContext = DataStorageProvider.sharedCatalogModelController.container.viewContext
     
     private func syncWithLocal(_ snapshot: [[String : Any]]) {
+        var storedWallpaperInfos = self.moWallpapersInfo
         
+        snapshot.forEach { (snapshotPicture) in
+            let remoteWallpaperInfo = RemoteWallpaperInfo(from: snapshotPicture)
+
+            guard let storedWallpaperInfo = moWallpapersInfo.first(where: { (wi) -> Bool in
+                return wi.id == remoteWallpaperInfo.id
+            }) else {
+                let moWallpaperInfo = MOWallpaperInfo(context: self.catalogContext)
+                fillData(local: moWallpaperInfo, remote: remoteWallpaperInfo)
+                return
+            }
+            fillData(local: storedWallpaperInfo, remote: remoteWallpaperInfo)
+            storedWallpaperInfos.removeAll(where: { (wi) -> Bool in
+                return wi === storedWallpaperInfo
+            })
+        }
+        self.catalogContext.delete(storedWallpaperInfos)
+        try? self.catalogContext.save()
     }
     
+    private func fillData(local: MOWallpaperInfo, remote: RemoteWallpaperInfo) {
+        local.id = remote.id
+        local.sourceURL = remote.source?.url
+        local.shortSourceURL = remote.shortSource?.url
+        local.category = moCategories.filter { (category) -> Bool in
+            return category.id == remote.categoryIDs?.first
+        }.first
+//        forEach({ (categoryID) in
+//            let moWithID = moCategories.filter { (category) -> Bool in
+//                return category.id == categoryID
+//            }.first
+//            if let mo = moWithID {
+//               local.addToCategories(mo)
+//            }
+//        })
+    }
     
     func observeConfigsCatalogtWithSingleEvent() {
-        categoriesReferencePath.observeSingleEvent(of: .value, with: { [weak self] (snapshot) in
+        categoriesReferencePath.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.value as? [[String : Any]] else {
                 return
             }
             
-            self?.syncWithLocal(snapshot)
+            self.syncWithLocal(snapshot)
             })
         { (error) in
             print(error.localizedDescription)

@@ -12,6 +12,7 @@
 		00138DE523D8E7FD00EBD787 /* PersistentContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE123D8E7FD00EBD787 /* PersistentContainerController.swift */; };
 		00138DE723D8E89100EBD787 /* RemoteWallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE623D8E89100EBD787 /* RemoteWallpaper.swift */; };
 		00138DE923D8E97B00EBD787 /* RemoteWallpaperSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE823D8E97B00EBD787 /* RemoteWallpaperSource.swift */; };
+		0015479223F9E161004594EC /* NSPredicate+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0015479123F9E161004594EC /* NSPredicate+Utils.swift */; };
 		0048C3D123C0CE450086D9D3 /* WallpapersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3D023C0CE450086D9D3 /* WallpapersListTableViewController.swift */; };
 		0048C3D623C0D0350086D9D3 /* WallpapersListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0048C3D423C0D0350086D9D3 /* WallpapersListTableViewCell.xib */; };
 		0048C3E423C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3E223C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift */; };
@@ -107,6 +108,7 @@
 		00138DE123D8E7FD00EBD787 /* PersistentContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainerController.swift; sourceTree = "<group>"; };
 		00138DE623D8E89100EBD787 /* RemoteWallpaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWallpaper.swift; sourceTree = "<group>"; };
 		00138DE823D8E97B00EBD787 /* RemoteWallpaperSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWallpaperSource.swift; sourceTree = "<group>"; };
+		0015479123F9E161004594EC /* NSPredicate+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Utils.swift"; sourceTree = "<group>"; };
 		0048C3D023C0CE450086D9D3 /* WallpapersListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpapersListTableViewController.swift; sourceTree = "<group>"; };
 		0048C3D423C0D0350086D9D3 /* WallpapersListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpapersListTableViewCell.xib; sourceTree = "<group>"; };
 		0048C3E223C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				004CD87E23CD2A50002B8092 /* UIDevice */,
 				00BEBAAB23C91F93007EE66D /* CoreData */,
 				0048C3FA23C3DE320086D9D3 /* UIKit */,
+				0015479123F9E161004594EC /* NSPredicate+Utils.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -939,6 +942,7 @@
 				0048C40223C3E06D0086D9D3 /* UIViewController+Child.swift in Sources */,
 				00138DE223D8E7FD00EBD787 /* NSPersistentContainer+Models.swift in Sources */,
 				0048C3F723C3DDC50086D9D3 /* LabelButtonTabViewController.swift in Sources */,
+				0015479223F9E161004594EC /* NSPredicate+Utils.swift in Sources */,
 				00F4C66123BFD9A000239BAA /* RootTabButtonViewController.swift in Sources */,
 				0064923823BFC02800DE8E71 /* SceneDelegate.swift in Sources */,
 				0048C3D123C0CE450086D9D3 /* WallpapersListTableViewController.swift in Sources */,

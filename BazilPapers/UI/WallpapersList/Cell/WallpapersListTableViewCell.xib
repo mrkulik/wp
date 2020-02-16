@@ -52,6 +52,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="categoryTitleLabel" destination="vEv-rS-za3" id="0cW-4v-8p7"/>
                 <outlet property="collectionContainerView" destination="kva-yi-NDy" id="p9T-xv-svk"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="50.558035714285715"/>

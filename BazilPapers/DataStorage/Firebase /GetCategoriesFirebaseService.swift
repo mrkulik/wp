@@ -36,12 +36,10 @@ class GetCategoriesFirebaseService {
                 return c.id == remoteCategory.id
             }) else {
                 let moCategory = MOCategory(context: self.catalogContext)
-                moCategory.id = remoteCategory.id
-                moCategory.title = remoteCategory.title
+                fillData(local: moCategory, remote: remoteCategory)
                 return
             }
-            storedCategory.id = remoteCategory.id
-            storedCategory.title = remoteCategory.title
+            fillData(local: storedCategory, remote: remoteCategory)
             storedCategories.removeAll(where: { (c) -> Bool in
                 return c === storedCategory
             })
@@ -50,14 +48,18 @@ class GetCategoriesFirebaseService {
         try? self.catalogContext.save()
     }
     
+    private func fillData(local: MOCategory, remote: RemoteCategory) {
+        local.id = remote.id
+        local.title = remote.title
+    }
     
     func observeConfigsCatalogtWithSingleEvent() {
-        categoriesReferencePath.observeSingleEvent(of: .value, with: { [weak self] (snapshot) in
+        categoriesReferencePath.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.value as? [[String : Any]] else {
                 return
             }
             
-            self?.syncWithLocal(snapshot)
+            self.syncWithLocal(snapshot)
             })
         { (error) in
             print(error.localizedDescription)

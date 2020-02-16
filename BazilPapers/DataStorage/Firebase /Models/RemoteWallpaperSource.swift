@@ -14,9 +14,9 @@ struct RemoteWallpaperSource {
     var storageType: String?
     var url: String?
     
-    init(from dict: [String : Any]) {
-        self.formFactor = dict["formFactorKey"] as? String
-        self.storageType = dict["storageType"] as? String
-        self.url = dict["uri"] as? String
+    init(from dict: [String : Any]?) {
+        self.formFactor = dict?["formFactorKey"] as? String
+        self.storageType = dict?["storageType"] as? String
+        self.url = dict?["uri"] as? String
     }
 }

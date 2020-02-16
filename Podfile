@@ -8,6 +8,8 @@ def external_pods
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
 end
 
 target 'BazilPapers' do
