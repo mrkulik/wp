@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseUI
+
 
 class WallpaperCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var rootView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -24,5 +27,5 @@ class WallpaperCollectionViewCell: UICollectionViewCell {
 
 
 private struct Constant {
-    static let cornerRadius: CGFloat = 12
+    static let cornerRadius: CGFloat = 12.0
 }

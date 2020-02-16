@@ -9,17 +9,39 @@
 import Foundation
 
 
-struct RemoteWallpaper {
+struct RemoteWallpaperInfo {
     var id: Int32!
     var categoryIDs: [Int32]?
-    var sources: [RemoteWallpaperSource]?
+    var source: RemoteWallpaperSource?
+    var shortSource: RemoteWallpaperSource?
     
     init(from dict: [String : Any]) {
         self.id = dict["id"] as? Int32
         self.categoryIDs = dict["categoryIds"] as? [Int32]
         let sources = dict["sources"] as? [[String : Any]]
-        sources?.forEach({ (source) in
-            self.sources?.append(RemoteWallpaperSource(from: source))
+        
+        let shortSource = sources?.first(where: { (source) -> Bool in
+            guard let picFormFactor = source["formFactorKey"] as? String else {
+                return false
+            }
+            
+            return picFormFactor == "640x960"
         })
+        
+        self.shortSource = RemoteWallpaperSource(from: shortSource)
+        
+        guard let deviceFormFactor = UserDefaults.standard.object(forKey: "formFactor") as? String else {
+            return
+        }
+        
+        let fullSource = sources?.first(where: { (source) -> Bool in
+            guard let picFormFactor = source["formFactorKey"] as? String else {
+                return false
+            }
+            
+            return picFormFactor == deviceFormFactor
+        })
+        
+        self.source = RemoteWallpaperSource(from: fullSource)
     }
 }

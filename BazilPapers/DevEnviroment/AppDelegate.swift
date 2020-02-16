@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let catalogFirebaseService = GetCategoriesFirebaseService()
         catalogFirebaseService.observeConfigsCatalogtWithSingleEvent()
+        
+        let wallpapersFirebaseService = GetWallpapersListFirebaseService()
+        wallpapersFirebaseService.observeConfigsCatalogtWithSingleEvent()
         return true
     }
 
