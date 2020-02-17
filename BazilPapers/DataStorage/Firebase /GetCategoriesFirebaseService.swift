@@ -53,7 +53,7 @@ class GetCategoriesFirebaseService {
         local.title = remote.title
     }
     
-    func observeConfigsCatalogtWithSingleEvent() {
+    func observeConfigsCatalogWithSingleEvent() {
         categoriesReferencePath.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.value as? [[String : Any]] else {
                 return

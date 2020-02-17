@@ -59,19 +59,11 @@ class GetWallpapersListFirebaseService {
         local.sourceURL = remote.source?.url
         local.shortSourceURL = remote.shortSource?.url
         local.category = moCategories.filter { (category) -> Bool in
-            return category.id == remote.categoryIDs?.first
+            return category.id == remote.categoryID
         }.first
-//        forEach({ (categoryID) in
-//            let moWithID = moCategories.filter { (category) -> Bool in
-//                return category.id == categoryID
-//            }.first
-//            if let mo = moWithID {
-//               local.addToCategories(mo)
-//            }
-//        })
     }
     
-    func observeConfigsCatalogtWithSingleEvent() {
+    func observeConfigsCatalogWithSingleEvent() {
         categoriesReferencePath.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.value as? [[String : Any]] else {
                 return

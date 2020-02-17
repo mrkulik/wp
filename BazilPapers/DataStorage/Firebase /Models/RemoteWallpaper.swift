@@ -11,13 +11,13 @@ import Foundation
 
 struct RemoteWallpaperInfo {
     var id: Int32!
-    var categoryIDs: [Int32]?
+    var categoryID: Int32?
     var source: RemoteWallpaperSource?
     var shortSource: RemoteWallpaperSource?
     
     init(from dict: [String : Any]) {
         self.id = dict["id"] as? Int32
-        self.categoryIDs = dict["categoryIds"] as? [Int32]
+        self.categoryID = dict["categoryId"] as? Int32
         let sources = dict["sources"] as? [[String : Any]]
         
         let shortSource = sources?.first(where: { (source) -> Bool in

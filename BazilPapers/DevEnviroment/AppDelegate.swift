@@ -20,13 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         DataStorageProvider.loadSharedStores()
         let getFormfactorsFirebaseService = GetFormfactorsFirebaseService()
-        getFormfactorsFirebaseService.observeConfigsCatalogtWithSingleEvent()
+        getFormfactorsFirebaseService.observeFormFactorsWithSingleEvent()
         
         let catalogFirebaseService = GetCategoriesFirebaseService()
-        catalogFirebaseService.observeConfigsCatalogtWithSingleEvent()
+        catalogFirebaseService.observeConfigsCatalogWithSingleEvent()
         
         let wallpapersFirebaseService = GetWallpapersListFirebaseService()
-        wallpapersFirebaseService.observeConfigsCatalogtWithSingleEvent()
+        wallpapersFirebaseService.observeConfigsCatalogWithSingleEvent()
         return true
     }
 

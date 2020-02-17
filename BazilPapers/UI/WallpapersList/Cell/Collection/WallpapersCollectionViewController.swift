@@ -96,6 +96,10 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
         return Constant.itemSpacing
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = WallpapersDetailsViewController.initial()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension WallpapersCollectionViewController: NSFetchedResultsControllerDelegate {

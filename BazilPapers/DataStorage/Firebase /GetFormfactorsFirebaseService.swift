@@ -15,16 +15,21 @@ class GetFormfactorsFirebaseService {
     private let dbConfigsFormFactorsReference: DatabaseReference = Database.database(url: Constant.configsFormFactorsURL).reference()
     
     private var formFactorsReferencePath: DatabaseReference {
-        return dbConfigsFormFactorsReference.child("formFactors")
+        return dbConfigsFormFactorsReference
     }
     
-    func observeConfigsCatalogtWithSingleEvent() {
-        formFactorsReferencePath.observeSingleEvent(of: .value, with: { [weak self] (snapshot) in
-            guard let snapshot = snapshot.value as? [[String : Any]] else {
+    func observeFormFactorsWithSingleEvent() {
+        formFactorsReferencePath.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            guard let snapshot = snapshot.value as? [String : Any] else {
                 return
             }
             
-            let formFactor = snapshot.first { (ff) -> Bool in
+            guard let formFactors = snapshot["formFactors"] as? [[String : Any]] else {
+                return
+            }
+            
+            let formFactor = formFactors.first { (ff) -> Bool in
                 guard let models = ff["models"] as? [String] else {
                     return false
                 }
@@ -35,24 +40,15 @@ class GetFormfactorsFirebaseService {
                 return currentModel != nil ? true : false
             }
             
-            let defaultFormFactor = snapshot.first { (ff) -> Bool in
-                guard let isDefault = ff["isDefault"] as? Bool else {
-                    return false
-                }
-                
-                return isDefault
+            var result: String?
+            if let ff = formFactor {
+                result = ff["key"] as? String
+            }
+            else {
+                result = snapshot["defaultFormFactorKey"] as? String
             }
             
-            guard let formFactorValue = formFactor?["key"] as? String else {
-                guard let defaultFormFactorValue = defaultFormFactor?["key"] as? String else {
-                    return
-                }
-                
-                UserDefaults.standard.setValue(defaultFormFactorValue, forKeyPath: "formFactor")
-                return
-            }
-            
-            UserDefaults.standard.setValue(formFactorValue, forKeyPath: "formFactor")
+            UserDefaults.standard.setValue(result, forKeyPath: "formFactor")
         })
         { (error) in
             print(error.localizedDescription)
