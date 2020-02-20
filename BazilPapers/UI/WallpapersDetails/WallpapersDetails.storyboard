@@ -15,75 +15,127 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DG4-UG-rhg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DG4-UG-rhg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjk-Mg-r1I">
-                                <rect key="frame" x="280.5" y="752" width="60" height="60"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kvD-F4-sDk">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz7-hc-GkB">
-                                            <rect key="frame" x="16.5" y="19" width="26" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="photo.fill.on.rectangle.fill" catalog="system">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                        </button>
-                                    </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Hfb-Hw-SXX"/>
-                                    <constraint firstAttribute="height" constant="60" id="qzF-6Z-6pj"/>
-                                </constraints>
-                                <blurEffect style="dark"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </visualEffectView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCA-JS-uty">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvI-hJ-obw">
                                 <rect key="frame" x="73.5" y="752" width="60" height="60"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ywC-k0-BQi">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo6-hW-BGs">
-                                            <rect key="frame" x="19" y="19" width="21" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
-                                        </button>
-                                    </subviews>
-                                </view>
+                                <subviews>
+                                    <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCA-JS-uty">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ywC-k0-BQi">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <blurEffect style="systemChromeMaterialDark"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </visualEffectView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo6-hW-BGs">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="ghT-Hk-U67" eventType="touchUpInside" id="HTV-bI-NFQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="y47-TV-FdM"/>
-                                    <constraint firstAttribute="width" constant="60" id="zkc-65-MZZ"/>
+                                    <constraint firstAttribute="width" constant="60" id="Ejd-VL-T5w"/>
+                                    <constraint firstItem="sCA-JS-uty" firstAttribute="top" secondItem="nvI-hJ-obw" secondAttribute="top" id="Kul-ry-lvA"/>
+                                    <constraint firstAttribute="trailing" secondItem="sCA-JS-uty" secondAttribute="trailing" id="MVi-TD-QHH"/>
+                                    <constraint firstItem="vo6-hW-BGs" firstAttribute="top" secondItem="nvI-hJ-obw" secondAttribute="top" id="Vgn-bX-vPc"/>
+                                    <constraint firstAttribute="height" constant="60" id="Wwb-2D-aMW"/>
+                                    <constraint firstAttribute="trailing" secondItem="vo6-hW-BGs" secondAttribute="trailing" id="idh-bL-9Qn"/>
+                                    <constraint firstAttribute="bottom" secondItem="sCA-JS-uty" secondAttribute="bottom" id="jDr-k6-a3z"/>
+                                    <constraint firstItem="sCA-JS-uty" firstAttribute="leading" secondItem="nvI-hJ-obw" secondAttribute="leading" id="kZv-tz-kwa"/>
+                                    <constraint firstItem="vo6-hW-BGs" firstAttribute="leading" secondItem="nvI-hJ-obw" secondAttribute="leading" id="pha-j5-sPt"/>
+                                    <constraint firstAttribute="bottom" secondItem="vo6-hW-BGs" secondAttribute="bottom" id="ur8-dn-HtD"/>
                                 </constraints>
-                                <blurEffect style="dark"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                            </visualEffectView>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQF-S3-HPr">
+                                <rect key="frame" x="280.5" y="752" width="60" height="60"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-eV-lpd">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b4v-ue-A0U">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <blurEffect style="systemChromeMaterialDark"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </visualEffectView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2m-5d-Ryg">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="icloud.and.arrow.down.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="ghT-Hk-U67" eventType="touchUpInside" id="OGB-1w-Dhi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="D2m-5d-Ryg" secondAttribute="trailing" id="1CR-l2-tJM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sm5-eV-lpd" secondAttribute="bottom" id="4OU-nJ-CYy"/>
+                                    <constraint firstAttribute="width" constant="60" id="4o4-MS-DA1"/>
+                                    <constraint firstItem="Sm5-eV-lpd" firstAttribute="leading" secondItem="qQF-S3-HPr" secondAttribute="leading" id="5e5-G8-kcQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="D2m-5d-Ryg" secondAttribute="bottom" id="8Rz-yC-Gd2"/>
+                                    <constraint firstItem="D2m-5d-Ryg" firstAttribute="leading" secondItem="qQF-S3-HPr" secondAttribute="leading" id="Lz3-Qv-8SH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sm5-eV-lpd" secondAttribute="trailing" id="hkj-tk-wA0"/>
+                                    <constraint firstItem="Sm5-eV-lpd" firstAttribute="top" secondItem="qQF-S3-HPr" secondAttribute="top" id="pSa-fK-eAQ"/>
+                                    <constraint firstItem="D2m-5d-Ryg" firstAttribute="top" secondItem="qQF-S3-HPr" secondAttribute="top" id="rVF-sW-UMg"/>
+                                    <constraint firstAttribute="height" constant="60" id="tvh-re-hlB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sCA-JS-uty" firstAttribute="centerX" secondItem="tdo-GS-VhO" secondAttribute="centerX" multiplier="0.5" id="425-0a-3kY"/>
-                            <constraint firstItem="tjk-Mg-r1I" firstAttribute="centerX" secondItem="tdo-GS-VhO" secondAttribute="centerX" multiplier="1.5" id="8vj-GF-qcp"/>
+                            <constraint firstItem="nvI-hJ-obw" firstAttribute="centerX" secondItem="tdo-GS-VhO" secondAttribute="centerX" multiplier="0.5" id="Bun-Ot-UDO"/>
+                            <constraint firstItem="5ls-WT-lKg" firstAttribute="bottom" secondItem="nvI-hJ-obw" secondAttribute="bottom" constant="50" id="GV6-3A-1bB"/>
                             <constraint firstAttribute="trailing" secondItem="DG4-UG-rhg" secondAttribute="trailing" id="JO2-3p-R5V"/>
+                            <constraint firstItem="5ls-WT-lKg" firstAttribute="bottom" secondItem="qQF-S3-HPr" secondAttribute="bottom" constant="50" id="S6T-wZ-ng9"/>
                             <constraint firstItem="DG4-UG-rhg" firstAttribute="leading" secondItem="tdo-GS-VhO" secondAttribute="leading" id="WBz-PF-JDw"/>
                             <constraint firstAttribute="bottom" secondItem="DG4-UG-rhg" secondAttribute="bottom" id="WeL-Ic-tBi"/>
-                            <constraint firstItem="5ls-WT-lKg" firstAttribute="bottom" secondItem="tjk-Mg-r1I" secondAttribute="bottom" constant="50" id="e1A-w4-xI8"/>
-                            <constraint firstItem="5ls-WT-lKg" firstAttribute="bottom" secondItem="sCA-JS-uty" secondAttribute="bottom" constant="50" id="gtM-mv-RlH"/>
                             <constraint firstItem="DG4-UG-rhg" firstAttribute="top" secondItem="tdo-GS-VhO" secondAttribute="top" id="yD8-qx-1W3"/>
+                            <constraint firstItem="qQF-S3-HPr" firstAttribute="centerX" secondItem="tdo-GS-VhO" secondAttribute="centerX" multiplier="1.5" id="zbE-5l-dfA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5ls-WT-lKg"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="DG4-UG-rhg" id="u3y-K3-ksg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AsJ-DJ-Bug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,6 +144,6 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="64" height="52"/>
-        <image name="photo.fill.on.rectangle.fill" catalog="system" width="64" height="48"/>
+        <image name="icloud.and.arrow.down.fill" catalog="system" width="64" height="56"/>
     </resources>
 </document>

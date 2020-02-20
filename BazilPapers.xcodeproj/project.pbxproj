@@ -52,6 +52,7 @@
 		0087ED6023FB37AE0026EFC1 /* NSPredicate+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ED5423FB37AE0026EFC1 /* NSPredicate+Utils.swift */; };
 		0087ED6223FB39A80026EFC1 /* UIView+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ED6123FB39A80026EFC1 /* UIView+Inspectable.swift */; };
 		0087ED6423FB3AB70026EFC1 /* CGColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ED6323FB3AB70026EFC1 /* CGColor+Utils.swift */; };
+		0087ED6823FF1AF00026EFC1 /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ED6723FF1AF00026EFC1 /* UIImage+GIF.swift */; };
 		00A5CC8823D8EBDF0025A872 /* Catalog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00138DDE23D8E7FD00EBD787 /* Catalog.xcdatamodeld */; };
 		00A964F323D8EFD2005E0417 /* FormFactors.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00A964F123D8EFD2005E0417 /* FormFactors.xcdatamodeld */; };
 		00A964FB23E32828005E0417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A964FA23E32828005E0417 /* AppDelegate.swift */; };
@@ -158,6 +159,7 @@
 		0087ED5423FB37AE0026EFC1 /* NSPredicate+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Utils.swift"; sourceTree = "<group>"; };
 		0087ED6123FB39A80026EFC1 /* UIView+Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Inspectable.swift"; sourceTree = "<group>"; };
 		0087ED6323FB3AB70026EFC1 /* CGColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColor+Utils.swift"; sourceTree = "<group>"; };
+		0087ED6723FF1AF00026EFC1 /* UIImage+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
 		00A964F223D8EFD2005E0417 /* FormFactors.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FormFactors.xcdatamodel; sourceTree = "<group>"; };
 		00A964F823E32828005E0417 /* Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A964FA23E32828005E0417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 				0087ED4A23FB37AD0026EFC1 /* UICollectionView */,
 				0087ED4C23FB37AD0026EFC1 /* UIViewController */,
 				0087ED4F23FB37AD0026EFC1 /* UITableView */,
+				0087ED6723FF1AF00026EFC1 /* UIImage+GIF.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -936,6 +939,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0087ED6823FF1AF00026EFC1 /* UIImage+GIF.swift in Sources */,
 				0087ECBF23FB2BA70026EFC1 /* WallpapersDetailsViewController.swift in Sources */,
 				00A964F323D8EFD2005E0417 /* FormFactors.xcdatamodeld in Sources */,
 				0048C3F123C0F7130086D9D3 /* ButtonTabViewController.swift in Sources */,

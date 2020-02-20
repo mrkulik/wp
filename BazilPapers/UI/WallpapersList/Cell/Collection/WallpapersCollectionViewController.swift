@@ -70,7 +70,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
         let cell = WallpaperCollectionViewCell.dequeueReusableCell(in: self.collectionView, for: indexPath)
         if let url = fetchedResultsController.object(at: indexPath).shortSourceURL {
             let islandRef = gsReference.child(url)
-
+            cell.imageView.sd_imageIndicator = SDWebImageActivityIndicator.whiteLarge
             cell.imageView.sd_setImage(with: islandRef)
         }
         
@@ -98,6 +98,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = WallpapersDetailsViewController.initial()
+        vc.wallpaperInfo = self.fetchedResultsController.object(at: indexPath)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

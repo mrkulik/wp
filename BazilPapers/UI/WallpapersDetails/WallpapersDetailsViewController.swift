@@ -7,24 +7,37 @@
 //
 
 import UIKit
+import CoreData
+import Firebase
+import FirebaseUI
+
 
 class WallpapersDetailsViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    private let gsReference = Storage.storage().reference(forURL: Constant.storageURL)
+    
+    weak var wallpaperInfo: MOWallpaperInfo?
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveButtonPressed(_ sender: Any) {
     }
-    */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let url = wallpaperInfo?.sourceURL {
+            let islandRef = gsReference.child(url)
+            self.imageView.sd_imageIndicator = SDWebImageActivityIndicator.whiteLarge
+            self.imageView.sd_setImage(with: islandRef)
+        }
+    }
 
+}
+
+private struct Constant {
+    static let storageURL: String = "gs://bazillabs-swipepappers.appspot.com"
 }
