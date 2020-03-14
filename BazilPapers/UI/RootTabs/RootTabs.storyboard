@@ -15,31 +15,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-q5-tU4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="814"/>
-                                <connections>
-                                    <segue destination="6g3-C4-XXJ" kind="embed" id="qXo-oQ-OmQ"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-sy-Mvh">
-                                <rect key="frame" x="0.0" y="814" width="414" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="MyI-qj-zLf"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="lm5-3j-tR4" kind="embed" id="PCf-aY-mWn"/>
-                                </connections>
-                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CJ6-DN-BOe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-q5-tU4">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                        <connections>
+                                            <segue destination="6g3-C4-XXJ" kind="embed" id="qXo-oQ-OmQ"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-sy-Mvh">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="MyI-qj-zLf"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="lm5-3j-tR4" kind="embed" id="PCf-aY-mWn"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sjv-sy-Mvh" firstAttribute="top" secondItem="2Cp-q5-tU4" secondAttribute="bottom" id="6Mz-1a-OfA"/>
-                            <constraint firstItem="sjv-sy-Mvh" firstAttribute="leading" secondItem="MEh-EC-Laj" secondAttribute="leading" id="AZ9-QA-Qbm"/>
-                            <constraint firstItem="2Cp-q5-tU4" firstAttribute="leading" secondItem="MEh-EC-Laj" secondAttribute="leading" id="Czm-wF-afA"/>
-                            <constraint firstItem="MEh-EC-Laj" firstAttribute="bottom" secondItem="sjv-sy-Mvh" secondAttribute="bottom" id="Qdw-j0-lnD"/>
-                            <constraint firstItem="MEh-EC-Laj" firstAttribute="trailing" secondItem="2Cp-q5-tU4" secondAttribute="trailing" id="SOn-Vx-K61"/>
-                            <constraint firstItem="MEh-EC-Laj" firstAttribute="trailing" secondItem="sjv-sy-Mvh" secondAttribute="trailing" id="tFK-V7-UyH"/>
-                            <constraint firstItem="2Cp-q5-tU4" firstAttribute="top" secondItem="TYM-Da-V9P" secondAttribute="top" id="uYh-D8-mNW"/>
+                            <constraint firstItem="CJ6-DN-BOe" firstAttribute="top" secondItem="TYM-Da-V9P" secondAttribute="top" id="37L-3e-ihm"/>
+                            <constraint firstItem="CJ6-DN-BOe" firstAttribute="leading" secondItem="MEh-EC-Laj" secondAttribute="leading" id="5u9-Jr-TwV"/>
+                            <constraint firstItem="MEh-EC-Laj" firstAttribute="bottom" secondItem="CJ6-DN-BOe" secondAttribute="bottom" id="nu2-L5-l2o"/>
+                            <constraint firstItem="CJ6-DN-BOe" firstAttribute="trailing" secondItem="MEh-EC-Laj" secondAttribute="trailing" id="t6r-Ug-Xbe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MEh-EC-Laj"/>
                     </view>

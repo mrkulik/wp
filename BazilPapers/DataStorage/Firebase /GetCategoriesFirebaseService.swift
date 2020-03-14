@@ -49,8 +49,12 @@ class GetCategoriesFirebaseService {
     }
     
     private func fillData(local: MOCategory, remote: RemoteCategory) {
-        local.id = remote.id
-        local.title = remote.title
+        if local.id != remote.id {
+            local.id = remote.id
+        }
+        if local.title != remote.title {
+            local.title = remote.title
+        }
     }
     
     func observeConfigsCatalogWithSingleEvent() {

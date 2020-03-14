@@ -134,7 +134,9 @@
                         <viewLayoutGuide key="safeArea" id="5ls-WT-lKg"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="vo6-hW-BGs" id="Cqg-jr-LXv"/>
                         <outlet property="imageView" destination="DG4-UG-rhg" id="u3y-K3-ksg"/>
+                        <outlet property="saveButton" destination="D2m-5d-Ryg" id="fZs-WH-tD2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AsJ-DJ-Bug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
