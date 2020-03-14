@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000BCD85241D7CD500DE8207 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000BCD84241D7CD500DE8207 /* C.swift */; };
 		00138DE223D8E7FD00EBD787 /* NSPersistentContainer+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DDD23D8E7FD00EBD787 /* NSPersistentContainer+Models.swift */; };
 		00138DE423D8E7FD00EBD787 /* DataStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE023D8E7FD00EBD787 /* DataStorageProvider.swift */; };
 		00138DE523D8E7FD00EBD787 /* PersistentContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE123D8E7FD00EBD787 /* PersistentContainerController.swift */; };
@@ -107,6 +108,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000BCD84241D7CD500DE8207 /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		00138DDD23D8E7FD00EBD787 /* NSPersistentContainer+Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPersistentContainer+Models.swift"; sourceTree = "<group>"; };
 		00138DDF23D8E7FD00EBD787 /* Catalog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catalog.xcdatamodel; sourceTree = "<group>"; };
 		00138DE023D8E7FD00EBD787 /* DataStorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorageProvider.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 				0064924023BFC02E00DE8E71 /* LaunchScreen.storyboard */,
 				0064924323BFC02E00DE8E71 /* Info.plist */,
 				0048C3F423C3DB230086D9D3 /* GoogleService-Info.plist */,
+				000BCD84241D7CD500DE8207 /* C.swift */,
 			);
 			path = DevEnviroment;
 			sourceTree = "<group>";
@@ -964,6 +967,7 @@
 				0087ED5F23FB37AE0026EFC1 /* UIDevice+SystemInfo.swift in Sources */,
 				00A9652923EA1A39005E0417 /* GetFormfactorsFirebaseService.swift in Sources */,
 				0048C3F323C0F7A40086D9D3 /* TintButtonTabViewController.swift in Sources */,
+				000BCD85241D7CD500DE8207 /* C.swift in Sources */,
 				0087ED5523FB37AE0026EFC1 /* NSManagedObjectContext+Utils.swift in Sources */,
 				004CD87D23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift in Sources */,
 				00138DE223D8E7FD00EBD787 /* NSPersistentContainer+Models.swift in Sources */,

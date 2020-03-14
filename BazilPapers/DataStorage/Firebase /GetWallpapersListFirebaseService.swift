@@ -12,7 +12,7 @@ import CoreData
 
 
 class GetWallpapersListFirebaseService {
-    private let dbConfigsCatalogReference: DatabaseReference = Database.database(url: Constant.configsCatalogURL).reference()
+    private let dbConfigsCatalogReference: DatabaseReference = Database.database(url: C.configsCatalogURL).reference()
     
     private var categoriesReferencePath: DatabaseReference {
         return dbConfigsCatalogReference.child("catalog").child("pictures")
@@ -76,8 +76,4 @@ class GetWallpapersListFirebaseService {
         }
     }
     
-}
-
-private struct Constant {
-    static let configsCatalogURL: String = "https://configs-catalog.firebaseio.com/"
 }

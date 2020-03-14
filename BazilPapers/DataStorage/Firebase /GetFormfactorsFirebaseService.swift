@@ -12,7 +12,7 @@ import CoreData
 
 
 class GetFormfactorsFirebaseService {
-    private let dbConfigsFormFactorsReference: DatabaseReference = Database.database(url: Constant.configsFormFactorsURL).reference()
+    private let dbConfigsFormFactorsReference: DatabaseReference = Database.database(url: C.configsFormFactorsURL).reference()
     
     private var formFactorsReferencePath: DatabaseReference {
         return dbConfigsFormFactorsReference
@@ -55,8 +55,4 @@ class GetFormfactorsFirebaseService {
         }
     }
     
-}
-
-private struct Constant {
-    static let configsFormFactorsURL: String = "https://configs-form-factors.firebaseio.com/"
 }

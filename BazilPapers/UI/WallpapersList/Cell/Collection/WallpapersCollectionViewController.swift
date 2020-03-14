@@ -13,7 +13,7 @@ import FirebaseUI
 
 class WallpapersCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    private let gsReference = Storage.storage().reference(forURL: Constant.storageURL)
+    private let gsReference = Storage.storage().reference(forURL: C.storageURL)
     
     private let catalogContext = DataStorageProvider.sharedCatalogModelController.container.viewContext
     
@@ -113,5 +113,4 @@ private struct Constant {
     static let collectionMargin: CGFloat = 16.0
     static let itemSpacing: CGFloat = 16.0
     static let iphoneScreenAspectRatio: CGFloat = 640.0 / 960.0
-    static let storageURL: String = "gs://bazillabs-swipepappers.appspot.com"
 }

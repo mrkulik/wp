@@ -15,7 +15,7 @@ import Photos
 
 class WallpapersDetailsViewController: UIViewController {
     
-    private let gsReference = Storage.storage().reference(forURL: Constant.storageURL)
+    private let gsReference = Storage.storage().reference(forURL: C.storageURL)
     
     weak var wallpaperInfo: MOWallpaperInfo?
     
@@ -125,6 +125,5 @@ class WallpapersDetailsViewController: UIViewController {
 }
 
 private struct Constant {
-    static let storageURL: String = "gs://bazillabs-swipepappers.appspot.com"
     static let assetCollectionName: String = "SwipePapers"
 }

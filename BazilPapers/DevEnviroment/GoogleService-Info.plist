@@ -17,17 +17,17 @@
 	<key>PROJECT_ID</key>
 	<string>bazillabs-swipepappers</string>
 	<key>STORAGE_BUCKET</key>
-	<string>bazillabs-swipepappers.appspot.com</string>
+	<string>bazillabs-swipepappers-img-dev-tokio</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:786670549124:ios:83306d871dd92a0c18aad1</string>
 	<key>DATABASE_URL</key>
