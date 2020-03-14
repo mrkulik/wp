@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		000BCD85241D7CD500DE8207 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000BCD84241D7CD500DE8207 /* C.swift */; };
+		000BCD87241D844E00DE8207 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 000BCD86241D844D00DE8207 /* GoogleService-Info.plist */; };
 		00138DE223D8E7FD00EBD787 /* NSPersistentContainer+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DDD23D8E7FD00EBD787 /* NSPersistentContainer+Models.swift */; };
 		00138DE423D8E7FD00EBD787 /* DataStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE023D8E7FD00EBD787 /* DataStorageProvider.swift */; };
 		00138DE523D8E7FD00EBD787 /* PersistentContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE123D8E7FD00EBD787 /* PersistentContainerController.swift */; };
@@ -22,7 +23,6 @@
 		0048C3EB23C0EA020086D9D3 /* WallpapersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3EA23C0EA020086D9D3 /* WallpapersCollectionViewController.swift */; };
 		0048C3F123C0F7130086D9D3 /* ButtonTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3F023C0F7130086D9D3 /* ButtonTabViewController.swift */; };
 		0048C3F323C0F7A40086D9D3 /* TintButtonTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3F223C0F7A40086D9D3 /* TintButtonTabViewController.swift */; };
-		0048C3F523C3DB230086D9D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0048C3F423C3DB230086D9D3 /* GoogleService-Info.plist */; };
 		0048C3F723C3DDC50086D9D3 /* LabelButtonTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3F623C3DDC50086D9D3 /* LabelButtonTabViewController.swift */; };
 		0048C3F923C3DDE90086D9D3 /* TintLabelButtonTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3F823C3DDE90086D9D3 /* TintLabelButtonTabViewController.swift */; };
 		004CD87723CD1730002B8092 /* GetCategoriesFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004CD87623CD1730002B8092 /* GetCategoriesFirebaseService.swift */; };
@@ -109,6 +109,7 @@
 
 /* Begin PBXFileReference section */
 		000BCD84241D7CD500DE8207 /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
+		000BCD86241D844D00DE8207 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00138DDD23D8E7FD00EBD787 /* NSPersistentContainer+Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPersistentContainer+Models.swift"; sourceTree = "<group>"; };
 		00138DDF23D8E7FD00EBD787 /* Catalog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catalog.xcdatamodel; sourceTree = "<group>"; };
 		00138DE023D8E7FD00EBD787 /* DataStorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorageProvider.swift; sourceTree = "<group>"; };
@@ -124,7 +125,6 @@
 		0048C3EA23C0EA020086D9D3 /* WallpapersCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpapersCollectionViewController.swift; sourceTree = "<group>"; };
 		0048C3F023C0F7130086D9D3 /* ButtonTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTabViewController.swift; sourceTree = "<group>"; };
 		0048C3F223C0F7A40086D9D3 /* TintButtonTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintButtonTabViewController.swift; sourceTree = "<group>"; };
-		0048C3F423C3DB230086D9D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0048C3F623C3DDC50086D9D3 /* LabelButtonTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButtonTabViewController.swift; sourceTree = "<group>"; };
 		0048C3F823C3DDE90086D9D3 /* TintLabelButtonTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintLabelButtonTabViewController.swift; sourceTree = "<group>"; };
 		004CD87623CD1730002B8092 /* GetCategoriesFirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesFirebaseService.swift; sourceTree = "<group>"; };
@@ -421,7 +421,7 @@
 				0064923723BFC02800DE8E71 /* SceneDelegate.swift */,
 				0064924023BFC02E00DE8E71 /* LaunchScreen.storyboard */,
 				0064924323BFC02E00DE8E71 /* Info.plist */,
-				0048C3F423C3DB230086D9D3 /* GoogleService-Info.plist */,
+				000BCD86241D844D00DE8207 /* GoogleService-Info.plist */,
 				000BCD84241D7CD500DE8207 /* C.swift */,
 			);
 			path = DevEnviroment;
@@ -784,11 +784,11 @@
 				0048C3D623C0D0350086D9D3 /* WallpapersListTableViewCell.xib in Resources */,
 				0064924223BFC02E00DE8E71 /* LaunchScreen.storyboard in Resources */,
 				0087ECC123FB2BB60026EFC1 /* WallpapersDetails.storyboard in Resources */,
+				000BCD87241D844E00DE8207 /* GoogleService-Info.plist in Resources */,
 				00F4C72823BFDE6A00239BAA /* LikedWallpapers.storyboard in Resources */,
 				00F4C65F23BFD98E00239BAA /* RootTabButtons.storyboard in Resources */,
 				0048C3E723C0D6C70086D9D3 /* WallpapersCollection.storyboard in Resources */,
 				00F4C72423BFDE4E00239BAA /* WallpapersList.storyboard in Resources */,
-				0048C3F523C3DB230086D9D3 /* GoogleService-Info.plist in Resources */,
 				0048C3E523C0D5A90086D9D3 /* WallpaperCollectionViewCell.xib in Resources */,
 				0064923F23BFC02E00DE8E71 /* Assets.xcassets in Resources */,
 			);
