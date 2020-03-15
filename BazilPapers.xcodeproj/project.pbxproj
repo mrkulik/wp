@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		000BCD85241D7CD500DE8207 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000BCD84241D7CD500DE8207 /* C.swift */; };
 		000BCD87241D844E00DE8207 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 000BCD86241D844D00DE8207 /* GoogleService-Info.plist */; };
+		000BCD8A241D851800DE8207 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000BCD89241D851800DE8207 /* IAPManager.swift */; };
 		00138DE223D8E7FD00EBD787 /* NSPersistentContainer+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DDD23D8E7FD00EBD787 /* NSPersistentContainer+Models.swift */; };
 		00138DE423D8E7FD00EBD787 /* DataStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE023D8E7FD00EBD787 /* DataStorageProvider.swift */; };
 		00138DE523D8E7FD00EBD787 /* PersistentContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE123D8E7FD00EBD787 /* PersistentContainerController.swift */; };
@@ -110,6 +111,7 @@
 /* Begin PBXFileReference section */
 		000BCD84241D7CD500DE8207 /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		000BCD86241D844D00DE8207 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		000BCD89241D851800DE8207 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		00138DDD23D8E7FD00EBD787 /* NSPersistentContainer+Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPersistentContainer+Models.swift"; sourceTree = "<group>"; };
 		00138DDF23D8E7FD00EBD787 /* Catalog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catalog.xcdatamodel; sourceTree = "<group>"; };
 		00138DE023D8E7FD00EBD787 /* DataStorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorageProvider.swift; sourceTree = "<group>"; };
@@ -246,6 +248,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000BCD88241D850100DE8207 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				000BCD89241D851800DE8207 /* IAPManager.swift */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
 		00138DDC23D8E7FD00EBD787 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +374,7 @@
 		0064923423BFC02800DE8E71 /* BazilPapers */ = {
 			isa = PBXGroup;
 			children = (
+				000BCD88241D850100DE8207 /* IAP */,
 				0064926C23BFC33500DE8E71 /* UI */,
 				00BEBA9923C90DBE007EE66D /* DataStorage */,
 				0048C3ED23C0F6840086D9D3 /* Helpers */,
@@ -978,6 +989,7 @@
 				0064923823BFC02800DE8E71 /* SceneDelegate.swift in Sources */,
 				0087ED5A23FB37AE0026EFC1 /* UICollectionViewCell+Utils.swift in Sources */,
 				0048C3D123C0CE450086D9D3 /* WallpapersListTableViewController.swift in Sources */,
+				000BCD8A241D851800DE8207 /* IAPManager.swift in Sources */,
 				0087ED6023FB37AE0026EFC1 /* NSPredicate+Utils.swift in Sources */,
 				0087ED5B23FB37AE0026EFC1 /* UIViewController+Child.swift in Sources */,
 				0087ED5C23FB37AE0026EFC1 /* UIViewController+Instance.swift in Sources */,

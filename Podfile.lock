@@ -287,6 +287,7 @@ PODS:
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
+  - SwiftyStoreKit (0.15.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
@@ -296,6 +297,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - FirebaseUI/Storage
+  - SwiftyStoreKit
 
 SPEC REPOS:
   trunk:
@@ -324,6 +326,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - SDWebImage
+    - SwiftyStoreKit
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -351,7 +354,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
 
-PODFILE CHECKSUM: de5efc598bf04b1efee5295994c2c5d9459ac7e2
+PODFILE CHECKSUM: 00991c5e846f844f15ec2816c791e49e08a33e45
 
 COCOAPODS: 1.8.4
