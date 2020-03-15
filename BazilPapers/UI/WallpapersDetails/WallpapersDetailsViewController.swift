@@ -25,7 +25,7 @@ class WallpapersDetailsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func backButtonPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.presentingViewController?.dismiss(animated: true)
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {

@@ -24,7 +24,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="2bh-VW-pwc" secondAttribute="bottom" constant="2" id="P9G-Ld-FQZ"/>
                             <constraint firstItem="2bh-VW-pwc" firstAttribute="top" secondItem="Mf0-Tb-uGe" secondAttribute="top" constant="2" id="iOx-Wc-tKh"/>

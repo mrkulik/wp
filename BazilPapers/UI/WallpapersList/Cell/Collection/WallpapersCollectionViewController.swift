@@ -98,8 +98,10 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = WallpapersDetailsViewController.initial()
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
         vc.wallpaperInfo = self.fetchedResultsController.object(at: indexPath)
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.present(vc, animated: true)
     }
 }
 
