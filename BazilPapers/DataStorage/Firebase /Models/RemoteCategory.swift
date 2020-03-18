@@ -15,6 +15,19 @@ struct RemoteCategory {
     
     init(from dict: [String : Any]) {
         self.id = dict["id"] as? Int32
-        self.title = dict["key"] as? String
+        let key = dict["key"] as? String
+        let i18n = dict["i18n"] as? [String : Any]
+        let languageCode = Locale.current.languageCode ?? Constant.defaultLanguageCode
+        if let title = i18n?[languageCode] as? String {
+            self.title = title
+        }
+        else {
+            self.title = i18n?[Constant.defaultLanguageCode] as? String
+        }
     }
+}
+
+
+private struct Constant {
+    static let defaultLanguageCode = "en"
 }
