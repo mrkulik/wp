@@ -207,7 +207,30 @@ extension WallpapersDetailsCollectionViewController {
 extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewControllerActionPerformer {
     
     func didPressedSaveButton(_ sender: UIButton) {
+        if let ip = self.collectionView.centerCellIndexPath,
+            let c = self.collectionView.cellForItem(at: ip) as? WallpapersDetailsCollectionViewCell,
+        let image = c.imageView.image {
+            saveImageToAlbum(image, name: Constant.assetCollectionName)
+        }
         
     }
     
+}
+
+extension UICollectionView {
+
+var centerPoint : CGPoint {
+
+    get {
+        return CGPoint(x: self.center.x + self.contentOffset.x, y: self.center.y + self.contentOffset.y);
+    }
+}
+
+var centerCellIndexPath: IndexPath? {
+
+    if let centerIndexPath = self.indexPathForItem(at: self.centerPoint) {
+        return centerIndexPath
+    }
+    return nil
+}
 }
