@@ -12,6 +12,7 @@ import Foundation
 struct RemoteCategory {
     var id: Int32!
     var title: String?
+    var iconURL: String?
     
     init(from dict: [String : Any]) {
         self.id = dict["id"] as? Int32
@@ -24,6 +25,9 @@ struct RemoteCategory {
         else {
             self.title = i18n?[Constant.defaultLanguageCode] as? String
         }
+        let icon = dict["icon"] as? [String : Any]
+        let iconURL = icon?["uri"] as? String
+        self.iconURL = iconURL
     }
 }
 

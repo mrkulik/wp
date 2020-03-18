@@ -15,6 +15,7 @@ class WallpapersListTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionContainerView: UIView!
     
     @IBOutlet weak var categoryTitleLabel: UILabel!
+    @IBOutlet weak var categoryImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -8,11 +8,15 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FirebaseUI
 
 
 class WallpapersListTableViewController: UITableViewController {
 
     private let catalogContext = DataStorageProvider.sharedCatalogModelController.container.viewContext
+    
+    private let gsReference = Storage.storage().reference(forURL: C.storageURL)
     
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<MOCategory> = {
         let fetchRequest: NSFetchRequest<MOCategory> = MOCategory.fetchRequest()
@@ -66,6 +70,11 @@ class WallpapersListTableViewController: UITableViewController {
         
         cell.selectionStyle = .none
         cell.categoryTitleLabel.text = category.title
+        if let url = category.iconURL {
+            let islandRef = gsReference.child(url)
+            cell.categoryImageView.sd_imageIndicator = SDWebImageActivityIndicator.white
+            cell.categoryImageView.sd_setImage(with: islandRef)
+        }
         return cell
     }
     
