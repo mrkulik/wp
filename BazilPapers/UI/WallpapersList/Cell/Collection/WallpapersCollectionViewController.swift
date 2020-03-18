@@ -80,7 +80,6 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemHeight = view.frame.height
         let itemWidth = itemHeight * Constant.iphoneScreenAspectRatio
-        
         return CGSize(width: itemWidth, height: itemHeight)
     }
     
@@ -98,8 +97,11 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = WallpapersDetailsViewController.initial()
+        vc.category = self.category
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
+        let p = self.fetchedResultsController.fetchedObjects
+        
         vc.wallpaperInfo = self.fetchedResultsController.object(at: indexPath)
         self.present(vc, animated: true)
     }

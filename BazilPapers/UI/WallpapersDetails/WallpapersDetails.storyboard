@@ -15,10 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DG4-UG-rhg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvI-hJ-obw">
                                 <rect key="frame" x="73.5" y="752" width="60" height="60"/>
                                 <subviews>
@@ -119,29 +115,59 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="_clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Il2-8q-Tpr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="AWe-PX-hAn" kind="embed" id="ALo-L6-YHX"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Il2-8q-Tpr" firstAttribute="top" secondItem="tdo-GS-VhO" secondAttribute="top" id="0mg-Za-L2P"/>
+                            <constraint firstAttribute="trailing" secondItem="Il2-8q-Tpr" secondAttribute="trailing" id="3HT-KN-OI6"/>
                             <constraint firstItem="nvI-hJ-obw" firstAttribute="centerX" secondItem="tdo-GS-VhO" secondAttribute="centerX" multiplier="0.5" id="Bun-Ot-UDO"/>
                             <constraint firstItem="5ls-WT-lKg" firstAttribute="bottom" secondItem="nvI-hJ-obw" secondAttribute="bottom" constant="50" id="GV6-3A-1bB"/>
-                            <constraint firstAttribute="trailing" secondItem="DG4-UG-rhg" secondAttribute="trailing" id="JO2-3p-R5V"/>
+                            <constraint firstAttribute="bottom" secondItem="Il2-8q-Tpr" secondAttribute="bottom" id="Kv7-PO-rdD"/>
                             <constraint firstItem="5ls-WT-lKg" firstAttribute="bottom" secondItem="qQF-S3-HPr" secondAttribute="bottom" constant="50" id="S6T-wZ-ng9"/>
-                            <constraint firstItem="DG4-UG-rhg" firstAttribute="leading" secondItem="tdo-GS-VhO" secondAttribute="leading" id="WBz-PF-JDw"/>
-                            <constraint firstAttribute="bottom" secondItem="DG4-UG-rhg" secondAttribute="bottom" id="WeL-Ic-tBi"/>
-                            <constraint firstItem="DG4-UG-rhg" firstAttribute="top" secondItem="tdo-GS-VhO" secondAttribute="top" id="yD8-qx-1W3"/>
+                            <constraint firstItem="Il2-8q-Tpr" firstAttribute="leading" secondItem="tdo-GS-VhO" secondAttribute="leading" id="XOh-82-HjS"/>
                             <constraint firstItem="qQF-S3-HPr" firstAttribute="centerX" secondItem="tdo-GS-VhO" secondAttribute="centerX" multiplier="1.5" id="zbE-5l-dfA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5ls-WT-lKg"/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="vo6-hW-BGs" id="Cqg-jr-LXv"/>
-                        <outlet property="imageView" destination="DG4-UG-rhg" id="u3y-K3-ksg"/>
                         <outlet property="saveButton" destination="D2m-5d-Ryg" id="fZs-WH-tD2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AsJ-DJ-Bug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5.7971014492753632" y="92.410714285714278"/>
+        </scene>
+        <!--Wallpapers Details Collection View Controller-->
+        <scene sceneID="rsw-ZX-pwJ">
+            <objects>
+                <collectionViewController id="AWe-PX-hAn" customClass="WallpapersDetailsCollectionViewController" customModule="BazilPapers" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" id="zud-vE-Q6d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="sDt-9s-1G7">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="AWe-PX-hAn" id="uG1-1k-Kih"/>
+                            <outlet property="delegate" destination="AWe-PX-hAn" id="WcS-m3-ESJ"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCn-2H-dXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="92"/>
         </scene>
     </scenes>
     <resources>
