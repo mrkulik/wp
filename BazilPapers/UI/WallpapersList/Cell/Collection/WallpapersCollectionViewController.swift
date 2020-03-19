@@ -20,7 +20,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<MOWallpaperInfo> = {
         let fetchRequest: NSFetchRequest<MOWallpaperInfo> = MOWallpaperInfo.fetchRequest()
         
-        let sortDescriptor = NSSortDescriptor(key: #keyPath(MOWallpaperInfo.id), ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(MOWallpaperInfo.order), ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         if let id = category?.id {

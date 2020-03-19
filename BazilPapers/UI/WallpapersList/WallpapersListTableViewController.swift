@@ -21,7 +21,7 @@ class WallpapersListTableViewController: UITableViewController {
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<MOCategory> = {
         let fetchRequest: NSFetchRequest<MOCategory> = MOCategory.fetchRequest()
 
-        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(MOCategory.order), ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
 
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.catalogContext, sectionNameKeyPath: nil, cacheName: nil)
@@ -47,17 +47,17 @@ class WallpapersListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return fetchedResultsController.fetchedObjects?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.view.frame.size.height / 2.3
+        let itemWidth = (self.view.frame.size.width + 16.0 * 3) / 2.5
+        let height = itemWidth / Constant.iphoneScreenAspectRatio
+        return height
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -91,4 +91,9 @@ extension WallpapersListTableViewController: NSFetchedResultsControllerDelegate 
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         tableView.reloadData()
     }
+}
+
+
+private struct Constant {
+    static let iphoneScreenAspectRatio: CGFloat = 640.0 / 960.0
 }

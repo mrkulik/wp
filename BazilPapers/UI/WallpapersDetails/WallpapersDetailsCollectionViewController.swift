@@ -23,7 +23,7 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<MOWallpaperInfo> = {
         let fetchRequest: NSFetchRequest<MOWallpaperInfo> = MOWallpaperInfo.fetchRequest()
         
-        let sortDescriptor = NSSortDescriptor(key: #keyPath(MOWallpaperInfo.id), ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(MOWallpaperInfo.order), ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         if let id = category?.id {
@@ -133,6 +133,32 @@ private struct Constant {
 extension WallpapersDetailsCollectionViewController {
     func saveImageToAlbum(_ image: UIImage, name: String) {
 
+        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        switch photoAuthorizationStatus {
+        case .authorized:
+            save(image, name)
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({ [weak self]
+                (newStatus) in
+                DispatchQueue.main.async {
+                    if newStatus ==  PHAuthorizationStatus.authorized {
+                        self?.save(image, name)
+                    }else{
+                        print("User denied")
+                    }
+                }})
+            break
+        case .restricted:
+            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+            break
+        case .denied:
+            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+            break
+        }
+        
+    }
+
+    func save(_ image: UIImage, _ name: String) {
         if let collection = fetchAssetCollection(name) {
             self.saveImageToAssetCollection(image, collection: collection)
         } else {

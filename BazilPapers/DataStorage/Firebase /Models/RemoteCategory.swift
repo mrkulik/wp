@@ -13,6 +13,7 @@ struct RemoteCategory {
     var id: Int32!
     var title: String?
     var iconURL: String?
+    var order: Int32
     
     init(from dict: [String : Any]) {
         self.id = dict["id"] as? Int32
@@ -28,6 +29,7 @@ struct RemoteCategory {
         let icon = dict["icon"] as? [String : Any]
         let iconURL = icon?["uri"] as? String
         self.iconURL = iconURL
+        self.order = dict["order"] as? Int32 ?? .max
     }
 }
 

@@ -58,6 +58,9 @@ class GetCategoriesFirebaseService {
         if local.iconURL != remote.iconURL {
             local.iconURL = remote.iconURL
         }
+        if local.order != remote.order {
+            local.order = remote.order
+        }
     }
     
     func observeConfigsCatalogWithSingleEvent() {

@@ -58,6 +58,7 @@ class GetWallpapersListFirebaseService {
         local.id = remote.id
         local.sourceURL = remote.source?.url
         local.shortSourceURL = remote.shortSource?.url
+        local.order = remote.order
         local.category = moCategories.filter { (category) -> Bool in
             return category.id == remote.categoryID
         }.first

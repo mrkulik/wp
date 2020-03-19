@@ -14,6 +14,7 @@ struct RemoteWallpaperInfo {
     var categoryID: Int32?
     var source: RemoteWallpaperSource?
     var shortSource: RemoteWallpaperSource?
+    var order: Int32
     
     init(from dict: [String : Any]) {
         self.id = dict["id"] as? Int32
@@ -29,6 +30,7 @@ struct RemoteWallpaperInfo {
         })
         
         self.shortSource = RemoteWallpaperSource(from: shortSource)
+        self.order = dict["order"] as? Int32 ?? .max
         
         guard let deviceFormFactor = UserDefaults.standard.object(forKey: "formFactor") as? String else {
             return
