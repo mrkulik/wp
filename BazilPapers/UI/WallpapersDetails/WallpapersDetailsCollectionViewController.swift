@@ -143,7 +143,7 @@ extension WallpapersDetailsCollectionViewController {
                 DispatchQueue.main.async {
                     if newStatus ==  PHAuthorizationStatus.authorized {
                         self?.save(image, name)
-                    }else{
+                    } else {
                         print("User denied")
                     }
                 }})
