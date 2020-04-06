@@ -58,6 +58,7 @@
 		0087ED6223FB39A80026EFC1 /* UIView+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ED6123FB39A80026EFC1 /* UIView+Inspectable.swift */; };
 		0087ED6423FB3AB70026EFC1 /* CGColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ED6323FB3AB70026EFC1 /* CGColor+Utils.swift */; };
 		0087ED6823FF1AF00026EFC1 /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ED6723FF1AF00026EFC1 /* UIImage+GIF.swift */; };
+		009CF8A1243B182700003FB5 /* IAPSelector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009CF8A0243B182700003FB5 /* IAPSelector.storyboard */; };
 		00A5CC8823D8EBDF0025A872 /* Catalog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00138DDE23D8E7FD00EBD787 /* Catalog.xcdatamodeld */; };
 		00A964F323D8EFD2005E0417 /* FormFactors.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00A964F123D8EFD2005E0417 /* FormFactors.xcdatamodeld */; };
 		00A964FB23E32828005E0417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A964FA23E32828005E0417 /* AppDelegate.swift */; };
@@ -170,6 +171,7 @@
 		0087ED6123FB39A80026EFC1 /* UIView+Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Inspectable.swift"; sourceTree = "<group>"; };
 		0087ED6323FB3AB70026EFC1 /* CGColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColor+Utils.swift"; sourceTree = "<group>"; };
 		0087ED6723FF1AF00026EFC1 /* UIImage+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
+		009CF8A0243B182700003FB5 /* IAPSelector.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IAPSelector.storyboard; sourceTree = "<group>"; };
 		00A964F223D8EFD2005E0417 /* FormFactors.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FormFactors.xcdatamodel; sourceTree = "<group>"; };
 		00A964F823E32828005E0417 /* Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A964FA23E32828005E0417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 		0064926C23BFC33500DE8E71 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				009CF89E243B17FA00003FB5 /* IAP */,
 				00F4C72223BFDE3000239BAA /* LikedWallpapers */,
 				0087ECBD23FB2A760026EFC1 /* WallpapersDetails */,
 				00F4C72123BFDE2700239BAA /* WallpapersList */,
@@ -521,6 +524,22 @@
 				0087ED5323FB37AE0026EFC1 /* UIDevice+SystemInfo.swift */,
 			);
 			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		009CF89E243B17FA00003FB5 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				009CF89F243B181000003FB5 /* IAPSelector */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
+		009CF89F243B181000003FB5 /* IAPSelector */ = {
+			isa = PBXGroup;
+			children = (
+				009CF8A0243B182700003FB5 /* IAPSelector.storyboard */,
+			);
+			path = IAPSelector;
 			sourceTree = "<group>";
 		};
 		00A964F923E32828005E0417 /* Playground */ = {
@@ -815,6 +834,7 @@
 				000BCD87241D844E00DE8207 /* GoogleService-Info.plist in Resources */,
 				00F4C72823BFDE6A00239BAA /* LikedWallpapers.storyboard in Resources */,
 				00F4C65F23BFD98E00239BAA /* RootTabButtons.storyboard in Resources */,
+				009CF8A1243B182700003FB5 /* IAPSelector.storyboard in Resources */,
 				0048C3E723C0D6C70086D9D3 /* WallpapersCollection.storyboard in Resources */,
 				00F4C72423BFDE4E00239BAA /* WallpapersList.storyboard in Resources */,
 				006F993B242013FB0007E99B /* WallpapersDetailsCollectionViewCell.xib in Resources */,
