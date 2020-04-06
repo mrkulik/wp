@@ -68,6 +68,12 @@
 		00A9650423E3282F005E0417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A9650323E3282F005E0417 /* Assets.xcassets */; };
 		00A9650723E3282F005E0417 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A9650523E3282F005E0417 /* LaunchScreen.storyboard */; };
 		00A9652923EA1A39005E0417 /* GetFormfactorsFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9652823EA1A39005E0417 /* GetFormfactorsFirebaseService.swift */; };
+		00E772C5243B3449006250FF /* IAPSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E772C4243B3449006250FF /* IAPSelectorViewController.swift */; };
+		00E772C7243B3EF5006250FF /* IAP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E772C6243B3EF5006250FF /* IAP.storyboard */; };
+		00E772C9243B3EFF006250FF /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E772C8243B3EFF006250FF /* IAPViewController.swift */; };
+		00E772CB243B4A5B006250FF /* IAP.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E772CA243B4A5B006250FF /* IAP.xcassets */; };
+		00E772CF243B4D27006250FF /* UseBottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E772CD243B4D27006250FF /* UseBottomButton.swift */; };
+		00E772D0243B4D27006250FF /* CommonButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E772CE243B4D27006250FF /* CommonButtonViewController.swift */; };
 		00F4C65F23BFD98E00239BAA /* RootTabButtons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F4C65E23BFD98E00239BAA /* RootTabButtons.storyboard */; };
 		00F4C66123BFD9A000239BAA /* RootTabButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4C66023BFD9A000239BAA /* RootTabButtonViewController.swift */; };
 		00F4C71B23BFDBFB00239BAA /* RootTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4C71A23BFDBFB00239BAA /* RootTabsViewController.swift */; };
@@ -188,6 +194,12 @@
 		00BEBAAC23C91FBE007EE66D /* DataStorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorageProvider.swift; sourceTree = "<group>"; };
 		00BEBAAE23C91FCB007EE66D /* NSPersistentContainer+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPersistentContainer+Models.swift"; sourceTree = "<group>"; };
 		00BEBAB023C91FD6007EE66D /* PersistentContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainerController.swift; sourceTree = "<group>"; };
+		00E772C4243B3449006250FF /* IAPSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPSelectorViewController.swift; sourceTree = "<group>"; };
+		00E772C6243B3EF5006250FF /* IAP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IAP.storyboard; sourceTree = "<group>"; };
+		00E772C8243B3EFF006250FF /* IAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
+		00E772CA243B4A5B006250FF /* IAP.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = IAP.xcassets; sourceTree = "<group>"; };
+		00E772CD243B4D27006250FF /* UseBottomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseBottomButton.swift; sourceTree = "<group>"; };
+		00E772CE243B4D27006250FF /* CommonButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonButtonViewController.swift; sourceTree = "<group>"; };
 		00F4C65E23BFD98E00239BAA /* RootTabButtons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootTabButtons.storyboard; sourceTree = "<group>"; };
 		00F4C66023BFD9A000239BAA /* RootTabButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabButtonViewController.swift; sourceTree = "<group>"; };
 		00F4C71A23BFDBFB00239BAA /* RootTabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabsViewController.swift; sourceTree = "<group>"; };
@@ -336,6 +348,7 @@
 		0048C3EE23C0F6F30086D9D3 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				00E772CC243B4D27006250FF /* UseBottomButton */,
 				0048C3EF23C0F6FD0086D9D3 /* ButtonTabViewController */,
 			);
 			path = UIKit;
@@ -530,6 +543,9 @@
 			isa = PBXGroup;
 			children = (
 				009CF89F243B181000003FB5 /* IAPSelector */,
+				00E772C6243B3EF5006250FF /* IAP.storyboard */,
+				00E772C8243B3EFF006250FF /* IAPViewController.swift */,
+				00E772CA243B4A5B006250FF /* IAP.xcassets */,
 			);
 			path = IAP;
 			sourceTree = "<group>";
@@ -538,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				009CF8A0243B182700003FB5 /* IAPSelector.storyboard */,
+				00E772C4243B3449006250FF /* IAPSelectorViewController.swift */,
 			);
 			path = IAPSelector;
 			sourceTree = "<group>";
@@ -585,6 +602,15 @@
 				00BEBAB023C91FD6007EE66D /* PersistentContainerController.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		00E772CC243B4D27006250FF /* UseBottomButton */ = {
+			isa = PBXGroup;
+			children = (
+				00E772CD243B4D27006250FF /* UseBottomButton.swift */,
+				00E772CE243B4D27006250FF /* CommonButtonViewController.swift */,
+			);
+			path = UseBottomButton;
 			sourceTree = "<group>";
 		};
 		00F4C65C23BFD75800239BAA /* RootTabButtons */ = {
@@ -828,8 +854,10 @@
 			files = (
 				0064926623BFC16100DE8E71 /* RootNavigation.storyboard in Resources */,
 				00F4C71D23BFDC0400239BAA /* RootTabs.storyboard in Resources */,
+				00E772CB243B4A5B006250FF /* IAP.xcassets in Resources */,
 				0048C3D623C0D0350086D9D3 /* WallpapersListTableViewCell.xib in Resources */,
 				0064924223BFC02E00DE8E71 /* LaunchScreen.storyboard in Resources */,
+				00E772C7243B3EF5006250FF /* IAP.storyboard in Resources */,
 				0087ECC123FB2BB60026EFC1 /* WallpapersDetails.storyboard in Resources */,
 				000BCD87241D844E00DE8207 /* GoogleService-Info.plist in Resources */,
 				00F4C72823BFDE6A00239BAA /* LikedWallpapers.storyboard in Resources */,
@@ -995,7 +1023,10 @@
 				0087ECBF23FB2BA70026EFC1 /* WallpapersDetailsViewController.swift in Sources */,
 				00A964F323D8EFD2005E0417 /* FormFactors.xcdatamodeld in Sources */,
 				0048C3F123C0F7130086D9D3 /* ButtonTabViewController.swift in Sources */,
+				00E772CF243B4D27006250FF /* UseBottomButton.swift in Sources */,
+				00E772C5243B3449006250FF /* IAPSelectorViewController.swift in Sources */,
 				0064926A23BFC25600DE8E71 /* RootNavigation.swift in Sources */,
+				00E772D0243B4D27006250FF /* CommonButtonViewController.swift in Sources */,
 				0048C3F923C3DDE90086D9D3 /* TintLabelButtonTabViewController.swift in Sources */,
 				006F993A242013FB0007E99B /* WallpapersDetailsCollectionViewCell.swift in Sources */,
 				0064926823BFC17300DE8E71 /* RootNavigationViewController.swift in Sources */,
@@ -1027,6 +1058,7 @@
 				0087ED5623FB37AE0026EFC1 /* Array+NSManagedObject.swift in Sources */,
 				0064923823BFC02800DE8E71 /* SceneDelegate.swift in Sources */,
 				0087ED5A23FB37AE0026EFC1 /* UICollectionViewCell+Utils.swift in Sources */,
+				00E772C9243B3EFF006250FF /* IAPViewController.swift in Sources */,
 				0048C3D123C0CE450086D9D3 /* WallpapersListTableViewController.swift in Sources */,
 				000BCD8A241D851800DE8207 /* IAPManager.swift in Sources */,
 				0087ED6023FB37AE0026EFC1 /* NSPredicate+Utils.swift in Sources */,

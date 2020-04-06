@@ -287,6 +287,7 @@ PODS:
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
+  - SVProgressHUD (2.2.5)
   - SwiftyStoreKit (0.15.0)
 
 DEPENDENCIES:
@@ -297,6 +298,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - FirebaseUI/Storage
+  - SVProgressHUD
   - SwiftyStoreKit
 
 SPEC REPOS:
@@ -326,6 +328,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - SDWebImage
+    - SVProgressHUD
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
@@ -354,8 +357,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
 
-PODFILE CHECKSUM: 00991c5e846f844f15ec2816c791e49e08a33e45
+PODFILE CHECKSUM: d861b8126ab204c8b0963e87aa4e468be5634f70
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

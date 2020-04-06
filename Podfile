@@ -11,6 +11,7 @@ def external_pods
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
   pod 'SwiftyStoreKit'
+  pod 'SVProgressHUD'
 end
 
 target 'BazilPapers' do

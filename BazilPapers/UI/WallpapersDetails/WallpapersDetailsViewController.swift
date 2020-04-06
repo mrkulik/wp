@@ -36,7 +36,9 @@ class WallpapersDetailsViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-        self.actionPerformer?.didPressedSaveButton(sender)
+        let vc = IAPViewController.initial()
+        self.present(vc, animated: true)
+        //self.actionPerformer?.didPressedSaveButton(sender)
     }
     
     override func viewDidLoad() {
