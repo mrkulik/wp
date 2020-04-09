@@ -11,6 +11,7 @@ import StoreKit
 
 class IAPSelectorViewController: ButtonTabViewController {
     
+    @IBOutlet var componentRootViews: [UIView]!
     @IBOutlet var subscriptionButtons: [UIButton]! {
         didSet {
             tabButtons = subscriptionButtons
@@ -20,27 +21,30 @@ class IAPSelectorViewController: ButtonTabViewController {
     
     var selectedIndex: Int {
         return tabButtons.firstIndex(where: { $0.isSelected }) ?? 1
-             
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupPriceLabels()
-        setSelection(atIndex: 1)
         delegate = self
+        setSelection(atIndex: 1)
+        componentRootViews[selectedIndex].borderColor = .cyan
     }
     
     private func setupUI() {
         setupPriceLabels()
+        componentRootViews.forEach {
+            $0.borderColor = .gray
+            $0.cornerRadius = 5
+            $0.borderWidth = 1
+        }
     }
     
     private func setupPriceLabels() {
         guard IAPController.skProducts.count == subscriptionButtons.count else {
             return
         }
-        
-        
         
         let monthTitle = String(format: NSLocalizedString("%@\n/ month", comment: ""), getFormattedPrice(product: IAPController.skProducts[0]) ?? 9.99)
         
@@ -59,6 +63,9 @@ class IAPSelectorViewController: ButtonTabViewController {
 
 extension IAPSelectorViewController: ButtonTabViewControllerDelegate {
     func controller(_ controller: ButtonTabViewController, didSelectTabAtIndex index: Int) {
-        
+        componentRootViews.forEach {
+            $0.borderColor = .gray
+        }
+        componentRootViews[index].borderColor = .cyan
     }
 }
