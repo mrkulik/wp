@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import PopMenu
+import StoreKit
 
 class WallpapersListViewController: UIViewController {
 
@@ -64,9 +65,24 @@ class WallpapersListViewController: UIViewController {
 extension WallpapersListViewController: PopMenuViewControllerDelegate {
     
     func popMenuDidSelectItem(_ popMenuViewController: PopMenuViewController, at index: Int) {
+        let menuItem = menuItems[index]
+        switch menuItem.type {
+        case .rate:
+            handleRate()
+        case .share:
+            handleShare()
+        default:
+            return
+        }
+    }
+    
+    private func handleShare() {
         
     }
     
+    private func handleRate() {
+        SKStoreReviewController.requestReview()
+    }
 }
 
 
