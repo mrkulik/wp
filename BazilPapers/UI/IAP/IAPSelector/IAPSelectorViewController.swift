@@ -18,6 +18,9 @@ class IAPSelectorViewController: ButtonTabViewController {
             subscriptionButtons.forEach{ $0.tintColor = .clear }
         }
     }
+    @IBOutlet weak var firstPurchasePriceLabel: UILabel!
+    @IBOutlet weak var secondPurchasePriceLabel: UILabel!
+    @IBOutlet weak var thirdPurchasePriceLabel: UILabel!
     
     var selectedIndex: Int {
         return tabButtons.firstIndex(where: { $0.isSelected }) ?? 1
@@ -25,19 +28,18 @@ class IAPSelectorViewController: ButtonTabViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        setupPriceLabels()
+        setupInitialUI()
         delegate = self
-        setSelection(atIndex: 1)
-        componentRootViews[selectedIndex].borderColor = .cyan
     }
     
-    private func setupUI() {
+    private func setupInitialUI() {
         setupPriceLabels()
+        
+        setSelection(atIndex: 1)
+        setupSelectedUI(at: selectedIndex)
         componentRootViews.forEach {
-            $0.borderColor = .gray
-            $0.cornerRadius = 5
-            $0.borderWidth = 1
+            $0.cornerRadius = 8
+            $0.borderWidth = 3
         }
     }
     
@@ -46,11 +48,12 @@ class IAPSelectorViewController: ButtonTabViewController {
             return
         }
         
-        let monthTitle = String(format: NSLocalizedString("%@\n/ month", comment: ""), getFormattedPrice(product: IAPController.skProducts[0]) ?? 9.99)
-        
-        let yearTrialTitle = String(format: NSLocalizedString("then %@\n/ year", comment: ""), getFormattedPrice(product: IAPController.skProducts[1]) ?? 49.99)
-        
-        let yearWithoutTrialTitle = String(format: NSLocalizedString("%@\n/ year", comment: ""), getFormattedPrice(product: IAPController.skProducts[2]) ?? 29.99)
+        let onetime = String(format: NSLocalizedString("%@", comment: ""), getFormattedPrice(product: IAPController.skProducts[0]) ?? "$5.99")
+        firstPurchasePriceLabel.text = onetime
+        let monthTitle = String(format: NSLocalizedString("then %@\n/ month", comment: ""), getFormattedPrice(product: IAPController.skProducts[1]) ?? "$1.99")
+        secondPurchasePriceLabel.text = monthTitle
+        let yearTitle = String(format: NSLocalizedString("%@", comment: ""), getFormattedPrice(product: IAPController.skProducts[2]) ?? "$3.99")
+        thirdPurchasePriceLabel.text = yearTitle
     }
     
     private func getFormattedPrice(product: SKProduct) -> String? {
@@ -59,13 +62,17 @@ class IAPSelectorViewController: ButtonTabViewController {
         nb.locale = product.priceLocale
         return nb.string(from: product.price)
     }
+    
+    private func setupSelectedUI(at index: Int) {
+        componentRootViews.forEach {
+            $0.borderColor = .gray
+        }
+        componentRootViews[selectedIndex].borderColor = .orange
+    }
 }
 
 extension IAPSelectorViewController: ButtonTabViewControllerDelegate {
     func controller(_ controller: ButtonTabViewController, didSelectTabAtIndex index: Int) {
-        componentRootViews.forEach {
-            $0.borderColor = .gray
-        }
-        componentRootViews[index].borderColor = .cyan
+        setupSelectedUI(at: index)
     }
 }

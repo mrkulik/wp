@@ -12,6 +12,8 @@ import SVProgressHUD
 class IAPViewController: UIViewController {
     @IBOutlet weak var rootView: UIStackView!
     
+    private let context = DataStorageProvider.sharedUserModelController.container.viewContext
+    
     private weak var selectorViewController: IAPSelectorViewController?
     
     private var selectedSubscription: Int {
@@ -33,7 +35,7 @@ class IAPViewController: UIViewController {
         }
     }
 
-    func commonButtonDidPressed() {
+    @IBAction func becomePremiumPressed(_ sender: Any) {
         iapController.purchaseProduct(index: selectedSubscription)
     }
     
@@ -46,11 +48,12 @@ class IAPViewController: UIViewController {
     }
     
     private func setUserPremium() {
-
+        self.context.currentUser.isPremium = true
+        try? self.context.save()
     }
     
     private func hideScreen() {
-
+        self.dismiss(animated: true)
     }
     
 }
@@ -79,6 +82,8 @@ extension IAPViewController: IAPControllerDelegate {
     
     func didFailRestorePurchases(message: String) {
         SVProgressHUD.showError(withStatus: message)
+        self.context.currentUser.isPremium = false
+        try? self.context.save()
     }
     
     func didFailPurchaseProduct(message: String) {
