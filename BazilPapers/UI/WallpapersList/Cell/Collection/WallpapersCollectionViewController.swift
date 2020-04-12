@@ -17,6 +17,8 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     
     private let catalogContext = DataStorageProvider.sharedCatalogModelController.container.viewContext
     
+    private let userContext = DataStorageProvider.sharedUserModelController.container.viewContext
+    
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<MOWallpaperInfo> = {
         let fetchRequest: NSFetchRequest<MOWallpaperInfo> = MOWallpaperInfo.fetchRequest()
         
@@ -38,7 +40,15 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     weak var category: MOCategory?
     
     private var numberOfWallpapers: Int {
-        return fetchedResultsController.fetchedObjects?.count ?? 0
+        let frCount = fetchedResultsController.fetchedObjects?.count ?? 0
+        let premiumLimit = 5
+        if self.userContext.currentUser.isPremium {
+            return frCount
+        }
+        else {
+            let limitedCount = frCount < premiumLimit ? frCount : premiumLimit
+            return limitedCount + 1
+        }
     }
     
     private var layoutWasSetup: Bool = false
@@ -46,6 +56,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         WallpaperCollectionViewCell.registerCellNib(in: self.collectionView)
+        WallpaperSubscriptionCollectionViewCell.registerCellNib(in: self.collectionView)
         do {
             try fetchedResultsController.performFetch()
         } catch {
@@ -67,6 +78,11 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard indexPath.row != numberOfWallpapers - 1 else {
+            let cell = WallpaperSubscriptionCollectionViewCell.dequeueReusableCell(in: self.collectionView, for: indexPath)
+            return cell
+        }
+        
         let cell = WallpaperCollectionViewCell.dequeueReusableCell(in: self.collectionView, for: indexPath)
         if let url = fetchedResultsController.object(at: indexPath).shortSourceURL {
             let islandRef = gsReference.child(url)
@@ -96,6 +112,15 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard indexPath.row != numberOfWallpapers - 1 else {
+            let vc = IAPViewController.initial()
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true)
+            Analytics.logEvent("sbscr_opened_from_root", parameters: [:])
+            return
+        }
+        
         let vc = WallpapersDetailsViewController.initial()
         vc.category = self.category
         vc.modalPresentationStyle = .fullScreen

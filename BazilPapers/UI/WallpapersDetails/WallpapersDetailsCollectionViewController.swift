@@ -20,6 +20,8 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     
     private let catalogContext = DataStorageProvider.sharedCatalogModelController.container.viewContext
     
+    private let userContext = DataStorageProvider.sharedUserModelController.container.viewContext
+    
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<MOWallpaperInfo> = {
         let fetchRequest: NSFetchRequest<MOWallpaperInfo> = MOWallpaperInfo.fetchRequest()
         
@@ -43,7 +45,14 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     
     
     private var numberOfWallpapers: Int {
-        return fetchedResultsController.fetchedObjects?.count ?? 0
+        let frCount = fetchedResultsController.fetchedObjects?.count ?? 0
+        let premiumLimit = 5
+        if self.userContext.currentUser.isPremium {
+            return frCount
+        }
+        else {
+            return frCount < premiumLimit ? frCount : premiumLimit
+        }
     }
     
     private var layoutWasSetup: Bool = false
@@ -95,6 +104,7 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
             let islandRef = gsReference.child(url)
             cell.imageView.sd_imageIndicator = SDWebImageActivityIndicator.whiteLarge
             cell.imageView.sd_setImage(with: islandRef)
+            Analytics.logEvent(String(fetchedResultsController.object(at: indexPath).id), parameters: ["status" : "opened"])
         }
         
         return cell
@@ -237,6 +247,7 @@ extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewContro
             let c = self.collectionView.cellForItem(at: ip) as? WallpapersDetailsCollectionViewCell,
         let image = c.imageView.image {
             saveImageToAlbum(image, name: Constant.assetCollectionName)
+            Analytics.logEvent(String(fetchedResultsController.object(at: ip).id), parameters: ["status" : "downloaded"])
         }
         
     }

@@ -23,7 +23,7 @@ class IAPController {
     // MARK: - Property
     weak var delegate: IAPControllerDelegate?
     private let sharedSecret = "7d1ffdfce2f94ff591476219892ce9be"
-    private let productIds = ["com.sandpipersoft.swipepapers.week119"]
+    private let productIds = ["premiumforever", "month1.99", "year8.99"]
     static var skProducts: [SKProduct] = []
     private var appleValidator: AppleReceiptValidator {
         return AppleReceiptValidator(service: .sandbox, sharedSecret: sharedSecret)
@@ -48,7 +48,7 @@ class IAPController {
     }
     
     private static func getProductsInfo() {
-        let productsForInfo = Set(arrayLiteral: "com.sandpipersoft.swipepapers.week119")
+        let productsForInfo = Set(["premiumforever", "month1.99", "year8.99"])
         SwiftyStoreKit.retrieveProductsInfo(productsForInfo) { (result) in
             skProducts = result.retrievedProducts.sorted(by: { (sk1, sk2) -> Bool in
                 return sk1.price.floatValue < sk2.price.floatValue
