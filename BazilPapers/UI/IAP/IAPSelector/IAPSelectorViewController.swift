@@ -8,6 +8,7 @@
 
 import UIKit
 import StoreKit
+import Firebase
 
 class IAPSelectorViewController: ButtonTabViewController {
     
@@ -74,5 +75,6 @@ class IAPSelectorViewController: ButtonTabViewController {
 extension IAPSelectorViewController: ButtonTabViewControllerDelegate {
     func controller(_ controller: ButtonTabViewController, didSelectTabAtIndex index: Int) {
         setupSelectedUI(at: index)
+        Analytics.logEvent("sbscr_tab_selected", parameters: ["index" : index])
     }
 }

@@ -104,6 +104,7 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
             let islandRef = gsReference.child(url)
             cell.imageView.sd_imageIndicator = SDWebImageActivityIndicator.whiteLarge
             cell.imageView.sd_setImage(with: islandRef)
+            Analytics.logEvent(String(fetchedResultsController.object(at: indexPath).id), parameters: ["status" : "opened"])
         }
         
         return cell
@@ -246,6 +247,7 @@ extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewContro
             let c = self.collectionView.cellForItem(at: ip) as? WallpapersDetailsCollectionViewCell,
         let image = c.imageView.image {
             saveImageToAlbum(image, name: Constant.assetCollectionName)
+            Analytics.logEvent(String(fetchedResultsController.object(at: ip).id), parameters: ["status" : "downloaded"])
         }
         
     }

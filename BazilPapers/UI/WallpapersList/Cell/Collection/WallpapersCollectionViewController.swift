@@ -117,6 +117,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
             vc.modalPresentationStyle = .fullScreen
             vc.modalTransitionStyle = .crossDissolve
             self.present(vc, animated: true)
+            Analytics.logEvent("sbscr_opened_from_root", parameters: [:])
             return
         }
         

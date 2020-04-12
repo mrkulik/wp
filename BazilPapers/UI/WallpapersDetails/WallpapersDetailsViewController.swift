@@ -36,10 +36,7 @@ class WallpapersDetailsViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-        let vc = IAPViewController.initial()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
-        //self.actionPerformer?.didPressedSaveButton(sender)
+        self.actionPerformer?.didPressedSaveButton(sender)
     }
     
     override func viewDidLoad() {

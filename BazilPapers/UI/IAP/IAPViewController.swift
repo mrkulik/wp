@@ -8,6 +8,8 @@
 
 import StoreKit
 import SVProgressHUD
+import Firebase
+
 
 class IAPViewController: UIViewController {
     @IBOutlet weak var rootView: UIStackView!
@@ -37,19 +39,23 @@ class IAPViewController: UIViewController {
 
     @IBAction func becomePremiumPressed(_ sender: Any) {
         iapController.purchaseProduct(index: selectedSubscription)
+        Analytics.logEvent("become_premium_pressed", parameters: [ : ])
     }
     
     @IBAction func restorePurchasesButtonDidPressed(_ sender: UIButton) {
         iapController.restorePurchases()
+        Analytics.logEvent("restore_sbscr_pressed", parameters: [ : ])
     }
     
     @IBAction func closeButtonDidPressed(_ sender: UIButton) {
         hideScreen()
+        Analytics.logEvent("close_sbscr_pressed", parameters: [ : ])
     }
     
     private func setUserPremium() {
         self.context.currentUser.isPremium = true
         try? self.context.save()
+        Analytics.logEvent("became_premium", parameters: [ : ])
     }
     
     private func hideScreen() {
@@ -66,6 +72,7 @@ extension IAPViewController: IAPControllerDelegate {
     
     func didPaymentCancelled() {
         SVProgressHUD.dismiss()
+        Analytics.logEvent("payment_canceled", parameters: [ : ])
     }
     
     func didPurchaseProduct(product: SKProduct) {
@@ -88,5 +95,6 @@ extension IAPViewController: IAPControllerDelegate {
     
     func didFailPurchaseProduct(message: String) {
         SVProgressHUD.showError(withStatus: message)
+        Analytics.logEvent("payment_failed", parameters: [ : ])
     }
 }
