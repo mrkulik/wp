@@ -16,6 +16,8 @@
 		00138DE523D8E7FD00EBD787 /* PersistentContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE123D8E7FD00EBD787 /* PersistentContainerController.swift */; };
 		00138DE723D8E89100EBD787 /* RemoteWallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE623D8E89100EBD787 /* RemoteWallpaper.swift */; };
 		00138DE923D8E97B00EBD787 /* RemoteWallpaperSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE823D8E97B00EBD787 /* RemoteWallpaperSource.swift */; };
+		004258C4244344B1000468F4 /* WallpaperSubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004258C3244344B1000468F4 /* WallpaperSubscriptionCollectionViewCell.swift */; };
+		004258C6244344BE000468F4 /* WallpaperSubscriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004258C5244344BE000468F4 /* WallpaperSubscriptionCollectionViewCell.xib */; };
 		0048C3D123C0CE450086D9D3 /* WallpapersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3D023C0CE450086D9D3 /* WallpapersListTableViewController.swift */; };
 		0048C3D623C0D0350086D9D3 /* WallpapersListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0048C3D423C0D0350086D9D3 /* WallpapersListTableViewCell.xib */; };
 		0048C3E423C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0048C3E223C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift */; };
@@ -110,6 +112,8 @@
 		00138DE123D8E7FD00EBD787 /* PersistentContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainerController.swift; sourceTree = "<group>"; };
 		00138DE623D8E89100EBD787 /* RemoteWallpaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWallpaper.swift; sourceTree = "<group>"; };
 		00138DE823D8E97B00EBD787 /* RemoteWallpaperSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWallpaperSource.swift; sourceTree = "<group>"; };
+		004258C3244344B1000468F4 /* WallpaperSubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperSubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		004258C5244344BE000468F4 /* WallpaperSubscriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperSubscriptionCollectionViewCell.xib; sourceTree = "<group>"; };
 		0048C3D023C0CE450086D9D3 /* WallpapersListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpapersListTableViewController.swift; sourceTree = "<group>"; };
 		0048C3D423C0D0350086D9D3 /* WallpapersListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpapersListTableViewCell.xib; sourceTree = "<group>"; };
 		0048C3E223C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -250,6 +254,15 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		004258C224434269000468F4 /* SubscriptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				004258C3244344B1000468F4 /* WallpaperSubscriptionCollectionViewCell.swift */,
+				004258C5244344BE000468F4 /* WallpaperSubscriptionCollectionViewCell.xib */,
+			);
+			path = SubscriptionCell;
+			sourceTree = "<group>";
+		};
 		0048C3D223C0D0150086D9D3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +276,7 @@
 		0048C3DC23C0D44D0086D9D3 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				004258C224434269000468F4 /* SubscriptionCell */,
 				0048C3E123C0D5810086D9D3 /* Cell */,
 				0048C3E623C0D6C70086D9D3 /* WallpapersCollection.storyboard */,
 				0048C3EA23C0EA020086D9D3 /* WallpapersCollectionViewController.swift */,
@@ -729,6 +743,7 @@
 				000BCD87241D844E00DE8207 /* GoogleService-Info.plist in Resources */,
 				00F4C72823BFDE6A00239BAA /* LikedWallpapers.storyboard in Resources */,
 				00F4C65F23BFD98E00239BAA /* RootTabButtons.storyboard in Resources */,
+				004258C6244344BE000468F4 /* WallpaperSubscriptionCollectionViewCell.xib in Resources */,
 				009CF8A1243B182700003FB5 /* IAPSelector.storyboard in Resources */,
 				0048C3E723C0D6C70086D9D3 /* WallpapersCollection.storyboard in Resources */,
 				00F4C72423BFDE4E00239BAA /* WallpapersList.storyboard in Resources */,
@@ -890,6 +905,7 @@
 				00138DE923D8E97B00EBD787 /* RemoteWallpaperSource.swift in Sources */,
 				0087ED5F23FB37AE0026EFC1 /* UIDevice+SystemInfo.swift in Sources */,
 				00A9994924432BB70057304D /* ManagedObjectContext+CurrentUser.swift in Sources */,
+				004258C4244344B1000468F4 /* WallpaperSubscriptionCollectionViewCell.swift in Sources */,
 				00A9652923EA1A39005E0417 /* GetFormfactorsFirebaseService.swift in Sources */,
 				0048C3F323C0F7A40086D9D3 /* TintButtonTabViewController.swift in Sources */,
 				000BCD85241D7CD500DE8207 /* C.swift in Sources */,
