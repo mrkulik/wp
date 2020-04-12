@@ -82,7 +82,7 @@ extension IAPViewController: IAPControllerDelegate {
     }
     
     func didRestorePurchases(message: String) {
-        SVProgressHUD.showSuccess(withStatus: message, maskType: SVProgressHUDMaskType.black)
+        SVProgressHUD.showSuccess(withStatus: message)
         setUserPremium()
         hideScreen()
     }

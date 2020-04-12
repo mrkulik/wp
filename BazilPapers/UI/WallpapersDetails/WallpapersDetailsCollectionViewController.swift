@@ -178,6 +178,8 @@ extension WallpapersDetailsCollectionViewController {
         case .denied:
             UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
             break
+        @unknown default:
+            return
         }
         
     }

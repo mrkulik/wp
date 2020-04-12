@@ -125,7 +125,6 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
         vc.category = self.category
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
-        let p = self.fetchedResultsController.fetchedObjects
         
         vc.wallpaperInfo = self.fetchedResultsController.object(at: indexPath)
         self.present(vc, animated: true)

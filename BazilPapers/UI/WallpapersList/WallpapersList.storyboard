@@ -25,7 +25,7 @@
                                             <constraint firstAttribute="width" secondItem="SNS-18-mcI" secondAttribute="height" multiplier="1.5:1" id="xfP-YK-NPX"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="list.bullet" catalog="system">
+                                        <state key="normal">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                         </state>
                                         <connections>
@@ -97,7 +97,4 @@
             <point key="canvasLocation" x="1030" y="65"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="list.bullet" catalog="system" width="64" height="44"/>
-    </resources>
 </document>
