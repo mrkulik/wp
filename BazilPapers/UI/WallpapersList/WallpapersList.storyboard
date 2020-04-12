@@ -17,30 +17,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQO-0l-emR">
-                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNS-18-mcI">
-                                        <rect key="frame" x="378" y="4" width="32" height="32"/>
+                                        <rect key="frame" x="348" y="0.0" width="66" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="SNS-18-mcI" secondAttribute="height" multiplier="1:1" id="xfP-YK-NPX"/>
+                                            <constraint firstAttribute="width" secondItem="SNS-18-mcI" secondAttribute="height" multiplier="1.5:1" id="xfP-YK-NPX"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="list.bullet" catalog="system"/>
+                                        <state key="normal" image="list.bullet" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
                                         <connections>
                                             <action selector="menuPressed:" destination="069-3i-x35" eventType="touchUpInside" id="p07-YB-iiM"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lovely Wallpapers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15w-OM-XNd">
+                                        <rect key="frame" x="121.5" y="10" width="171.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="SNS-18-mcI" secondAttribute="trailing" constant="4" id="6UW-SU-pY9"/>
-                                    <constraint firstItem="SNS-18-mcI" firstAttribute="top" secondItem="WQO-0l-emR" secondAttribute="top" constant="4" id="Jrn-wj-CDv"/>
-                                    <constraint firstAttribute="bottom" secondItem="SNS-18-mcI" secondAttribute="bottom" constant="4" id="kpF-kR-sMd"/>
-                                    <constraint firstAttribute="height" constant="40" id="sP3-Yl-md8"/>
+                                    <constraint firstAttribute="trailing" secondItem="SNS-18-mcI" secondAttribute="trailing" id="6UW-SU-pY9"/>
+                                    <constraint firstItem="15w-OM-XNd" firstAttribute="centerX" secondItem="WQO-0l-emR" secondAttribute="centerX" id="BIB-Zl-JF5"/>
+                                    <constraint firstItem="SNS-18-mcI" firstAttribute="top" secondItem="WQO-0l-emR" secondAttribute="top" id="Jrn-wj-CDv"/>
+                                    <constraint firstAttribute="bottom" secondItem="SNS-18-mcI" secondAttribute="bottom" id="kpF-kR-sMd"/>
+                                    <constraint firstItem="15w-OM-XNd" firstAttribute="centerY" secondItem="WQO-0l-emR" secondAttribute="centerY" id="roD-EX-uE7"/>
+                                    <constraint firstAttribute="height" constant="44" id="sP3-Yl-md8"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEy-gh-M13">
-                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <connections>
                                     <segue destination="rU6-Oj-KDB" kind="embed" id="G3E-0E-kh2"/>
                                 </connections>
@@ -71,7 +81,7 @@
             <objects>
                 <tableViewController id="rU6-Oj-KDB" customClass="WallpapersListTableViewController" customModule="LovelyPapers" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YfE-nz-5VP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="778"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
