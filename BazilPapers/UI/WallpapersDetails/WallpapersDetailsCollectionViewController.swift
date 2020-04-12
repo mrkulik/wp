@@ -256,18 +256,16 @@ extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewContro
 
 extension UICollectionView {
 
-var centerPoint : CGPoint {
-
-    get {
-        return CGPoint(x: self.center.x + self.contentOffset.x, y: self.center.y + self.contentOffset.y);
+    var centerPoint : CGPoint {
+        get {
+            return CGPoint(x: self.center.x + self.contentOffset.x, y: self.center.y + self.contentOffset.y);
+        }
     }
-}
 
-var centerCellIndexPath: IndexPath? {
-
-    if let centerIndexPath = self.indexPathForItem(at: self.centerPoint) {
-        return centerIndexPath
+    var centerCellIndexPath: IndexPath? {
+        if let centerIndexPath = self.indexPathForItem(at: self.centerPoint) {
+            return centerIndexPath
+        }
+        return nil
     }
-    return nil
-}
 }
