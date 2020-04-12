@@ -11,7 +11,7 @@ import CoreData
 import Firebase
 import FirebaseUI
 import Photos
-
+import PopMenu
 
 
 class WallpapersDetailsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
@@ -66,7 +66,13 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
             let _ = error as NSError
         }
         
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
+        swipeUp.direction = .up
+        collectionView.addGestureRecognizer(swipeUp)
         
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
+        swipeDown.direction = .down
+        collectionView.addGestureRecognizer(swipeDown)
     }
     
     override func viewWillLayoutSubviews() {
@@ -124,11 +130,19 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return Constant.itemSpacing
     }
+    
+    @objc func swiped(_ recognizer: UISwipeGestureRecognizer) {
+        if recognizer.state == .ended {
+            if recognizer.direction == .down || recognizer.direction == .up {
+                self.presentingViewController?.dismiss(animated: true)
+            }
+        }
+    }
 }
 
 extension WallpapersDetailsCollectionViewController: NSFetchedResultsControllerDelegate {
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        
+        collectionView.reloadData()
     }
 }
 
