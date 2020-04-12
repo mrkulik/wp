@@ -115,7 +115,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
         guard indexPath.row != numberOfWallpapers - 1 else {
             let vc = IAPViewController.initial()
             vc.modalPresentationStyle = .fullScreen
-            vc.modalTransitionStyle = .partialCurl
+            vc.modalTransitionStyle = .crossDissolve
             self.present(vc, animated: true)
             return
         }
