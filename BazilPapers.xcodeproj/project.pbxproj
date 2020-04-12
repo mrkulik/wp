@@ -128,7 +128,7 @@
 		004CD87623CD1730002B8092 /* GetCategoriesFirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesFirebaseService.swift; sourceTree = "<group>"; };
 		004CD87A23CD1756002B8092 /* RemoteCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCategory.swift; sourceTree = "<group>"; };
 		004CD87C23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWallpapersListFirebaseService.swift; sourceTree = "<group>"; };
-		0064923223BFC02800DE8E71 /* BazilPapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BazilPapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0064923223BFC02800DE8E71 /* LovelyPapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LovelyPapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0064923523BFC02800DE8E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0064923E23BFC02E00DE8E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0064924123BFC02E00DE8E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -357,7 +357,7 @@
 		0064923323BFC02800DE8E71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0064923223BFC02800DE8E71 /* BazilPapers.app */,
+				0064923223BFC02800DE8E71 /* LovelyPapers.app */,
 				0064924823BFC02E00DE8E71 /* BazilPapersTests.xctest */,
 				0064925323BFC02E00DE8E71 /* BazilPapersUITests.xctest */,
 			);
@@ -643,7 +643,7 @@
 			);
 			name = BazilPapers;
 			productName = BazilPapers;
-			productReference = 0064923223BFC02800DE8E71 /* BazilPapers.app */;
+			productReference = 0064923223BFC02800DE8E71 /* LovelyPapers.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0064924723BFC02E00DE8E71 /* BazilPapersTests */ = {
@@ -1104,7 +1104,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sandpipersoft.swipepapers;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LovelyPapers;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1124,7 +1124,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sandpipersoft.swipepapers;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LovelyPapers;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="069-3i-x35">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="069-3i-x35">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,13 +11,36 @@
         <!--Wallpapers List View Controller-->
         <scene sceneID="QRd-d1-nID">
             <objects>
-                <viewController id="069-3i-x35" customClass="WallpapersListViewController" customModule="BazilPapers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="069-3i-x35" customClass="WallpapersListViewController" customModule="LovelyPapers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ld7-mJ-CeD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQO-0l-emR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNS-18-mcI">
+                                        <rect key="frame" x="378" y="4" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="SNS-18-mcI" secondAttribute="height" multiplier="1:1" id="xfP-YK-NPX"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="list.bullet" catalog="system"/>
+                                        <connections>
+                                            <action selector="menuPressed:" destination="069-3i-x35" eventType="touchUpInside" id="p07-YB-iiM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="SNS-18-mcI" secondAttribute="trailing" constant="4" id="6UW-SU-pY9"/>
+                                    <constraint firstItem="SNS-18-mcI" firstAttribute="top" secondItem="WQO-0l-emR" secondAttribute="top" constant="4" id="Jrn-wj-CDv"/>
+                                    <constraint firstAttribute="bottom" secondItem="SNS-18-mcI" secondAttribute="bottom" constant="4" id="kpF-kR-sMd"/>
+                                    <constraint firstAttribute="height" constant="40" id="sP3-Yl-md8"/>
+                                </constraints>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEy-gh-M13">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
                                 <connections>
                                     <segue destination="rU6-Oj-KDB" kind="embed" id="G3E-0E-kh2"/>
                                 </connections>
@@ -24,26 +48,33 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="WQO-0l-emR" firstAttribute="top" secondItem="UoB-tF-via" secondAttribute="top" id="8KE-PF-v8j"/>
+                            <constraint firstItem="WQO-0l-emR" firstAttribute="leading" secondItem="UoB-tF-via" secondAttribute="leading" id="BDi-N1-iVL"/>
                             <constraint firstItem="UoB-tF-via" firstAttribute="bottom" secondItem="XEy-gh-M13" secondAttribute="bottom" id="FbG-ZC-sjk"/>
                             <constraint firstItem="XEy-gh-M13" firstAttribute="leading" secondItem="UoB-tF-via" secondAttribute="leading" id="UNg-i3-eBo"/>
-                            <constraint firstItem="XEy-gh-M13" firstAttribute="top" secondItem="UoB-tF-via" secondAttribute="top" id="XM4-vt-KXr"/>
+                            <constraint firstItem="XEy-gh-M13" firstAttribute="top" secondItem="WQO-0l-emR" secondAttribute="bottom" id="Xlq-PV-Rha"/>
+                            <constraint firstItem="UoB-tF-via" firstAttribute="trailing" secondItem="WQO-0l-emR" secondAttribute="trailing" id="bV9-43-FbA"/>
                             <constraint firstItem="UoB-tF-via" firstAttribute="trailing" secondItem="XEy-gh-M13" secondAttribute="trailing" id="ugm-gp-8bL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UoB-tF-via"/>
                     </view>
+                    <connections>
+                        <outlet property="menuButton" destination="SNS-18-mcI" id="Wqi-Zp-fUE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMN-tp-xkv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="65"/>
+            <point key="canvasLocation" x="134.78260869565219" y="64.955357142857139"/>
         </scene>
         <!--Wallpapers List Table View Controller-->
         <scene sceneID="U0H-jV-36C">
             <objects>
-                <tableViewController id="rU6-Oj-KDB" customClass="WallpapersListTableViewController" customModule="BazilPapers" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="YfE-nz-5VP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                <tableViewController id="rU6-Oj-KDB" customClass="WallpapersListTableViewController" customModule="LovelyPapers" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YfE-nz-5VP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="778"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="rU6-Oj-KDB" id="5h0-UA-yk9"/>
@@ -56,4 +87,7 @@
             <point key="canvasLocation" x="1030" y="65"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.bullet" catalog="system" width="64" height="44"/>
+    </resources>
 </document>

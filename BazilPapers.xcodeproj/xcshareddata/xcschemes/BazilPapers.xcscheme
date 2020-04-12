@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0064923123BFC02800DE8E71"
-               BuildableName = "BazilPapers.app"
+               BuildableName = "LovelyPapers.app"
                BlueprintName = "BazilPapers"
                ReferencedContainer = "container:BazilPapers.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0064923123BFC02800DE8E71"
-            BuildableName = "BazilPapers.app"
+            BuildableName = "LovelyPapers.app"
             BlueprintName = "BazilPapers"
             ReferencedContainer = "container:BazilPapers.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0064923123BFC02800DE8E71"
-            BuildableName = "BazilPapers.app"
+            BuildableName = "LovelyPapers.app"
             BlueprintName = "BazilPapers"
             ReferencedContainer = "container:BazilPapers.xcodeproj">
          </BuildableReference>
