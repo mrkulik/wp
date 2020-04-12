@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let wallpapersFirebaseService = GetWallpapersListFirebaseService()
         wallpapersFirebaseService.observeConfigsCatalogWithSingleEvent()
+        
+        SVProgressHUD.setMinimumDismissTimeInterval(0.7)
+        SVProgressHUD.setMaximumDismissTimeInterval(0.7)
         return true
     }
 
