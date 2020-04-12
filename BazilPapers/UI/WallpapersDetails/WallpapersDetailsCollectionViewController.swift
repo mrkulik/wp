@@ -12,6 +12,7 @@ import Firebase
 import FirebaseUI
 import Photos
 import PopMenu
+import SVProgressHUD
 
 
 class WallpapersDetailsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
@@ -240,11 +241,7 @@ extension WallpapersDetailsCollectionViewController {
     }
     
     private func showSuccessAlert() {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Success!", message: "Wallpaper saved to album: " + Constant.assetCollectionName, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: self.successPressed))
-            self.present(alert, animated: true, completion: nil)
-        }
+        SVProgressHUD.showSuccess(withStatus: "Successfully saved!")
     }
     
     func successPressed(alert: UIAlertAction!) {
