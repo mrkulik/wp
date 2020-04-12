@@ -20,6 +20,8 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     
     private let catalogContext = DataStorageProvider.sharedCatalogModelController.container.viewContext
     
+    private let userContext = DataStorageProvider.sharedUserModelController.container.viewContext
+    
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<MOWallpaperInfo> = {
         let fetchRequest: NSFetchRequest<MOWallpaperInfo> = MOWallpaperInfo.fetchRequest()
         
@@ -43,7 +45,14 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     
     
     private var numberOfWallpapers: Int {
-        return fetchedResultsController.fetchedObjects?.count ?? 0
+        let frCount = fetchedResultsController.fetchedObjects?.count ?? 0
+        let premiumLimit = 5
+        if self.userContext.currentUser.isPremium {
+            return frCount
+        }
+        else {
+            return frCount < premiumLimit ? frCount : premiumLimit
+        }
     }
     
     private var layoutWasSetup: Bool = false
