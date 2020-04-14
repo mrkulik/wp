@@ -17,8 +17,7 @@ class WallpapersListViewController: UIViewController {
         .init(title: "Rate app", image: nil, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .rate),
         .init(title: "Support", image: nil, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .support),
         .init(title: "Share", image: nil, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .share),
-        .init(title: "Privacy Policy", image: nil, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy),
-        .init(title: "Terms of Use", image: nil, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .terms)
+        .init(title: "Privacy Policy", image: nil, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy)
     ]
     
     @IBOutlet weak var menuButton: UIButton!
@@ -104,7 +103,6 @@ enum MenuItemType {
     case rate
     case share
     case privacy
-    case terms
     case support
     case usual
 }
