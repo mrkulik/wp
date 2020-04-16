@@ -82,6 +82,7 @@
 		3931800EF19510F59F59CA2D /* Pods_BazilPapers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EE32DFFDF2379101763362 /* Pods_BazilPapers.framework */; };
 		6006F4C382B7CDCF7BD317DD /* Pods_BazilPapersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74A48A9C87DE3238D0F1B7A /* Pods_BazilPapersTests.framework */; };
 		F5E8AA23A6CB0B30E8197BDE /* Pods_BazilPapers_BazilPapersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B33D75536B58075B41B4DF /* Pods_BazilPapers_BazilPapersUITests.framework */; };
+		F9719F492447A60D00A40F8A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9719F482447A60D00A40F8A /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,7 +129,7 @@
 		004CD87623CD1730002B8092 /* GetCategoriesFirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesFirebaseService.swift; sourceTree = "<group>"; };
 		004CD87A23CD1756002B8092 /* RemoteCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCategory.swift; sourceTree = "<group>"; };
 		004CD87C23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWallpapersListFirebaseService.swift; sourceTree = "<group>"; };
-		0064923223BFC02800DE8E71 /* LovelyPapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LovelyPapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0064923223BFC02800DE8E71 /* Wallpapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallpapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0064923523BFC02800DE8E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0064923E23BFC02E00DE8E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0064924123BFC02E00DE8E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -193,6 +194,7 @@
 		D74A48A9C87DE3238D0F1B7A /* Pods_BazilPapersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BazilPapersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D57CE94D371CFA8A6DA181 /* Pods-BazilPapers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazilPapers.release.xcconfig"; path = "Target Support Files/Pods-BazilPapers/Pods-BazilPapers.release.xcconfig"; sourceTree = "<group>"; };
 		F7D77BD4973209C2B37759CA /* Pods-BazilPapers-BazilPapersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazilPapers-BazilPapersUITests.debug.xcconfig"; path = "Target Support Files/Pods-BazilPapers-BazilPapersUITests/Pods-BazilPapers-BazilPapersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9719F482447A60D00A40F8A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,7 +359,7 @@
 		0064923323BFC02800DE8E71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0064923223BFC02800DE8E71 /* LovelyPapers.app */,
+				0064923223BFC02800DE8E71 /* Wallpapers.app */,
 				0064924823BFC02E00DE8E71 /* BazilPapersTests.xctest */,
 				0064925323BFC02E00DE8E71 /* BazilPapersUITests.xctest */,
 			);
@@ -587,6 +589,7 @@
 				00F4C72323BFDE4E00239BAA /* WallpapersList.storyboard */,
 				00F4C72523BFDE5A00239BAA /* WallpapersListViewController.swift */,
 				0048C3D023C0CE450086D9D3 /* WallpapersListTableViewController.swift */,
+				F9719F482447A60D00A40F8A /* Media.xcassets */,
 			);
 			path = WallpapersList;
 			sourceTree = "<group>";
@@ -643,7 +646,7 @@
 			);
 			name = BazilPapers;
 			productName = BazilPapers;
-			productReference = 0064923223BFC02800DE8E71 /* LovelyPapers.app */;
+			productReference = 0064923223BFC02800DE8E71 /* Wallpapers.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0064924723BFC02E00DE8E71 /* BazilPapersTests */ = {
@@ -749,6 +752,7 @@
 				00F4C72423BFDE4E00239BAA /* WallpapersList.storyboard in Resources */,
 				006F993B242013FB0007E99B /* WallpapersDetailsCollectionViewCell.xib in Resources */,
 				0048C3E523C0D5A90086D9D3 /* WallpaperCollectionViewCell.xib in Resources */,
+				F9719F492447A60D00A40F8A /* Media.xcassets in Resources */,
 				0064923F23BFC02E00DE8E71 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1095,16 +1099,18 @@
 			baseConfigurationReference = D26CD848532A86FB674F31B1 /* Pods-BazilPapers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = UUPHMT32ZS;
+				DEVELOPMENT_TEAM = 57QSZJJYXT;
 				INFOPLIST_FILE = "$(SRCROOT)/BazilPapers/DevEnviroment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sandpipersoft.swipepapers;
-				PRODUCT_NAME = LovelyPapers;
+				PRODUCT_NAME = Wallpapers;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1115,16 +1121,18 @@
 			baseConfigurationReference = E0D57CE94D371CFA8A6DA181 /* Pods-BazilPapers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = UUPHMT32ZS;
+				DEVELOPMENT_TEAM = 57QSZJJYXT;
 				INFOPLIST_FILE = "$(SRCROOT)/BazilPapers/DevEnviroment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sandpipersoft.swipepapers;
-				PRODUCT_NAME = LovelyPapers;
+				PRODUCT_NAME = Wallpapers;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

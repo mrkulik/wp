@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="069-3i-x35">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="069-3i-x35">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,15 +38,24 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="burger-menu" translatesAutoresizingMaskIntoConstraints="NO" id="jtv-q1-m3q">
+                                        <rect key="frame" x="380" y="9" width="26" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jtv-q1-m3q" secondAttribute="height" multiplier="1:1" id="hoW-4D-gv4"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="SNS-18-mcI" secondAttribute="trailing" id="6UW-SU-pY9"/>
                                     <constraint firstItem="15w-OM-XNd" firstAttribute="centerX" secondItem="WQO-0l-emR" secondAttribute="centerX" id="BIB-Zl-JF5"/>
                                     <constraint firstItem="SNS-18-mcI" firstAttribute="top" secondItem="WQO-0l-emR" secondAttribute="top" id="Jrn-wj-CDv"/>
+                                    <constraint firstItem="jtv-q1-m3q" firstAttribute="height" secondItem="SNS-18-mcI" secondAttribute="height" multiplier="0.6" id="b9W-wr-Zmj"/>
+                                    <constraint firstItem="jtv-q1-m3q" firstAttribute="centerX" secondItem="SNS-18-mcI" secondAttribute="centerX" id="gSx-9a-ezp"/>
                                     <constraint firstAttribute="bottom" secondItem="SNS-18-mcI" secondAttribute="bottom" id="kpF-kR-sMd"/>
                                     <constraint firstItem="15w-OM-XNd" firstAttribute="centerY" secondItem="WQO-0l-emR" secondAttribute="centerY" id="roD-EX-uE7"/>
                                     <constraint firstAttribute="height" constant="44" id="sP3-Yl-md8"/>
+                                    <constraint firstItem="jtv-q1-m3q" firstAttribute="centerY" secondItem="SNS-18-mcI" secondAttribute="centerY" id="tdK-4B-CdE"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEy-gh-M13">
@@ -97,4 +106,7 @@
             <point key="canvasLocation" x="1030" y="65"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="burger-menu" width="167" height="135"/>
+    </resources>
 </document>
