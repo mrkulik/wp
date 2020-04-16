@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "burger-menu-slice.png",
+      "filename" : "privacy-policy-slice.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "burger-menu-slice@2x.png",
+      "filename" : "privacy-policy-slice@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "burger-menu-slice@3x.png",
+      "filename" : "privacy-policy-slice@3x.png",
       "scale" : "3x"
     }
   ],

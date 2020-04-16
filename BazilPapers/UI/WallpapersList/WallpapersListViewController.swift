@@ -10,14 +10,16 @@ import UIKit
 import CoreData
 import PopMenu
 import StoreKit
+import SafariServices
 
 class WallpapersListViewController: UIViewController {
 
     private let menuItems: [MenuItemViewModel] = [
-        .init(title: "Rate app", image: nil, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .rate),
-        .init(title: "Support", image: nil, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .support),
-        .init(title: "Share", image: nil, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .share),
-        .init(title: "Privacy Policy", image: nil, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy)
+        .init(title: "Premium Access", image:  UIImage(named: "get-premium"), color: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), type: .premiumAccess),
+        .init(title: "Rate App", image: UIImage(named: "star.fill"), color:  #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .rate),
+        .init(title: "Support", image: UIImage(named: "support"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .support),
+        .init(title: "Share", image: UIImage(named: "share"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .share),
+        .init(title: "Privacy Policy", image:  UIImage(named: "privacy-policy"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy)
     ]
     
     @IBOutlet weak var menuButton: UIButton!
@@ -70,6 +72,10 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
             handleRate()
         case .share:
             handleShare()
+        case .privacy:
+            handlePrivacyPolicy()
+        case .support:
+            handleSupport()
         default:
             return
         }
@@ -81,6 +87,18 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
     
     private func handleRate() {
         SKStoreReviewController.requestReview()
+    }
+    
+    private func handlePrivacyPolicy() {
+        if let url = URL(string: "https://lovely-wallpapers.bazillabs.com/home/privacy-policy") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    private func handleSupport() {
+        if let url = URL(string: "https://lovely-wallpapers.bazillabs.com/home/faq") {
+            UIApplication.shared.open(url)
+        }
     }
 }
 
@@ -105,4 +123,5 @@ enum MenuItemType {
     case privacy
     case support
     case usual
+    case premiumAccess
 }
