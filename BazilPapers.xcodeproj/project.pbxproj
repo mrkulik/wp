@@ -1102,7 +1102,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = 57QSZJJYXT;
+				DEVELOPMENT_TEAM = UUPHMT32ZS;
 				INFOPLIST_FILE = "$(SRCROOT)/BazilPapers/DevEnviroment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1124,7 +1124,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = 57QSZJJYXT;
+				DEVELOPMENT_TEAM = UUPHMT32ZS;
 				INFOPLIST_FILE = "$(SRCROOT)/BazilPapers/DevEnviroment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
