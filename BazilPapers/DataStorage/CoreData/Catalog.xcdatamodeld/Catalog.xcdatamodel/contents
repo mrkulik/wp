@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="MOCategory" representedClassName="MOCategory" syncable="YES" codeGenerationType="class">
         <attribute name="iconURL" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="order" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="wallpaperInfos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MOWallpaperInfo" inverseName="category" inverseEntity="MOWallpaperInfo"/>
+    </entity>
+    <entity name="MOPremiumPreviewPicture" representedClassName="MOPremiumPreviewPicture" syncable="YES" codeGenerationType="class">
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
     </entity>
     <entity name="MOWallpaperInfo" representedClassName="MOWallpaperInfo" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
@@ -16,6 +20,7 @@
     </entity>
     <elements>
         <element name="MOCategory" positionX="-303.16015625" positionY="106.39453125" width="128" height="118"/>
+        <element name="MOPremiumPreviewPicture" positionX="-284.546875" positionY="404.0390625" width="128" height="73"/>
         <element name="MOWallpaperInfo" positionX="-1.1875" positionY="119.3125" width="128" height="118"/>
     </elements>
 </model>
