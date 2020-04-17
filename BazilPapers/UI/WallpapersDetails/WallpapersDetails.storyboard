@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghT-Hk-U67">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghT-Hk-U67">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <!--Wallpapers Details View Controller-->
         <scene sceneID="1zr-Kp-am7">
             <objects>
-                <viewController id="ghT-Hk-U67" customClass="WallpapersDetailsViewController" customModule="BazilPapers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ghT-Hk-U67" customClass="WallpapersDetailsViewController" customModule="Wallpapers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tdo-GS-VhO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +46,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo6-hW-BGs">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                        <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="backButtonPressed:" destination="ghT-Hk-U67" eventType="touchUpInside" id="HTV-bI-NFQ"/>
                                         </connections>
@@ -95,7 +96,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2m-5d-Ryg">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="icloud.and.arrow.down.fill" catalog="system"/>
+                                        <state key="normal" image="download"/>
                                         <connections>
                                             <action selector="saveButtonPressed:" destination="ghT-Hk-U67" eventType="touchUpInside" id="OGB-1w-Dhi"/>
                                         </connections>
@@ -147,7 +148,7 @@
         <!--Wallpapers Details Collection View Controller-->
         <scene sceneID="rsw-ZX-pwJ">
             <objects>
-                <collectionViewController id="AWe-PX-hAn" customClass="WallpapersDetailsCollectionViewController" customModule="BazilPapers" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="AWe-PX-hAn" customClass="WallpapersDetailsCollectionViewController" customModule="Wallpapers" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" id="zud-vE-Q6d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +172,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="64" height="52"/>
-        <image name="icloud.and.arrow.down.fill" catalog="system" width="64" height="56"/>
+        <image name="back" width="480" height="480"/>
+        <image name="download" width="480" height="480"/>
     </resources>
 </document>
