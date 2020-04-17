@@ -66,9 +66,9 @@ class IAPSelectorViewController: ButtonTabViewController {
     
     private func setupSelectedUI(at index: Int) {
         componentRootViews.forEach {
-            $0.borderColor = .gray
+            $0.borderColor = .white
         }
-        componentRootViews[selectedIndex].borderColor = .white
+        componentRootViews[selectedIndex].borderColor = #colorLiteral(red: 0.9512905478, green: 0.6862642765, blue: 0.1313454807, alpha: 1)
     }
 }
 
