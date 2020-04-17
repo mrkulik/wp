@@ -33,6 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let wallpapersFirebaseService = GetWallpapersListFirebaseService()
         wallpapersFirebaseService.observeConfigsCatalogWithSingleEvent()
         
+        let premiumPictureFirebaseService = GetPremiumCategoriesFirebaseService()
+        premiumPictureFirebaseService.observeConfigsCatalogWithSingleEvent()
+        
         SVProgressHUD.setMinimumDismissTimeInterval(0.7)
         SVProgressHUD.setMaximumDismissTimeInterval(0.7)
         return true

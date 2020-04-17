@@ -42,6 +42,7 @@
 		0064926A23BFC25600DE8E71 /* RootNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064926923BFC25600DE8E71 /* RootNavigation.swift */; };
 		006F993A242013FB0007E99B /* WallpapersDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006F9938242013FB0007E99B /* WallpapersDetailsCollectionViewCell.swift */; };
 		006F993B242013FB0007E99B /* WallpapersDetailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006F9939242013FB0007E99B /* WallpapersDetailsCollectionViewCell.xib */; };
+		00876E4C2448FC840015CCB4 /* GetPremiumCategoriesFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00876E4B2448FC840015CCB4 /* GetPremiumCategoriesFirebaseService.swift */; };
 		0087ECBF23FB2BA70026EFC1 /* WallpapersDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ECBE23FB2BA70026EFC1 /* WallpapersDetailsViewController.swift */; };
 		0087ECC123FB2BB60026EFC1 /* WallpapersDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0087ECC023FB2BB60026EFC1 /* WallpapersDetails.storyboard */; };
 		0087ED5523FB37AE0026EFC1 /* NSManagedObjectContext+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ED4423FB37AD0026EFC1 /* NSManagedObjectContext+Utils.swift */; };
@@ -79,10 +80,12 @@
 		00F4C72623BFDE5A00239BAA /* WallpapersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4C72523BFDE5A00239BAA /* WallpapersListViewController.swift */; };
 		00F4C72823BFDE6A00239BAA /* LikedWallpapers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F4C72723BFDE6A00239BAA /* LikedWallpapers.storyboard */; };
 		00F4C72A23BFDE7400239BAA /* LikedWallpapersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F4C72923BFDE7400239BAA /* LikedWallpapersViewController.swift */; };
+		00F5B59B2449016F00156004 /* IAPCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F5B59A2449016F00156004 /* IAPCollection.storyboard */; };
+		00F5B59D2449018300156004 /* IAPCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F5B59C2449018300156004 /* IAPCollectionViewController.swift */; };
 		3931800EF19510F59F59CA2D /* Pods_BazilPapers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EE32DFFDF2379101763362 /* Pods_BazilPapers.framework */; };
 		6006F4C382B7CDCF7BD317DD /* Pods_BazilPapersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74A48A9C87DE3238D0F1B7A /* Pods_BazilPapersTests.framework */; };
 		F5E8AA23A6CB0B30E8197BDE /* Pods_BazilPapers_BazilPapersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B33D75536B58075B41B4DF /* Pods_BazilPapers_BazilPapersUITests.framework */; };
-		F9719F492447A60D00A40F8A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9719F482447A60D00A40F8A /* Media.xcassets */; };
+		F9719F492447A60D00A40F8A /* WallpapersList.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9719F482447A60D00A40F8A /* WallpapersList.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +148,7 @@
 		0064926923BFC25600DE8E71 /* RootNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigation.swift; sourceTree = "<group>"; };
 		006F9938242013FB0007E99B /* WallpapersDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpapersDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		006F9939242013FB0007E99B /* WallpapersDetailsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpapersDetailsCollectionViewCell.xib; sourceTree = "<group>"; };
+		00876E4B2448FC840015CCB4 /* GetPremiumCategoriesFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPremiumCategoriesFirebaseService.swift; sourceTree = "<group>"; };
 		0087ECBE23FB2BA70026EFC1 /* WallpapersDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpapersDetailsViewController.swift; sourceTree = "<group>"; };
 		0087ECC023FB2BB60026EFC1 /* WallpapersDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WallpapersDetails.storyboard; sourceTree = "<group>"; };
 		0087ED4423FB37AD0026EFC1 /* NSManagedObjectContext+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Utils.swift"; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 		00F4C72523BFDE5A00239BAA /* WallpapersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpapersListViewController.swift; sourceTree = "<group>"; };
 		00F4C72723BFDE6A00239BAA /* LikedWallpapers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LikedWallpapers.storyboard; sourceTree = "<group>"; };
 		00F4C72923BFDE7400239BAA /* LikedWallpapersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedWallpapersViewController.swift; sourceTree = "<group>"; };
+		00F5B59A2449016F00156004 /* IAPCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IAPCollection.storyboard; sourceTree = "<group>"; };
+		00F5B59C2449018300156004 /* IAPCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPCollectionViewController.swift; sourceTree = "<group>"; };
 		0A648A4532737F84078B4971 /* Pods-BazilPapersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazilPapersTests.release.xcconfig"; path = "Target Support Files/Pods-BazilPapersTests/Pods-BazilPapersTests.release.xcconfig"; sourceTree = "<group>"; };
 		1E9EE0F888EA3E1500878FC0 /* Pods-BazilPapersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazilPapersTests.debug.xcconfig"; path = "Target Support Files/Pods-BazilPapersTests/Pods-BazilPapersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8561A6FD452B03F3FDAF1A76 /* Pods-BazilPapers-BazilPapersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazilPapers-BazilPapersUITests.release.xcconfig"; path = "Target Support Files/Pods-BazilPapers-BazilPapersUITests/Pods-BazilPapers-BazilPapersUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,7 +200,7 @@
 		D74A48A9C87DE3238D0F1B7A /* Pods_BazilPapersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BazilPapersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D57CE94D371CFA8A6DA181 /* Pods-BazilPapers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazilPapers.release.xcconfig"; path = "Target Support Files/Pods-BazilPapers/Pods-BazilPapers.release.xcconfig"; sourceTree = "<group>"; };
 		F7D77BD4973209C2B37759CA /* Pods-BazilPapers-BazilPapersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazilPapers-BazilPapersUITests.debug.xcconfig"; path = "Target Support Files/Pods-BazilPapers-BazilPapersUITests/Pods-BazilPapers-BazilPapersUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F9719F482447A60D00A40F8A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		F9719F482447A60D00A40F8A /* WallpapersList.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WallpapersList.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +512,7 @@
 		009CF89E243B17FA00003FB5 /* IAP */ = {
 			isa = PBXGroup;
 			children = (
+				00F5B5982449015200156004 /* IAPCollection */,
 				009CF89F243B181000003FB5 /* IAPSelector */,
 				00E772C6243B3EF5006250FF /* IAP.storyboard */,
 				00E772C8243B3EFF006250FF /* IAPViewController.swift */,
@@ -539,6 +546,7 @@
 				004CD87623CD1730002B8092 /* GetCategoriesFirebaseService.swift */,
 				004CD87C23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift */,
 				00A9652823EA1A39005E0417 /* GetFormfactorsFirebaseService.swift */,
+				00876E4B2448FC840015CCB4 /* GetPremiumCategoriesFirebaseService.swift */,
 			);
 			path = "Firebase ";
 			sourceTree = "<group>";
@@ -589,7 +597,7 @@
 				00F4C72323BFDE4E00239BAA /* WallpapersList.storyboard */,
 				00F4C72523BFDE5A00239BAA /* WallpapersListViewController.swift */,
 				0048C3D023C0CE450086D9D3 /* WallpapersListTableViewController.swift */,
-				F9719F482447A60D00A40F8A /* Media.xcassets */,
+				F9719F482447A60D00A40F8A /* WallpapersList.xcassets */,
 			);
 			path = WallpapersList;
 			sourceTree = "<group>";
@@ -601,6 +609,15 @@
 				00F4C72923BFDE7400239BAA /* LikedWallpapersViewController.swift */,
 			);
 			path = LikedWallpapers;
+			sourceTree = "<group>";
+		};
+		00F5B5982449015200156004 /* IAPCollection */ = {
+			isa = PBXGroup;
+			children = (
+				00F5B59A2449016F00156004 /* IAPCollection.storyboard */,
+				00F5B59C2449018300156004 /* IAPCollectionViewController.swift */,
+			);
+			path = IAPCollection;
 			sourceTree = "<group>";
 		};
 		28D546C531A7755234C7E4CE /* Pods */ = {
@@ -743,6 +760,7 @@
 				0064924223BFC02E00DE8E71 /* LaunchScreen.storyboard in Resources */,
 				00E772C7243B3EF5006250FF /* IAP.storyboard in Resources */,
 				0087ECC123FB2BB60026EFC1 /* WallpapersDetails.storyboard in Resources */,
+				00F5B59B2449016F00156004 /* IAPCollection.storyboard in Resources */,
 				000BCD87241D844E00DE8207 /* GoogleService-Info.plist in Resources */,
 				00F4C72823BFDE6A00239BAA /* LikedWallpapers.storyboard in Resources */,
 				00F4C65F23BFD98E00239BAA /* RootTabButtons.storyboard in Resources */,
@@ -752,7 +770,7 @@
 				00F4C72423BFDE4E00239BAA /* WallpapersList.storyboard in Resources */,
 				006F993B242013FB0007E99B /* WallpapersDetailsCollectionViewCell.xib in Resources */,
 				0048C3E523C0D5A90086D9D3 /* WallpaperCollectionViewCell.xib in Resources */,
-				F9719F492447A60D00A40F8A /* Media.xcassets in Resources */,
+				F9719F492447A60D00A40F8A /* WallpapersList.xcassets in Resources */,
 				0064923F23BFC02E00DE8E71 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -883,6 +901,7 @@
 			files = (
 				0087ED6823FF1AF00026EFC1 /* UIImage+GIF.swift in Sources */,
 				0087ECBF23FB2BA70026EFC1 /* WallpapersDetailsViewController.swift in Sources */,
+				00F5B59D2449018300156004 /* IAPCollectionViewController.swift in Sources */,
 				00A964F323D8EFD2005E0417 /* FormFactors.xcdatamodeld in Sources */,
 				0048C3F123C0F7130086D9D3 /* ButtonTabViewController.swift in Sources */,
 				00E772CF243B4D27006250FF /* UseBottomButton.swift in Sources */,
@@ -892,6 +911,7 @@
 				0048C3F923C3DDE90086D9D3 /* TintLabelButtonTabViewController.swift in Sources */,
 				006F993A242013FB0007E99B /* WallpapersDetailsCollectionViewCell.swift in Sources */,
 				0064926823BFC17300DE8E71 /* RootNavigationViewController.swift in Sources */,
+				00876E4C2448FC840015CCB4 /* GetPremiumCategoriesFirebaseService.swift in Sources */,
 				00138DE723D8E89100EBD787 /* RemoteWallpaper.swift in Sources */,
 				0087ED5823FB37AE0026EFC1 /* NSFetchedResultsController+Utils.swift in Sources */,
 				004CD87723CD1730002B8092 /* GetCategoriesFirebaseService.swift in Sources */,

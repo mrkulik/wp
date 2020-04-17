@@ -39,7 +39,7 @@ class IAPSelectorViewController: ButtonTabViewController {
         setSelection(atIndex: 1)
         setupSelectedUI(at: selectedIndex)
         componentRootViews.forEach {
-            $0.cornerRadius = 8
+            $0.cornerRadius = 12
             $0.borderWidth = 3
         }
     }
@@ -68,7 +68,7 @@ class IAPSelectorViewController: ButtonTabViewController {
         componentRootViews.forEach {
             $0.borderColor = .gray
         }
-        componentRootViews[selectedIndex].borderColor = .orange
+        componentRootViews[selectedIndex].borderColor = .white
     }
 }
 

@@ -14,13 +14,9 @@ import SafariServices
 
 class WallpapersListViewController: UIViewController {
 
-    private let menuItems: [MenuItemViewModel] = [
-        .init(title: "Premium Access", image:  UIImage(named: "get-premium"), color: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), type: .premiumAccess),
-        .init(title: "Rate App", image: UIImage(named: "star.fill"), color:  #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .rate),
-        .init(title: "Support", image: UIImage(named: "support"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .support),
-        .init(title: "Share", image: UIImage(named: "share"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .share),
-        .init(title: "Privacy Policy", image:  UIImage(named: "privacy-policy"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy)
-    ]
+    private let userContext = DataStorageProvider.sharedUserModelController.container.viewContext
+    
+    private var menuItems: [MenuItemViewModel] = .init()
     
     @IBOutlet weak var menuButton: UIButton!
     @IBAction func menuPressed(_ sender: UIButton) {
@@ -39,7 +35,8 @@ class WallpapersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setupMenuDataSource()
     }
     
     private func getPopMenuDefaultActions() -> [PopMenuDefaultAction] {
@@ -50,6 +47,18 @@ class WallpapersListViewController: UIViewController {
         return result
     }
 
+    private func setupMenuDataSource() {
+        self.menuItems = [
+            .init(title: "Rate App", image: #imageLiteral(resourceName: "Star"), color:  #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .rate),
+            .init(title: "Share", image: #imageLiteral(resourceName: "share"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .share),
+            .init(title: "Support", image: #imageLiteral(resourceName: "support"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .support),
+            .init(title: "Privacy Policy", image:  #imageLiteral(resourceName: "privacy-policy"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy)
+        ]
+    
+        if !self.userContext.currentUser.isPremium {
+            self.menuItems.insert(.init(title: "Premium Access", image:  #imageLiteral(resourceName: "get-premium"), color: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), type: .premiumAccess), at: 0)
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -82,7 +91,7 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
     }
     
     private func handleShare() {
-        
+        //TODO: SHARE LOGIC
     }
     
     private func handleRate() {
