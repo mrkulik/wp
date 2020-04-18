@@ -170,7 +170,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.08/week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xED-6R-NxN">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.99/week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xED-6R-NxN">
                                                         <rect key="frame" x="0.0" y="138" width="121" height="23"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -223,7 +223,9 @@
                     <connections>
                         <outlet property="firstPurchasePriceLabel" destination="Hzb-WM-tJt" id="4HX-vb-dbY"/>
                         <outlet property="secondPurchasePriceLabel" destination="ZKS-Ha-hpf" id="PDn-yr-Zow"/>
+                        <outlet property="secondPurchaseWeekPrice" destination="cUo-7L-yAS" id="PRM-9K-I6n"/>
                         <outlet property="thirdPurchasePriceLabel" destination="LKY-6N-eNV" id="A5K-lz-OsS"/>
+                        <outlet property="thirdPurchaseWeekPrice" destination="xED-6R-NxN" id="Zq0-lU-UGz"/>
                         <outletCollection property="subscriptionButtons" destination="Vv0-Ru-0DQ" collectionClass="NSMutableArray" id="a0K-2I-Unf"/>
                         <outletCollection property="subscriptionButtons" destination="mxK-Uj-rne" collectionClass="NSMutableArray" id="7Xt-i6-hU9"/>
                         <outletCollection property="subscriptionButtons" destination="k4T-Vd-I3t" collectionClass="NSMutableArray" id="RUr-vr-9kv"/>
