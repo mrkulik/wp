@@ -243,7 +243,7 @@ extension WallpapersDetailsCollectionViewController {
     }
     
     private func showSuccessAlert() {
-        SVProgressHUD.showSuccess(withStatus: "Successfully saved!")
+        SVProgressHUD.showSuccess(withStatus: "Successfully saved! Check the Photos app")
     }
     
     func successPressed(alert: UIAlertAction!) {

@@ -34,7 +34,6 @@
 		004CD87D23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004CD87C23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift */; };
 		0064923623BFC02800DE8E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064923523BFC02800DE8E71 /* AppDelegate.swift */; };
 		0064923F23BFC02E00DE8E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0064923E23BFC02E00DE8E71 /* Assets.xcassets */; };
-		0064924223BFC02E00DE8E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064924023BFC02E00DE8E71 /* LaunchScreen.storyboard */; };
 		0064924D23BFC02E00DE8E71 /* BazilPapersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064924C23BFC02E00DE8E71 /* BazilPapersTests.swift */; };
 		0064925823BFC02E00DE8E71 /* BazilPapersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064925723BFC02E00DE8E71 /* BazilPapersUITests.swift */; };
 		0064926623BFC16100DE8E71 /* RootNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064926523BFC16100DE8E71 /* RootNavigation.storyboard */; };
@@ -86,6 +85,7 @@
 		3931800EF19510F59F59CA2D /* Pods_BazilPapers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EE32DFFDF2379101763362 /* Pods_BazilPapers.framework */; };
 		6006F4C382B7CDCF7BD317DD /* Pods_BazilPapersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74A48A9C87DE3238D0F1B7A /* Pods_BazilPapersTests.framework */; };
 		F5E8AA23A6CB0B30E8197BDE /* Pods_BazilPapers_BazilPapersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B33D75536B58075B41B4DF /* Pods_BazilPapers_BazilPapersUITests.framework */; };
+		F92429EA244B9FFA0083180F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92429E9244B9FFA0083180F /* LaunchScreen.storyboard */; };
 		F9719F492447A60D00A40F8A /* WallpapersList.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9719F482447A60D00A40F8A /* WallpapersList.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -136,7 +136,6 @@
 		0064923223BFC02800DE8E71 /* Wallpapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallpapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0064923523BFC02800DE8E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0064923E23BFC02E00DE8E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0064924123BFC02E00DE8E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0064924323BFC02E00DE8E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0064924823BFC02E00DE8E71 /* BazilPapersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BazilPapersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0064924C23BFC02E00DE8E71 /* BazilPapersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BazilPapersTests.swift; sourceTree = "<group>"; };
@@ -202,6 +201,7 @@
 		D74A48A9C87DE3238D0F1B7A /* Pods_BazilPapersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BazilPapersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D57CE94D371CFA8A6DA181 /* Pods-BazilPapers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazilPapers.release.xcconfig"; path = "Target Support Files/Pods-BazilPapers/Pods-BazilPapers.release.xcconfig"; sourceTree = "<group>"; };
 		F7D77BD4973209C2B37759CA /* Pods-BazilPapers-BazilPapersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazilPapers-BazilPapersUITests.debug.xcconfig"; path = "Target Support Files/Pods-BazilPapers-BazilPapersUITests/Pods-BazilPapers-BazilPapersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F92429E9244B9FFA0083180F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9719F482447A60D00A40F8A /* WallpapersList.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WallpapersList.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -433,10 +433,10 @@
 			children = (
 				0064923E23BFC02E00DE8E71 /* Assets.xcassets */,
 				0064923523BFC02800DE8E71 /* AppDelegate.swift */,
-				0064924023BFC02E00DE8E71 /* LaunchScreen.storyboard */,
 				0064924323BFC02E00DE8E71 /* Info.plist */,
 				000BCD86241D844D00DE8207 /* GoogleService-Info.plist */,
 				000BCD84241D7CD500DE8207 /* C.swift */,
+				F92429E9244B9FFA0083180F /* LaunchScreen.storyboard */,
 			);
 			path = DevEnviroment;
 			sourceTree = "<group>";
@@ -760,7 +760,6 @@
 				00F4C71D23BFDC0400239BAA /* RootTabs.storyboard in Resources */,
 				00E772CB243B4A5B006250FF /* IAP.xcassets in Resources */,
 				0048C3D623C0D0350086D9D3 /* WallpapersListTableViewCell.xib in Resources */,
-				0064924223BFC02E00DE8E71 /* LaunchScreen.storyboard in Resources */,
 				00E772C7243B3EF5006250FF /* IAP.storyboard in Resources */,
 				0087ECC123FB2BB60026EFC1 /* WallpapersDetails.storyboard in Resources */,
 				0073167A24498FA200A757DB /* WallpaperDetails.xcassets in Resources */,
@@ -770,6 +769,7 @@
 				00F4C65F23BFD98E00239BAA /* RootTabButtons.storyboard in Resources */,
 				004258C6244344BE000468F4 /* WallpaperSubscriptionCollectionViewCell.xib in Resources */,
 				009CF8A1243B182700003FB5 /* IAPSelector.storyboard in Resources */,
+				F92429EA244B9FFA0083180F /* LaunchScreen.storyboard in Resources */,
 				0048C3E723C0D6C70086D9D3 /* WallpapersCollection.storyboard in Resources */,
 				00F4C72423BFDE4E00239BAA /* WallpapersList.storyboard in Resources */,
 				006F993B242013FB0007E99B /* WallpapersDetailsCollectionViewCell.xib in Resources */,
@@ -992,17 +992,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		0064924023BFC02E00DE8E71 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0064924123BFC02E00DE8E71 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		0064925A23BFC02E00DE8E71 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1126,6 +1115,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_ASSET_PATHS = BazilPapers/DevEnviroment;
 				DEVELOPMENT_TEAM = UUPHMT32ZS;
 				INFOPLIST_FILE = "$(SRCROOT)/BazilPapers/DevEnviroment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1148,6 +1138,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_ASSET_PATHS = BazilPapers/DevEnviroment;
 				DEVELOPMENT_TEAM = UUPHMT32ZS;
 				INFOPLIST_FILE = "$(SRCROOT)/BazilPapers/DevEnviroment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
