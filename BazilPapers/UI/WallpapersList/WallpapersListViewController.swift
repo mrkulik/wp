@@ -85,6 +85,8 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
             handlePrivacyPolicy()
         case .support:
             handleSupport()
+        case .premiumAccess:
+            handlePremium()
         default:
             return
         }
@@ -108,6 +110,12 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
         if let url = URL(string: "https://lovely-wallpapers.bazillabs.com/home/faq") {
             UIApplication.shared.open(url)
         }
+    }
+    
+    private func handlePremium() {
+        let vc = IAPViewController.initial()
+        vc.modalPresentationStyle = .fullScreen
+        self.presentedViewController?.present(vc, animated: true, completion: nil)
     }
 }
 
