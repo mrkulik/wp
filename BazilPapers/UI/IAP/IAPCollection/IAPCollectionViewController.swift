@@ -40,10 +40,22 @@ class IAPCollectionViewController: UICollectionViewController, UICollectionViewD
         } catch {
             let _ = error as NSError
         }
+        autoScroll()
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+    }
+    
+    private func autoScroll() {
+        let co = collectionView.contentOffset.x
+        let no = co + 1
+
+        UIView.animate(withDuration: 0.016, delay: 0, options: .curveEaseInOut, animations: { [weak self]() -> Void in
+            self?.collectionView.contentOffset = CGPoint(x: no, y: 0)
+            }) { [weak self](finished) -> Void in
+                self?.autoScroll()
+        }
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
