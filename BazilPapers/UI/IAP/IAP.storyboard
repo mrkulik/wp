@@ -72,15 +72,24 @@
                                         <color key="textColor" red="0.9512905478" green="0.68626427649999999" blue="0.13134548069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access to 500+ luxury wallpapers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQU-dc-Eu2">
+                                        <rect key="frame" x="25" y="270.5" width="270.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="FHi-sy-pH3" firstAttribute="centerY" secondItem="zb4-Ji-URV" secondAttribute="centerY" id="8W3-8H-Ro5"/>
                                     <constraint firstItem="FHi-sy-pH3" firstAttribute="top" secondItem="K2Z-iV-8p8" secondAttribute="bottom" constant="16" id="Hgi-Ew-Pqt"/>
                                     <constraint firstItem="K2Z-iV-8p8" firstAttribute="top" secondItem="zb4-Ji-URV" secondAttribute="top" constant="16" id="JJT-YG-Hk7"/>
+                                    <constraint firstAttribute="bottom" secondItem="zQU-dc-Eu2" secondAttribute="bottom" constant="16" id="SWh-nR-KoE"/>
                                     <constraint firstAttribute="trailing" secondItem="FHi-sy-pH3" secondAttribute="trailing" id="TRd-fS-geo"/>
                                     <constraint firstItem="K2Z-iV-8p8" firstAttribute="centerX" secondItem="zb4-Ji-URV" secondAttribute="centerX" id="Z6c-Ab-8iI"/>
+                                    <constraint firstItem="zQU-dc-Eu2" firstAttribute="top" secondItem="FHi-sy-pH3" secondAttribute="bottom" constant="16" id="gak-s1-nVV"/>
                                     <constraint firstItem="FHi-sy-pH3" firstAttribute="leading" secondItem="zb4-Ji-URV" secondAttribute="leading" id="hdR-nz-wDP"/>
+                                    <constraint firstItem="zQU-dc-Eu2" firstAttribute="centerX" secondItem="zb4-Ji-URV" secondAttribute="centerX" id="yRQ-Mc-Tmz"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KII-t0-qOu">
