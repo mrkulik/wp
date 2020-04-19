@@ -64,7 +64,7 @@ class WallpapersListViewController: UIViewController {
         ]
     
         if !self.userContext.currentUser.isPremium {
-            self.menuItems.insert(.init(title: "Premium Access", image:  #imageLiteral(resourceName: "get-premium"), color: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), type: .premiumAccess), at: 0)
+            self.menuItems.insert(.init(title: "Premium", image:  #imageLiteral(resourceName: "get-premium"), color: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), type: .premiumAccess), at: 0)
         }
     }
     /*
