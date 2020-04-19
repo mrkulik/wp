@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zez-se-y3H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zez-se-y3H">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,12 +25,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgc-VJ-qZB">
-                                        <rect key="frame" x="16" y="0.0" width="20" height="20"/>
+                                        <rect key="frame" x="16" y="2.5" width="15" height="15"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="RmK-9G-frT"/>
+                                            <constraint firstAttribute="width" constant="15" id="RmK-9G-frT"/>
+                                            <constraint firstAttribute="width" secondItem="Xgc-VJ-qZB" secondAttribute="height" multiplier="1:1" id="y2F-GY-FT1"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.27051608438419206" green="0.27051608438419206" blue="0.27051608438419206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="multiply" catalog="system"/>
+                                        <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="cross"/>
                                         <connections>
                                             <action selector="closeButtonDidPressed:" destination="zez-se-y3H" eventType="touchUpInside" id="h0D-kZ-uHz"/>
                                         </connections>
@@ -39,7 +40,7 @@
                                         <rect key="frame" x="232" y="0.0" width="127" height="20"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                         <state key="normal" title="Restore Purchases">
-                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="restorePurchasesButtonDidPressed:" destination="zez-se-y3H" eventType="touchUpInside" id="XM4-WZ-yfe"/>
@@ -48,12 +49,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Xgc-VJ-qZB" firstAttribute="top" secondItem="xrj-j9-D5M" secondAttribute="top" id="23f-vW-Qjg"/>
                                     <constraint firstAttribute="trailing" secondItem="6Zx-fv-hg6" secondAttribute="trailing" constant="16" id="ABt-gW-BD1"/>
                                     <constraint firstAttribute="bottom" secondItem="6Zx-fv-hg6" secondAttribute="bottom" id="AXs-bh-kfJ"/>
+                                    <constraint firstItem="6Zx-fv-hg6" firstAttribute="centerY" secondItem="Xgc-VJ-qZB" secondAttribute="centerY" id="d8x-6x-TqY"/>
                                     <constraint firstItem="Xgc-VJ-qZB" firstAttribute="leading" secondItem="xrj-j9-D5M" secondAttribute="leading" constant="16" id="e6J-4d-kvu"/>
                                     <constraint firstAttribute="height" constant="20" id="nSR-8c-0bi"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xgc-VJ-qZB" secondAttribute="bottom" id="oDy-tJ-cFj"/>
                                     <constraint firstItem="6Zx-fv-hg6" firstAttribute="top" secondItem="xrj-j9-D5M" secondAttribute="top" id="sj3-O4-ykK"/>
                                 </constraints>
                             </view>
@@ -196,6 +196,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="multiply" catalog="system" width="64" height="54"/>
+        <image name="cross" width="142" height="141"/>
     </resources>
 </document>
