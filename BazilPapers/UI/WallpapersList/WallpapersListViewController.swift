@@ -130,7 +130,10 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
     }
     
     private func handlePremium() {
-        openSbscr()
+        let vc = IAPViewController.initial()
+        vc.modalPresentationStyle = .fullScreen
+        vc.delegate = self
+        self.presentedViewController?.present(vc, animated: true)
     }
 }
 
