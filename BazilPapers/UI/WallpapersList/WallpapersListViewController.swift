@@ -45,7 +45,7 @@ class WallpapersListViewController: UIViewController {
     private func openSbscr() {
         let vc = IAPViewController.initial()
         vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .crossDissolve
+        vc.delegate = self
         self.present(vc, animated: true)
     }
     
@@ -130,9 +130,7 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
     }
     
     private func handlePremium() {
-        let vc = IAPViewController.initial()
-        vc.modalPresentationStyle = .fullScreen
-        self.presentedViewController?.present(vc, animated: true, completion: nil)
+        openSbscr()
     }
 }
 
@@ -158,4 +156,12 @@ enum MenuItemType {
     case support
     case usual
     case premiumAccess
+}
+
+
+extension WallpapersListViewController: IAPViewControllerDelegate {
+    func didPurchase() {
+        self.menuItems.remove(at: 0)
+    }
+    
 }

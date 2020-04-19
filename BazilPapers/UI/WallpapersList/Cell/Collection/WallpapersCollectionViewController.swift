@@ -76,7 +76,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard indexPath.row != numberOfWallpapers - 1, self.catalogContext.currentUser.isPremium else {
+        guard indexPath.row != numberOfWallpapers - 1 || self.catalogContext.currentUser.isPremium else {
             let cell = WallpaperSubscriptionCollectionViewCell.dequeueReusableCell(in: self.collectionView, for: indexPath)
             return cell
         }
@@ -110,7 +110,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard indexPath.row != numberOfWallpapers - 1 else {
+        guard indexPath.row != numberOfWallpapers - 1 || self.catalogContext.currentUser.isPremium else {
             let vc = IAPViewController.initial()
             vc.modalPresentationStyle = .fullScreen
             vc.modalTransitionStyle = .crossDissolve

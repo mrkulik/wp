@@ -10,6 +10,9 @@ import StoreKit
 import SVProgressHUD
 import Firebase
 
+protocol IAPViewControllerDelegate: class {
+    func didPurchase()
+}
 
 class IAPViewController: UIViewController {
     @IBOutlet weak var rootView: UIStackView!
@@ -23,6 +26,8 @@ class IAPViewController: UIViewController {
     }
     
     private let iapController = IAPController()
+    
+    weak var delegate: IAPViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +61,7 @@ class IAPViewController: UIViewController {
         self.context.currentUser.isPremium = true
         try? self.context.save()
         Analytics.logEvent("became_premium", parameters: [ : ])
+        delegate?.didPurchase()
     }
     
     private func hideScreen() {
