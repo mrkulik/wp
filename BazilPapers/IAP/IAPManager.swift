@@ -48,7 +48,7 @@ class IAPController {
     }
     
     private static func getProductsInfo() {
-        let productsForInfo = Set(["premiumforever", "month1.99", "year8.99"])
+        let productsForInfo = Set(["premiumforever", "month1.99", "year3.99"])
         SwiftyStoreKit.retrieveProductsInfo(productsForInfo) { (result) in
             skProducts = result.retrievedProducts.sorted(by: { (sk1, sk2) -> Bool in
                 return sk1.price.floatValue < sk2.price.floatValue

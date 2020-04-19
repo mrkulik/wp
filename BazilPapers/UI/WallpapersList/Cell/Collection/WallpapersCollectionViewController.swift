@@ -16,9 +16,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     private let gsReference = Storage.storage().reference(forURL: C.storageURL)
     
     private let catalogContext = DataStorageProvider.sharedCatalogModelController.container.viewContext
-    
-    private let userContext = DataStorageProvider.sharedUserModelController.container.viewContext
-    
+
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<MOWallpaperInfo> = {
         let fetchRequest: NSFetchRequest<MOWallpaperInfo> = MOWallpaperInfo.fetchRequest()
         
@@ -42,7 +40,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     private var numberOfWallpapers: Int {
         let frCount = fetchedResultsController.fetchedObjects?.count ?? 0
         let premiumLimit = 5
-        if self.userContext.currentUser.isPremium {
+        if self.catalogContext.currentUser.isPremium {
             return frCount
         }
         else {
@@ -78,7 +76,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard indexPath.row != numberOfWallpapers - 1 else {
+        guard indexPath.row != numberOfWallpapers - 1, self.catalogContext.currentUser.isPremium else {
             let cell = WallpaperSubscriptionCollectionViewCell.dequeueReusableCell(in: self.collectionView, for: indexPath)
             return cell
         }

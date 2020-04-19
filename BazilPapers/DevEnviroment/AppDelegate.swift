@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nc = RootNavigationController.initial()
         nc.setRootTabs()
         window?.rootViewController = nc
-        
+        IAPController.setupTransactionObserver()
         FirebaseApp.configure()
         DataStorageProvider.loadSharedStores()
         let getFormfactorsFirebaseService = GetFormfactorsFirebaseService()

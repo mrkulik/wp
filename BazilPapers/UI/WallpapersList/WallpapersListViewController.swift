@@ -14,7 +14,7 @@ import SafariServices
 
 class WallpapersListViewController: UIViewController {
 
-    private let userContext = DataStorageProvider.sharedUserModelController.container.viewContext
+    private let context = DataStorageProvider.sharedCatalogModelController.container.viewContext
     
     private var menuItems: [MenuItemViewModel] = .init()
     
@@ -37,7 +37,9 @@ class WallpapersListViewController: UIViewController {
         super.viewDidLoad()
         
         setupMenuDataSource()
-        openSbscr()
+        if !self.context.currentUser.isPremium {
+            openSbscr()
+        }
     }
     
     private func openSbscr() {
@@ -63,7 +65,7 @@ class WallpapersListViewController: UIViewController {
             .init(title: "Privacy Policy", image:  #imageLiteral(resourceName: "privacy-policy"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy)
         ]
     
-        if !self.userContext.currentUser.isPremium {
+        if !self.context.currentUser.isPremium {
             self.menuItems.insert(.init(title: "Premium", image:  #imageLiteral(resourceName: "get-premium"), color: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), type: .premiumAccess), at: 0)
         }
     }

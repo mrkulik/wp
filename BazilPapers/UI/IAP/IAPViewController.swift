@@ -14,7 +14,7 @@ import Firebase
 class IAPViewController: UIViewController {
     @IBOutlet weak var rootView: UIStackView!
     
-    private let context = DataStorageProvider.sharedUserModelController.container.viewContext
+    private let context = DataStorageProvider.sharedCatalogModelController.container.viewContext
     
     private weak var selectorViewController: IAPSelectorViewController?
     

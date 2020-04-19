@@ -16,9 +16,7 @@ class IAPCollectionViewController: UICollectionViewController, UICollectionViewD
     private let gsReference = Storage.storage().reference(forURL: C.storageURL)
     
     private let catalogContext = DataStorageProvider.sharedCatalogModelController.container.viewContext
-    
-    private let userContext = DataStorageProvider.sharedUserModelController.container.viewContext
-    
+
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<MOPremiumPreviewPicture> = {
         let fetchRequest: NSFetchRequest<MOPremiumPreviewPicture> = MOPremiumPreviewPicture.fetchRequest()
         

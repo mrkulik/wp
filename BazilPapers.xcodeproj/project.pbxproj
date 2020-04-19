@@ -64,7 +64,6 @@
 		00A5CC8823D8EBDF0025A872 /* Catalog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00138DDE23D8E7FD00EBD787 /* Catalog.xcdatamodeld */; };
 		00A964F323D8EFD2005E0417 /* FormFactors.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00A964F123D8EFD2005E0417 /* FormFactors.xcdatamodeld */; };
 		00A9652923EA1A39005E0417 /* GetFormfactorsFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9652823EA1A39005E0417 /* GetFormfactorsFirebaseService.swift */; };
-		00A9994724432B670057304D /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00A9994524432B670057304D /* User.xcdatamodeld */; };
 		00A9994924432BB70057304D /* ManagedObjectContext+CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9994824432BB70057304D /* ManagedObjectContext+CurrentUser.swift */; };
 		00E772C5243B3449006250FF /* IAPSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E772C4243B3449006250FF /* IAPSelectorViewController.swift */; };
 		00E772C7243B3EF5006250FF /* IAP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E772C6243B3EF5006250FF /* IAP.storyboard */; };
@@ -170,7 +169,6 @@
 		009CF8A0243B182700003FB5 /* IAPSelector.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IAPSelector.storyboard; sourceTree = "<group>"; };
 		00A964F223D8EFD2005E0417 /* FormFactors.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FormFactors.xcdatamodel; sourceTree = "<group>"; };
 		00A9652823EA1A39005E0417 /* GetFormfactorsFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFormfactorsFirebaseService.swift; sourceTree = "<group>"; };
-		00A9994624432B670057304D /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
 		00A9994824432BB70057304D /* ManagedObjectContext+CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedObjectContext+CurrentUser.swift"; sourceTree = "<group>"; };
 		00BEBA9F23C91EC6007EE66D /* Catalog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catalog.xcdatamodel; sourceTree = "<group>"; };
 		00BEBAAC23C91FBE007EE66D /* DataStorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorageProvider.swift; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 			children = (
 				00A964F123D8EFD2005E0417 /* FormFactors.xcdatamodeld */,
 				00138DDE23D8E7FD00EBD787 /* Catalog.xcdatamodeld */,
-				00A9994524432B670057304D /* User.xcdatamodeld */,
 				00138DDD23D8E7FD00EBD787 /* NSPersistentContainer+Models.swift */,
 				00138DE023D8E7FD00EBD787 /* DataStorageProvider.swift */,
 				00138DE123D8E7FD00EBD787 /* PersistentContainerController.swift */,
@@ -955,7 +952,6 @@
 				0087ED5E23FB37AE0026EFC1 /* UITableViewCell+Table.swift in Sources */,
 				000BCD8D241E266400DE8207 /* WallpapersDetailsCollectionViewController.swift in Sources */,
 				00A5CC8823D8EBDF0025A872 /* Catalog.xcdatamodeld in Sources */,
-				00A9994724432B670057304D /* User.xcdatamodeld in Sources */,
 				004CD87B23CD1756002B8092 /* RemoteCategory.swift in Sources */,
 				00138DE523D8E7FD00EBD787 /* PersistentContainerController.swift in Sources */,
 			);
@@ -1296,16 +1292,6 @@
 			);
 			currentVersion = 00A964F223D8EFD2005E0417 /* FormFactors.xcdatamodel */;
 			path = FormFactors.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		00A9994524432B670057304D /* User.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				00A9994624432B670057304D /* User.xcdatamodel */,
-			);
-			currentVersion = 00A9994624432B670057304D /* User.xcdatamodel */;
-			path = User.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
