@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qJD-gI-3S1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="WZN-qW-RZN">
+            <objects>
+                <viewController id="qJD-gI-3S1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DhL-Qm-pcq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cef-PL-XMB">
+                                <rect key="frame" x="165.5" y="280" width="83" height="336"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cef-PL-XMB" firstAttribute="width" secondItem="DhL-Qm-pcq" secondAttribute="width" multiplier="0.2" id="930-UV-aB4"/>
+                            <constraint firstItem="cef-PL-XMB" firstAttribute="centerX" secondItem="DhL-Qm-pcq" secondAttribute="centerX" id="LYL-9x-eZP"/>
+                            <constraint firstItem="cef-PL-XMB" firstAttribute="centerY" secondItem="DhL-Qm-pcq" secondAttribute="centerY" id="ruI-N6-Gcn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kL8-5a-o8j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbv-3b-z1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaunchScreenIcon" width="336" height="336"/>
+    </resources>
+</document>
