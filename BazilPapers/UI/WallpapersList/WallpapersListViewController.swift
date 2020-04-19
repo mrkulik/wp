@@ -37,6 +37,14 @@ class WallpapersListViewController: UIViewController {
         super.viewDidLoad()
         
         setupMenuDataSource()
+        openSbscr()
+    }
+    
+    private func openSbscr() {
+        let vc = IAPViewController.initial()
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true)
     }
     
     private func getPopMenuDefaultActions() -> [PopMenuDefaultAction] {
