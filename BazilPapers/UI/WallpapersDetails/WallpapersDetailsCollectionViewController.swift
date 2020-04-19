@@ -148,7 +148,7 @@ extension WallpapersDetailsCollectionViewController: NSFetchedResultsControllerD
 }
 
 private struct Constant {
-    static let assetCollectionName: String = "SwipePapers"
+    static let assetCollectionName: String = "Lovely Wallpapers"
     static let collectionMargin: CGFloat = 0
     static let itemSpacing: CGFloat = 0
 }
