@@ -93,7 +93,14 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
     }
     
     private func handleShare() {
-        //TODO: SHARE LOGIC
+        let message = "Message goes here."
+        //Set the link to share.
+        if let link = NSURL(string: "http://itunes.apple.com/app/id1502856671")
+        {
+            let activityVC = UIActivityViewController(activityItems: [message,link], applicationActivities: nil)
+            activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+            self.presentedViewController?.present(activityVC, animated: true, completion: nil)
+        }
     }
     
     private func handleRate() {
