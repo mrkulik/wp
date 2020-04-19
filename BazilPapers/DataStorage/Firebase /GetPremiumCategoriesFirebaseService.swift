@@ -32,6 +32,7 @@ class GetPremiumCategoriesFirebaseService {
             let moPicture = MOPremiumPreviewPicture(context: self.catalogContext)
             let source = p["source"] as? [String : Any]
             moPicture.url = source?["uri"] as? String
+            moPicture.order = p["order"] as? Int64 ?? 999
         }
         
         try? self.catalogContext.save()
