@@ -26,7 +26,7 @@ class IAPController {
     private let productIds = ["premiumforever", "month1.99", "year3.99"]
     static var skProducts: [SKProduct] = []
     private var appleValidator: AppleReceiptValidator {
-        return AppleReceiptValidator(service: .sandbox, sharedSecret: sharedSecret)
+        return AppleReceiptValidator(service: .production, sharedSecret: sharedSecret)
     }
     // MARK: - Methodts
     static func setupTransactionObserver() {
