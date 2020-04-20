@@ -17,6 +17,7 @@ protocol IAPControllerDelegate: class {
     func didRestorePurchases(message: String)
     func didFailRestorePurchases(message: String)
     func didFailPurchaseProduct(message: String)
+    func productsUpdated()
 }
 
 class IAPController {
@@ -24,7 +25,11 @@ class IAPController {
     weak var delegate: IAPControllerDelegate?
     private let sharedSecret = "7d1ffdfce2f94ff591476219892ce9be"
     private let productIds = ["premiumforever", "month1.99", "year3.99"]
-    static var skProducts: [SKProduct] = []
+    static var skProducts: [SKProduct] = [] {
+        didSet {
+            
+        }
+    }
     private var appleValidator: AppleReceiptValidator {
         return AppleReceiptValidator(service: .production, sharedSecret: sharedSecret)
     }

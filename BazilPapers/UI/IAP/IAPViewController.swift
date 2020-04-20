@@ -103,4 +103,8 @@ extension IAPViewController: IAPControllerDelegate {
         SVProgressHUD.showError(withStatus: message)
         Analytics.logEvent("payment_failed", parameters: [ : ])
     }
+    
+    func productsUpdated() {
+        self.selectorViewController?.setupPriceLabels()
+    }
 }
