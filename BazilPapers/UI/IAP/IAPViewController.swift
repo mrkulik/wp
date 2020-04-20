@@ -25,7 +25,7 @@ class IAPViewController: UIViewController {
         return selectorViewController?.selectedIndex ?? 1
     }
     
-    private let iapController = IAPController()
+    let iapController = IAPController()
     
     weak var delegate: IAPViewControllerDelegate?
     

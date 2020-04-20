@@ -18,6 +18,8 @@ class WallpapersListViewController: UIViewController {
     
     private var menuItems: [MenuItemViewModel] = .init()
     
+    private var iapViewController: IAPViewController?
+    
     @IBOutlet weak var menuButton: UIButton!
     @IBAction func menuPressed(_ sender: UIButton) {
         let controller = PopMenuViewController(sourceView: menuButton, actions: getPopMenuDefaultActions())
@@ -35,7 +37,7 @@ class WallpapersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupIAPController()
         setupMenuDataSource()
         if !self.context.currentUser.isPremium {
             openSbscr()
@@ -43,10 +45,35 @@ class WallpapersListViewController: UIViewController {
     }
     
     private func openSbscr() {
+        guard let vc = iapViewController else {
+            return
+        }
+        self.present(vc, animated: true)
+    }
+    
+    private func setupIAPController() {
         let vc = IAPViewController.initial()
         vc.modalPresentationStyle = .fullScreen
         vc.delegate = self
-        self.present(vc, animated: true)
+        vc.iapController.verifySubscription { (result) in
+            guard let result = result else {
+                return
+            }
+
+            switch result {
+            case .purchased(_):
+                self.context.currentUser.isPremium = true
+                
+            case .expired(_):
+                self.context.currentUser.isPremium = false
+                
+            case .notPurchased:
+                self.context.currentUser.isPremium = false
+            }
+        
+            try? self.context.save()
+        }
+        self.iapViewController = vc
     }
     
     private func getPopMenuDefaultActions() -> [PopMenuDefaultAction] {
@@ -130,9 +157,10 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
     }
     
     private func handlePremium() {
-        let vc = IAPViewController.initial()
-        vc.modalPresentationStyle = .fullScreen
-        vc.delegate = self
+        guard let vc = iapViewController else {
+            return
+        }
+        
         self.presentedViewController?.present(vc, animated: true)
     }
 }
