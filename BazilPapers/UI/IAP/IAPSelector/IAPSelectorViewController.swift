@@ -48,11 +48,7 @@ class IAPSelectorViewController: ButtonTabViewController {
     }
     
     private func setupPriceLabels() {
-        guard IAPController.skProducts.count == subscriptionButtons.count else {
-            return
-        }
-        
-        let onetime = String(format: NSLocalizedString("%@", comment: ""), getFormattedPrice(product: IAPController.skProducts[0]) ?? "$5.99")
+        let onetime = String(format: NSLocalizedString("%@", comment: ""), getFormattedPrice(product: IAPController.skProducts[0]) ?? "$4.99")
         firstPurchasePriceLabel.text = onetime
         let monthTitle = String(format: NSLocalizedString("then %@\n/ month", comment: ""), getFormattedPrice(product: IAPController.skProducts[1]) ?? "$1.99")
         secondPurchasePriceLabel.text = monthTitle
