@@ -55,9 +55,9 @@ class IAPSelectorViewController: ButtonTabViewController {
         let yearTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productIndex: 2) ?? "$3.99")
         thirdPurchasePriceLabel.text = yearTitle
         
-        let secondWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productIndex: 1, divider: 4) ?? "$0.49")
+        let secondWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productIndex: 1, divider: 4.3) ?? "$0.49")
         secondPurchaseWeekPrice.text = secondWeekPrice
-        let thirdWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productIndex: 2, divider: 52) ?? "$0.08")
+        let thirdWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productIndex: 2, divider: 52.14) ?? "$0.08")
         thirdPurchaseWeekPrice.text = thirdWeekPrice
     }
     
