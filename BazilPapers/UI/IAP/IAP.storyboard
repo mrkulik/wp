@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zez-se-y3H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zez-se-y3H">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,10 +58,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zb4-Ji-URV">
-                                <rect key="frame" x="0.0" y="20" width="375" height="387.5"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="370.5"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHi-sy-pH3">
-                                        <rect key="frame" x="0.0" y="61" width="375" height="265.5"/>
+                                        <rect key="frame" x="0.0" y="61" width="375" height="248.5"/>
                                         <connections>
                                             <segue destination="Bt4-SS-88m" kind="embed" id="55u-fv-MCS"/>
                                         </connections>
@@ -73,7 +73,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access to 500+ premium wallpapers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQU-dc-Eu2">
-                                        <rect key="frame" x="44.5" y="342.5" width="286" height="29"/>
+                                        <rect key="frame" x="44.5" y="325.5" width="286" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KII-t0-qOu">
-                                <rect key="frame" x="0.0" y="407.5" width="375" height="183.5"/>
+                                <rect key="frame" x="0.0" y="390.5" width="375" height="183.5"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0a-Ch-BEj">
                                         <rect key="frame" x="16" y="0.0" width="343" height="183.5"/>
@@ -105,12 +105,19 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KII-t0-qOu" secondAttribute="height" multiplier="1920:940" id="ANk-0D-HpY"/>
+                                    <constraint firstAttribute="bottom" secondItem="i0a-Ch-BEj" secondAttribute="bottom" id="SF1-hV-AFg"/>
                                     <constraint firstAttribute="trailing" secondItem="i0a-Ch-BEj" secondAttribute="trailing" constant="16" id="ag0-cK-FQg"/>
                                     <constraint firstItem="i0a-Ch-BEj" firstAttribute="leading" secondItem="KII-t0-qOu" secondAttribute="leading" constant="16" id="ioF-gU-pqQ"/>
                                     <constraint firstItem="i0a-Ch-BEj" firstAttribute="top" secondItem="KII-t0-qOu" secondAttribute="top" id="lmQ-MK-Ecu"/>
-                                    <constraint firstAttribute="bottom" secondItem="i0a-Ch-BEj" secondAttribute="bottom" id="vVd-Dg-OrP"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1w-Qd-VTx">
+                                <rect key="frame" x="16" y="576" width="343" height="29"/>
+                                <string key="text">Automatic renewal can be disabled 24 hours before the end of the current period. A subscription fee is charged to iTunes along with a subscription confirmation. Automatic renewal can be disabled after purchase in your account settings.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" red="0.48079923793749157" green="0.48079923793749157" blue="0.48079923793749157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mG-Z7-jTO" userLabel="Bottom button view">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
@@ -159,6 +166,8 @@
                         <constraints>
                             <constraint firstItem="KII-t0-qOu" firstAttribute="leading" secondItem="Tyy-Kk-eHf" secondAttribute="leading" id="50C-6E-yBp"/>
                             <constraint firstItem="KII-t0-qOu" firstAttribute="trailing" secondItem="Tyy-Kk-eHf" secondAttribute="trailing" id="5A1-gb-xz9"/>
+                            <constraint firstItem="Tyy-Kk-eHf" firstAttribute="trailing" secondItem="a1w-Qd-VTx" secondAttribute="trailing" constant="16" id="60X-bY-cdG"/>
+                            <constraint firstItem="a1w-Qd-VTx" firstAttribute="top" secondItem="KII-t0-qOu" secondAttribute="bottom" constant="2" id="8UC-pF-4q7"/>
                             <constraint firstItem="Tyy-Kk-eHf" firstAttribute="bottom" secondItem="4mG-Z7-jTO" secondAttribute="bottom" id="C7u-sm-n4o"/>
                             <constraint firstItem="xrj-j9-D5M" firstAttribute="top" secondItem="Tyy-Kk-eHf" secondAttribute="top" id="Tkh-2y-VcM"/>
                             <constraint firstItem="zb4-Ji-URV" firstAttribute="top" secondItem="xrj-j9-D5M" secondAttribute="bottom" id="Vx8-n4-EDp"/>
@@ -167,16 +176,17 @@
                             <constraint firstItem="Tyy-Kk-eHf" firstAttribute="trailing" secondItem="4mG-Z7-jTO" secondAttribute="trailing" id="ixL-95-vi7"/>
                             <constraint firstItem="KII-t0-qOu" firstAttribute="top" secondItem="zb4-Ji-URV" secondAttribute="bottom" id="qD6-iw-aux"/>
                             <constraint firstItem="zb4-Ji-URV" firstAttribute="leading" secondItem="Tyy-Kk-eHf" secondAttribute="leading" id="sPW-Xd-K6i"/>
-                            <constraint firstItem="4mG-Z7-jTO" firstAttribute="top" secondItem="KII-t0-qOu" secondAttribute="bottom" constant="16" id="uLP-gd-T1u"/>
                             <constraint firstItem="xrj-j9-D5M" firstAttribute="trailing" secondItem="Tyy-Kk-eHf" secondAttribute="trailing" id="wW4-rk-cg7"/>
+                            <constraint firstItem="a1w-Qd-VTx" firstAttribute="leading" secondItem="Tyy-Kk-eHf" secondAttribute="leading" constant="16" id="yjh-fP-UhE"/>
                             <constraint firstItem="xrj-j9-D5M" firstAttribute="leading" secondItem="Tyy-Kk-eHf" secondAttribute="leading" id="zXI-YR-Zqr"/>
+                            <constraint firstItem="4mG-Z7-jTO" firstAttribute="top" secondItem="a1w-Qd-VTx" secondAttribute="bottom" constant="2" id="zmL-q9-Rhe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tyy-Kk-eHf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vnr-EN-79D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118.125" y="31.690140845070424"/>
+            <point key="canvasLocation" x="117.59999999999999" y="31.03448275862069"/>
         </scene>
         <!--IAPCollection-->
         <scene sceneID="wsP-rp-Ee1">
