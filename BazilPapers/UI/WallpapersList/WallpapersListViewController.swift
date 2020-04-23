@@ -89,7 +89,8 @@ class WallpapersListViewController: UIViewController {
             .init(title: "Rate App", image: #imageLiteral(resourceName: "Star"), color:  #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .rate),
             .init(title: "Share", image: #imageLiteral(resourceName: "share"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .share),
             .init(title: "Support", image: #imageLiteral(resourceName: "support"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .support),
-            .init(title: "Privacy Policy", image:  #imageLiteral(resourceName: "privacy-policy"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy)
+            .init(title: "Privacy Policy", image:  #imageLiteral(resourceName: "privacy-policy"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy),
+            .init(title: "Terms Of Use", image:  #imageLiteral(resourceName: "privacy-policy"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .terms)
         ]
     
         if !self.context.currentUser.isPremium {
@@ -124,6 +125,8 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
             handleSupport()
         case .premiumAccess:
             handlePremium()
+        case .terms:
+            handleTerms()
         default:
             return
         }
@@ -146,6 +149,12 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
     
     private func handlePrivacyPolicy() {
         if let url = URL(string: "https://lovely-wallpapers.bazillabs.com/home/privacy-policy") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    private func handleTerms() {
+        if let url = URL(string: "https://lovely-wallpapers.bazillabs.com/home/therms-of-use") {
             UIApplication.shared.open(url)
         }
     }
@@ -187,6 +196,7 @@ enum MenuItemType {
     case support
     case usual
     case premiumAccess
+    case terms
 }
 
 
