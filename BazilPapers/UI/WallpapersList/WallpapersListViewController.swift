@@ -22,7 +22,10 @@ class WallpapersListViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIButton!
     @IBAction func menuPressed(_ sender: UIButton) {
-        let controller = PopMenuViewController(sourceView: menuButton, actions: getPopMenuDefaultActions())
+        let menuAppearance: PopMenuAppearance = .init()
+        menuAppearance.popMenuActionCountForScrollable = 7
+        
+        let controller = PopMenuViewController(sourceView: menuButton, actions: getPopMenuDefaultActions(), appearance: menuAppearance)
         
         // Customize appearance
         controller.appearance.popMenuFont = UIFont.systemFont(ofSize: 17, weight: .regular)
@@ -30,7 +33,7 @@ class WallpapersListViewController: UIViewController {
         // Configure options
         controller.shouldDismissOnSelection = false
         controller.delegate = self
-        
+
         // Present menu controller
         present(controller, animated: true, completion: nil)
     }
