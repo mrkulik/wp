@@ -93,7 +93,7 @@ class WallpapersListViewController: UIViewController {
             .init(title: "Share", image: #imageLiteral(resourceName: "share"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .share),
             .init(title: "Support", image: #imageLiteral(resourceName: "support"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .support),
             .init(title: "Privacy Policy", image:  #imageLiteral(resourceName: "privacy-policy"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy),
-            .init(title: "Terms Of Use", image:  #imageLiteral(resourceName: "privacy-policy"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .terms)
+            .init(title: "Terms Of Use", image:  #imageLiteral(resourceName: "eula"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .terms)
         ]
     
         if !self.context.currentUser.isPremium {
