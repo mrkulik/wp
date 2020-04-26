@@ -42,9 +42,6 @@ class WallpapersListViewController: UIViewController {
         super.viewDidLoad()
         setupIAPController()
         setupMenuDataSource()
-        if !self.context.currentUser.isPremium {
-            openSbscr()
-        }
     }
     
     private func openSbscr() {
