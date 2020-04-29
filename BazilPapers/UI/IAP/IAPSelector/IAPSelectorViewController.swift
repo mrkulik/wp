@@ -48,41 +48,41 @@ class IAPSelectorViewController: ButtonTabViewController {
     }
     
     func setupPriceLabels() {
-        let onetime = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productIndex: 0) ?? "$4.99")
+        let onetime = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productId: IAPController.productIds[0]) ?? "$4.99")
         firstPurchasePriceLabel.text = onetime
-        let monthTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productIndex: 1) ?? "$1.99")
+        let monthTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productId: IAPController.productIds[1]) ?? "$1.99")
         secondPurchasePriceLabel.text = monthTitle
-        let yearTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productIndex: 2) ?? "$3.99")
+        let yearTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productId: IAPController.productIds[2]) ?? "$3.99")
         thirdPurchasePriceLabel.text = yearTitle
         
-        let secondWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productIndex: 1, divider: 4.3) ?? "$0.49")
+        let secondWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productId: IAPController.productIds[1], divider: 4.3) ?? "$0.49")
         secondPurchaseWeekPrice.text = secondWeekPrice
-        let thirdWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productIndex: 2, divider: 52.14) ?? "$0.08")
+        let thirdWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productId: IAPController.productIds[2], divider: 52.14) ?? "$0.08")
         thirdPurchaseWeekPrice.text = thirdWeekPrice
     }
     
-    private func getFormattedPrice(productIndex: Int) -> String? {
-        guard productIndex < IAPController.skProducts.count else {
-            return nil
+    private func getFormattedPrice(productId: String) -> String? {
+        let product = IAPController.skProducts.first { (skp) -> Bool in
+            return skp.productIdentifier == productId
         }
+        guard let p = product else { return nil }
         
-        let product = IAPController.skProducts[productIndex]
         let nb = NumberFormatter()
         nb.numberStyle = .currency
-        nb.locale = product.priceLocale
-        return nb.string(from: product.price)
+        nb.locale = p.priceLocale
+        return nb.string(from: p.price)
     }
     
-    private func getWeekPrice(productIndex: Int, divider: NSDecimalNumber) -> String? {
-        guard productIndex < IAPController.skProducts.count else {
-            return nil
+    private func getWeekPrice(productId: String, divider: NSDecimalNumber) -> String? {
+        let product = IAPController.skProducts.first { (skp) -> Bool in
+            return skp.productIdentifier == productId
         }
+        guard let p = product else { return nil }
         
-        let product = IAPController.skProducts[productIndex]
         let nb = NumberFormatter()
         nb.numberStyle = .currency
-        nb.locale = product.priceLocale
-        let price = product.price.dividing(by: divider)
+        nb.locale = p.priceLocale
+        let price = p.price.dividing(by: divider)
         return nb.string(from: price)
     }
     

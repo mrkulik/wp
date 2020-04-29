@@ -24,12 +24,9 @@ class IAPController {
     // MARK: - Property
     weak var delegate: IAPControllerDelegate?
     private let sharedSecret = "7d1ffdfce2f94ff591476219892ce9be"
-    private let productIds = ["premiumforever", "month1.99", "year3.99"]
-    static var skProducts: [SKProduct] = [] {
-        didSet {
-            
-        }
-    }
+    static let productIds = ["premiumforever", "month1.99", "year3.99"]
+    static var skProducts: Set<SKProduct> = .init()
+    
     private var appleValidator: AppleReceiptValidator {
         return AppleReceiptValidator(service: .production, sharedSecret: sharedSecret)
     }
@@ -53,17 +50,15 @@ class IAPController {
     }
     
     private static func getProductsInfo() {
-        let productsForInfo = Set(["premiumforever", "month1.99", "year3.99"])
+        let productsForInfo = Set(IAPController.productIds)
         SwiftyStoreKit.retrieveProductsInfo(productsForInfo) { (result) in
-            skProducts = result.retrievedProducts.sorted(by: { (sk1, sk2) -> Bool in
-                return sk1.price.floatValue < sk2.price.floatValue
-            })
+            skProducts = result.retrievedProducts
         }
     }
     
     func purchaseProduct(index: Int) {
         delegate?.tryBuyProduct()
-        SwiftyStoreKit.purchaseProduct(productIds[index]) { (result) in
+        SwiftyStoreKit.purchaseProduct(IAPController.productIds[index]) { (result) in
             if case .success(let purchase) = result {
                 self.delegate?.didPurchaseProduct(product: purchase.product)
                 if purchase.needsFinishTransaction {
@@ -109,7 +104,7 @@ class IAPController {
         SwiftyStoreKit.verifyReceipt(using: appleValidator) { (result) in
             switch result {
             case .success(let receipt):
-                let purchaseResult = SwiftyStoreKit.verifySubscriptions(productIds: Set(self.productIds), inReceipt: receipt)
+                let purchaseResult = SwiftyStoreKit.verifySubscriptions(productIds: Set(IAPController.productIds), inReceipt: receipt)
                 completion(purchaseResult)
             case .error(_):
                 completion(nil)
