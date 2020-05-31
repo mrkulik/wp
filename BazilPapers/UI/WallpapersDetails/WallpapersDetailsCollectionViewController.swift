@@ -102,6 +102,16 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row % 7 == 0 {
+            let vc = IAPViewController.initial()
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true)
+            Analytics.logEvent("sbscr_opened_from_swipalka", parameters: [:])
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return UIScreen.main.bounds.size
     }
