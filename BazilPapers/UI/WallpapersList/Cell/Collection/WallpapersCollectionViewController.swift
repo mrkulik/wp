@@ -39,7 +39,7 @@ class WallpapersCollectionViewController: UICollectionViewController, UICollecti
     
     private var numberOfWallpapers: Int {
         let frCount = fetchedResultsController.fetchedObjects?.count ?? 0
-        let premiumLimit = 4
+        let premiumLimit = 15
         if self.catalogContext.currentUser.isPremium {
             return frCount
         }
