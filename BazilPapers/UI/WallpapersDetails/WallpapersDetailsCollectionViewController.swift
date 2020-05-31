@@ -27,11 +27,6 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
         let sortDescriptor = NSSortDescriptor(key: #keyPath(MOWallpaperInfo.order), ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        if let id = category?.id {
-            let predicate = NSPredicate.equalValue(key: #keyPath(MOWallpaperInfo.category.id), object: id)
-            fetchRequest.predicate = predicate
-        }
-        
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.catalogContext, sectionNameKeyPath: nil, cacheName: nil)
         
         fetchedResultsController.delegate = self
@@ -44,14 +39,7 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     
     
     private var numberOfWallpapers: Int {
-        let frCount = fetchedResultsController.fetchedObjects?.count ?? 0
-        let premiumLimit = 5
-        if self.catalogContext.currentUser.isPremium {
-            return frCount
-        }
-        else {
-            return frCount < premiumLimit ? frCount : premiumLimit
-        }
+        return fetchedResultsController.fetchedObjects?.count ?? 0
     }
     
     private var layoutWasSetup: Bool = false
