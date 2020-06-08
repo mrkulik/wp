@@ -24,7 +24,7 @@ class IAPController {
     // MARK: - Property
     weak var delegate: IAPControllerDelegate?
     private let sharedSecret = "7d1ffdfce2f94ff591476219892ce9be"
-    static let productIds = ["premiumforever", "month1.99", "year3.99"]
+    static let productIds = ["premiumforever", "month1.99", "week0.99"]
     static var skProducts: Set<SKProduct> = .init()
     
     private var appleValidator: AppleReceiptValidator {

@@ -52,12 +52,12 @@ class IAPSelectorViewController: ButtonTabViewController {
         firstPurchasePriceLabel.text = onetime
         let monthTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productId: IAPController.productIds[1]) ?? "$1.99")
         secondPurchasePriceLabel.text = monthTitle
-        let yearTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productId: IAPController.productIds[2]) ?? "$3.99")
+        let yearTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productId: IAPController.productIds[2]) ?? "$0.99")
         thirdPurchasePriceLabel.text = yearTitle
         
         let secondWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productId: IAPController.productIds[1], divider: 4.3) ?? "$0.49")
         secondPurchaseWeekPrice.text = secondWeekPrice
-        let thirdWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productId: IAPController.productIds[2], divider: 52.14) ?? "$0.08")
+        let thirdWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productId: IAPController.productIds[2], divider: 1) ?? "$0.99")
         thirdPurchaseWeekPrice.text = thirdWeekPrice
     }
     
