@@ -65,6 +65,7 @@
 		00A964F323D8EFD2005E0417 /* FormFactors.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00A964F123D8EFD2005E0417 /* FormFactors.xcdatamodeld */; };
 		00A9652923EA1A39005E0417 /* GetFormfactorsFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9652823EA1A39005E0417 /* GetFormfactorsFirebaseService.swift */; };
 		00A9994924432BB70057304D /* ManagedObjectContext+CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9994824432BB70057304D /* ManagedObjectContext+CurrentUser.swift */; };
+		00C8C0082493B640008596DF /* CGRect+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C8C0072493B640008596DF /* CGRect+Utils.swift */; };
 		00E772C5243B3449006250FF /* IAPSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E772C4243B3449006250FF /* IAPSelectorViewController.swift */; };
 		00E772C7243B3EF5006250FF /* IAP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E772C6243B3EF5006250FF /* IAP.storyboard */; };
 		00E772C9243B3EFF006250FF /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E772C8243B3EFF006250FF /* IAPViewController.swift */; };
@@ -174,6 +175,7 @@
 		00BEBAAC23C91FBE007EE66D /* DataStorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorageProvider.swift; sourceTree = "<group>"; };
 		00BEBAAE23C91FCB007EE66D /* NSPersistentContainer+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPersistentContainer+Models.swift"; sourceTree = "<group>"; };
 		00BEBAB023C91FD6007EE66D /* PersistentContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainerController.swift; sourceTree = "<group>"; };
+		00C8C0072493B640008596DF /* CGRect+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Utils.swift"; sourceTree = "<group>"; };
 		00E772C4243B3449006250FF /* IAPSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPSelectorViewController.swift; sourceTree = "<group>"; };
 		00E772C6243B3EF5006250FF /* IAP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IAP.storyboard; sourceTree = "<group>"; };
 		00E772C8243B3EFF006250FF /* IAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
@@ -471,6 +473,7 @@
 				0087ED4C23FB37AD0026EFC1 /* UIViewController */,
 				0087ED4F23FB37AD0026EFC1 /* UITableView */,
 				0087ED6723FF1AF00026EFC1 /* UIImage+GIF.swift */,
+				00C8C0072493B640008596DF /* CGRect+Utils.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -928,6 +931,7 @@
 				0087ED5923FB37AE0026EFC1 /* NSManagedObject+SyncManyRelationship.swift in Sources */,
 				0087ED5723FB37AE0026EFC1 /* NSManagedObject+Instance.swift in Sources */,
 				00138DE923D8E97B00EBD787 /* RemoteWallpaperSource.swift in Sources */,
+				00C8C0082493B640008596DF /* CGRect+Utils.swift in Sources */,
 				0087ED5F23FB37AE0026EFC1 /* UIDevice+SystemInfo.swift in Sources */,
 				00A9994924432BB70057304D /* ManagedObjectContext+CurrentUser.swift in Sources */,
 				004258C4244344B1000468F4 /* WallpaperSubscriptionCollectionViewCell.swift in Sources */,

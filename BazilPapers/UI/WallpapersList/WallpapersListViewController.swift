@@ -139,6 +139,12 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
         {
             let activityVC = UIActivityViewController(activityItems: [message,link], applicationActivities: nil)
             activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+            if let popoverController = activityVC.popoverPresentationController {
+                popoverController.sourceView = activityVC.view
+                popoverController.sourceRect = CGRect(x: activityVC.view.bounds.midX, y: activityVC.view.bounds.midY, width: 0, height: activityVC.view.bounds.bottom)
+                popoverController.permittedArrowDirections = []
+            }
+            
             self.presentedViewController?.present(activityVC, animated: true, completion: nil)
         }
     }
