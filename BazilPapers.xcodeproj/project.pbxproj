@@ -61,6 +61,8 @@
 		0087ED6423FB3AB70026EFC1 /* CGColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ED6323FB3AB70026EFC1 /* CGColor+Utils.swift */; };
 		0087ED6823FF1AF00026EFC1 /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087ED6723FF1AF00026EFC1 /* UIImage+GIF.swift */; };
 		009CF8A1243B182700003FB5 /* IAPSelector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009CF8A0243B182700003FB5 /* IAPSelector.storyboard */; };
+		00A0506E24DFD884004D2263 /* AdsPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A0506D24DFD884004D2263 /* AdsPopUp.storyboard */; };
+		00A0507024DFD8CD004D2263 /* AdsPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A0506F24DFD8CD004D2263 /* AdsPopUpViewController.swift */; };
 		00A5CC8823D8EBDF0025A872 /* Catalog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00138DDE23D8E7FD00EBD787 /* Catalog.xcdatamodeld */; };
 		00A964F323D8EFD2005E0417 /* FormFactors.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00A964F123D8EFD2005E0417 /* FormFactors.xcdatamodeld */; };
 		00A9652923EA1A39005E0417 /* GetFormfactorsFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A9652823EA1A39005E0417 /* GetFormfactorsFirebaseService.swift */; };
@@ -168,6 +170,8 @@
 		0087ED6323FB3AB70026EFC1 /* CGColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColor+Utils.swift"; sourceTree = "<group>"; };
 		0087ED6723FF1AF00026EFC1 /* UIImage+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
 		009CF8A0243B182700003FB5 /* IAPSelector.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IAPSelector.storyboard; sourceTree = "<group>"; };
+		00A0506D24DFD884004D2263 /* AdsPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdsPopUp.storyboard; sourceTree = "<group>"; };
+		00A0506F24DFD8CD004D2263 /* AdsPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPopUpViewController.swift; sourceTree = "<group>"; };
 		00A964F223D8EFD2005E0417 /* FormFactors.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FormFactors.xcdatamodel; sourceTree = "<group>"; };
 		00A9652823EA1A39005E0417 /* GetFormfactorsFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFormfactorsFirebaseService.swift; sourceTree = "<group>"; };
 		00A9994824432BB70057304D /* ManagedObjectContext+CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedObjectContext+CurrentUser.swift"; sourceTree = "<group>"; };
@@ -417,6 +421,7 @@
 		0064926C23BFC33500DE8E71 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				00A0506C24DFD861004D2263 /* AdsPopUp */,
 				009CF89E243B17FA00003FB5 /* IAP */,
 				00F4C72223BFDE3000239BAA /* LikedWallpapers */,
 				0087ECBD23FB2A760026EFC1 /* WallpapersDetails */,
@@ -531,6 +536,15 @@
 				00E772C4243B3449006250FF /* IAPSelectorViewController.swift */,
 			);
 			path = IAPSelector;
+			sourceTree = "<group>";
+		};
+		00A0506C24DFD861004D2263 /* AdsPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				00A0506D24DFD884004D2263 /* AdsPopUp.storyboard */,
+				00A0506F24DFD8CD004D2263 /* AdsPopUpViewController.swift */,
+			);
+			path = AdsPopUp;
 			sourceTree = "<group>";
 		};
 		00BEBA9923C90DBE007EE66D /* DataStorage */ = {
@@ -765,6 +779,7 @@
 				0073167A24498FA200A757DB /* WallpaperDetails.xcassets in Resources */,
 				00F5B59B2449016F00156004 /* IAPCollection.storyboard in Resources */,
 				000BCD87241D844E00DE8207 /* GoogleService-Info.plist in Resources */,
+				00A0506E24DFD884004D2263 /* AdsPopUp.storyboard in Resources */,
 				00F4C72823BFDE6A00239BAA /* LikedWallpapers.storyboard in Resources */,
 				00F4C65F23BFD98E00239BAA /* RootTabButtons.storyboard in Resources */,
 				004258C6244344BE000468F4 /* WallpaperSubscriptionCollectionViewCell.xib in Resources */,
@@ -921,6 +936,7 @@
 				004CD87723CD1730002B8092 /* GetCategoriesFirebaseService.swift in Sources */,
 				00F4C72623BFDE5A00239BAA /* WallpapersListViewController.swift in Sources */,
 				00F4C72A23BFDE7400239BAA /* LikedWallpapersViewController.swift in Sources */,
+				00A0507024DFD8CD004D2263 /* AdsPopUpViewController.swift in Sources */,
 				0087ED5D23FB37AE0026EFC1 /* UITableViewHeaderFooterView+Table.swift in Sources */,
 				00138DE423D8E7FD00EBD787 /* DataStorageProvider.swift in Sources */,
 				0048C3E423C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift in Sources */,
