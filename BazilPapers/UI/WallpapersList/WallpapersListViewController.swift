@@ -18,8 +18,6 @@ class WallpapersListViewController: UIViewController {
     
     private var menuItems: [MenuItemViewModel] = .init()
     
-    private var iapViewController: IAPViewController?
-    
     @IBOutlet weak var menuButton: UIButton!
     @IBAction func menuPressed(_ sender: UIButton) {
         let menuAppearance: PopMenuAppearance = .init()
@@ -40,40 +38,7 @@ class WallpapersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupIAPController()
         setupMenuDataSource()
-    }
-    
-    private func openSbscr() {
-        guard let vc = iapViewController else {
-            return
-        }
-        self.present(vc, animated: true)
-    }
-    
-    private func setupIAPController() {
-        let vc = IAPViewController.initial()
-        vc.modalPresentationStyle = .fullScreen
-        vc.delegate = self
-        vc.iapController.verifySubscription { (result) in
-            guard let result = result else {
-                return
-            }
-
-            switch result {
-            case .purchased(_):
-                self.context.currentUser.isPremium = true
-                
-            case .expired(_):
-                self.context.currentUser.isPremium = false
-                
-            case .notPurchased:
-                self.context.currentUser.isPremium = false
-            }
-        
-            try? self.context.save()
-        }
-        self.iapViewController = vc
     }
     
     private func getPopMenuDefaultActions() -> [PopMenuDefaultAction] {
@@ -86,16 +51,13 @@ class WallpapersListViewController: UIViewController {
 
     private func setupMenuDataSource() {
         self.menuItems = [
+            .init(title: "Premium", image:  #imageLiteral(resourceName: "get-premium"), color: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), type: .premiumAccess),
             .init(title: "Rate App", image: #imageLiteral(resourceName: "Star"), color:  #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .rate),
             .init(title: "Share", image: #imageLiteral(resourceName: "share"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .share),
             .init(title: "Support", image: #imageLiteral(resourceName: "support"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .support),
             .init(title: "Privacy Policy", image:  #imageLiteral(resourceName: "privacy-policy"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .privacy),
             .init(title: "Terms Of Use", image:  #imageLiteral(resourceName: "eula"), color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), type: .terms)
         ]
-    
-        if !self.context.currentUser.isPremium {
-            self.menuItems.insert(.init(title: "Premium", image:  #imageLiteral(resourceName: "get-premium"), color: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), type: .premiumAccess), at: 0)
-        }
     }
     /*
     // MARK: - Navigation
@@ -172,10 +134,8 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
     }
     
     private func handlePremium() {
-        guard let vc = iapViewController else {
-            return
-        }
-        
+        let vc = IAPViewController.initial()
+        vc.modalPresentationStyle = .fullScreen
         self.presentedViewController?.present(vc, animated: true)
     }
 }
@@ -203,12 +163,4 @@ enum MenuItemType {
     case usual
     case premiumAccess
     case terms
-}
-
-
-extension WallpapersListViewController: IAPViewControllerDelegate {
-    func didPurchase() {
-        self.menuItems.remove(at: 0)
-    }
-    
 }

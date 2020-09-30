@@ -14,6 +14,8 @@ import SVProgressHUD
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    private let context = DataStorageProvider.sharedCatalogModelController.container.viewContext
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -39,6 +41,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SVProgressHUD.setMinimumDismissTimeInterval(0.7)
         SVProgressHUD.setMaximumDismissTimeInterval(0.7)
         return true
+    }
+    
+    
+    private func verifySbscr() {
+        IAPController().verifySubscription { (result) in
+            guard let result = result else {
+                return
+            }
+
+            switch result {
+            case .purchased(_):
+                self.context.currentUser.isPremium = true
+                
+            case .expired(_):
+                self.context.currentUser.isPremium = false
+                
+            case .notPurchased:
+                self.context.currentUser.isPremium = false
+            }
+        
+            try? self.context.save()
+        }
     }
 
 }
