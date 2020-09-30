@@ -29,11 +29,6 @@ class WallpapersDetailsViewController: UIViewController {
     private weak var collectionViewController: WallpapersDetailsCollectionViewController?
     
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var backButton: UIButton!
-    
-    @IBAction func backButtonPressed(_ sender: UIButton) {
-        self.presentingViewController?.dismiss(animated: true)
-    }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         self.actionPerformer?.didPressedSaveButton(sender)

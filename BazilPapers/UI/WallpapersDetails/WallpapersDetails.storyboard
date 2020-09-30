@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghT-Hk-U67">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghT-Hk-U67">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,81 +22,16 @@
                                     <segue destination="AWe-PX-hAn" kind="embed" id="ALo-L6-YHX"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvI-hJ-obw">
-                                <rect key="frame" x="73.5" y="752" width="60" height="60"/>
-                                <subviews>
-                                    <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCA-JS-uty">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ywC-k0-BQi">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="30"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <blurEffect style="systemChromeMaterialDark"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </visualEffectView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo6-hW-BGs">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="back"/>
-                                        <connections>
-                                            <action selector="backButtonPressed:" destination="ghT-Hk-U67" eventType="touchUpInside" id="HTV-bI-NFQ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Ejd-VL-T5w"/>
-                                    <constraint firstItem="sCA-JS-uty" firstAttribute="top" secondItem="nvI-hJ-obw" secondAttribute="top" id="Kul-ry-lvA"/>
-                                    <constraint firstAttribute="trailing" secondItem="sCA-JS-uty" secondAttribute="trailing" id="MVi-TD-QHH"/>
-                                    <constraint firstItem="vo6-hW-BGs" firstAttribute="top" secondItem="nvI-hJ-obw" secondAttribute="top" id="Vgn-bX-vPc"/>
-                                    <constraint firstAttribute="height" constant="60" id="Wwb-2D-aMW"/>
-                                    <constraint firstAttribute="trailing" secondItem="vo6-hW-BGs" secondAttribute="trailing" id="idh-bL-9Qn"/>
-                                    <constraint firstAttribute="bottom" secondItem="sCA-JS-uty" secondAttribute="bottom" id="jDr-k6-a3z"/>
-                                    <constraint firstItem="sCA-JS-uty" firstAttribute="leading" secondItem="nvI-hJ-obw" secondAttribute="leading" id="kZv-tz-kwa"/>
-                                    <constraint firstItem="vo6-hW-BGs" firstAttribute="leading" secondItem="nvI-hJ-obw" secondAttribute="leading" id="pha-j5-sPt"/>
-                                    <constraint firstAttribute="bottom" secondItem="vo6-hW-BGs" secondAttribute="bottom" id="ur8-dn-HtD"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_clipsToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQF-S3-HPr">
-                                <rect key="frame" x="280.5" y="752" width="60" height="60"/>
+                                <rect key="frame" x="167" y="732" width="80" height="80"/>
                                 <subviews>
-                                    <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-eV-lpd">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b4v-ue-A0U">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="30"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <blurEffect style="systemChromeMaterialDark"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </visualEffectView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2m-5d-Ryg">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="download"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="tintColor" red="0.30388484589041098" green="0.57705479452054798" blue="0.59503424657534243" alpha="0.33459974315068491" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Save" backgroundImage="save-button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="saveButtonPressed:" destination="ghT-Hk-U67" eventType="touchUpInside" id="OGB-1w-Dhi"/>
                                         </connections>
@@ -105,15 +40,11 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="D2m-5d-Ryg" secondAttribute="trailing" id="1CR-l2-tJM"/>
-                                    <constraint firstAttribute="bottom" secondItem="Sm5-eV-lpd" secondAttribute="bottom" id="4OU-nJ-CYy"/>
-                                    <constraint firstAttribute="width" constant="60" id="4o4-MS-DA1"/>
-                                    <constraint firstItem="Sm5-eV-lpd" firstAttribute="leading" secondItem="qQF-S3-HPr" secondAttribute="leading" id="5e5-G8-kcQ"/>
+                                    <constraint firstAttribute="width" constant="80" id="4o4-MS-DA1"/>
                                     <constraint firstAttribute="bottom" secondItem="D2m-5d-Ryg" secondAttribute="bottom" id="8Rz-yC-Gd2"/>
                                     <constraint firstItem="D2m-5d-Ryg" firstAttribute="leading" secondItem="qQF-S3-HPr" secondAttribute="leading" id="Lz3-Qv-8SH"/>
-                                    <constraint firstAttribute="trailing" secondItem="Sm5-eV-lpd" secondAttribute="trailing" id="hkj-tk-wA0"/>
-                                    <constraint firstItem="Sm5-eV-lpd" firstAttribute="top" secondItem="qQF-S3-HPr" secondAttribute="top" id="pSa-fK-eAQ"/>
                                     <constraint firstItem="D2m-5d-Ryg" firstAttribute="top" secondItem="qQF-S3-HPr" secondAttribute="top" id="rVF-sW-UMg"/>
-                                    <constraint firstAttribute="height" constant="60" id="tvh-re-hlB"/>
+                                    <constraint firstAttribute="height" constant="80" id="tvh-re-hlB"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -127,17 +58,14 @@
                         <constraints>
                             <constraint firstItem="Il2-8q-Tpr" firstAttribute="top" secondItem="tdo-GS-VhO" secondAttribute="top" id="0mg-Za-L2P"/>
                             <constraint firstAttribute="trailing" secondItem="Il2-8q-Tpr" secondAttribute="trailing" id="3HT-KN-OI6"/>
-                            <constraint firstItem="nvI-hJ-obw" firstAttribute="centerX" secondItem="tdo-GS-VhO" secondAttribute="centerX" multiplier="0.5" id="Bun-Ot-UDO"/>
-                            <constraint firstItem="5ls-WT-lKg" firstAttribute="bottom" secondItem="nvI-hJ-obw" secondAttribute="bottom" constant="50" id="GV6-3A-1bB"/>
                             <constraint firstAttribute="bottom" secondItem="Il2-8q-Tpr" secondAttribute="bottom" id="Kv7-PO-rdD"/>
                             <constraint firstItem="5ls-WT-lKg" firstAttribute="bottom" secondItem="qQF-S3-HPr" secondAttribute="bottom" constant="50" id="S6T-wZ-ng9"/>
                             <constraint firstItem="Il2-8q-Tpr" firstAttribute="leading" secondItem="tdo-GS-VhO" secondAttribute="leading" id="XOh-82-HjS"/>
-                            <constraint firstItem="qQF-S3-HPr" firstAttribute="centerX" secondItem="tdo-GS-VhO" secondAttribute="centerX" multiplier="1.5" id="zbE-5l-dfA"/>
+                            <constraint firstItem="qQF-S3-HPr" firstAttribute="centerX" secondItem="tdo-GS-VhO" secondAttribute="centerX" id="zbE-5l-dfA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5ls-WT-lKg"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="vo6-hW-BGs" id="Cqg-jr-LXv"/>
                         <outlet property="saveButton" destination="D2m-5d-Ryg" id="fZs-WH-tD2"/>
                     </connections>
                 </viewController>
@@ -172,7 +100,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="480" height="480"/>
-        <image name="download" width="480" height="480"/>
+        <image name="save-button" width="165" height="165"/>
     </resources>
 </document>
