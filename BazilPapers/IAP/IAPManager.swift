@@ -10,6 +10,11 @@ import Foundation
 import SwiftyStoreKit
 import StoreKit
 
+
+import Foundation
+import SwiftyStoreKit
+import StoreKit
+
 protocol IAPControllerDelegate: class {
     func tryBuyProduct()
     func didPaymentCancelled()
@@ -22,16 +27,27 @@ protocol IAPControllerDelegate: class {
 
 class IAPController {
     // MARK: - Property
+    
+    static let shared = IAPController()
+    
     weak var delegate: IAPControllerDelegate?
     private let sharedSecret = "7d1ffdfce2f94ff591476219892ce9be"
     static let productIds = ["premiumforever", "month1.99", "week0.99"]
-    static var skProducts: Set<SKProduct> = .init()
+    
+    var skProducts: [SKProduct] = [] {
+        didSet {
+            self.delegate?.productsUpdated()
+        }
+    }
     
     private var appleValidator: AppleReceiptValidator {
         return AppleReceiptValidator(service: .production, sharedSecret: sharedSecret)
     }
+    
+    private init() {}
+    
     // MARK: - Methodts
-    static func setupTransactionObserver() {
+    func setupTransactionObserver() {
         SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
             for purchase in purchases {
                 switch purchase.transaction.transactionState {
@@ -49,10 +65,12 @@ class IAPController {
         getProductsInfo()
     }
     
-    private static func getProductsInfo() {
+    func getProductsInfo() {
         let productsForInfo = Set(IAPController.productIds)
-        SwiftyStoreKit.retrieveProductsInfo(productsForInfo) { (result) in
-            skProducts = result.retrievedProducts
+        SwiftyStoreKit.retrieveProductsInfo(productsForInfo) { [weak self] (result) in
+            self?.skProducts = result.retrievedProducts.sorted(by: { (sk1, sk2) -> Bool in
+                return sk1.price.floatValue < sk2.price.floatValue
+            })
         }
     }
     
@@ -140,5 +158,13 @@ class IAPController {
             print("notPurchased")
             delegate?.didFailRestorePurchases(message: NSLocalizedString("Not Purchased", comment: ""))
         }
+    }
+    
+    func productForIndex(index: Int) -> SKProduct? {
+        guard self.skProducts.count > index else {
+            return nil
+        }
+        
+        return self.skProducts[index]
     }
 }

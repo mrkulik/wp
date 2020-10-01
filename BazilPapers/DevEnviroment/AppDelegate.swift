@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nc = RootNavigationController.initial()
         nc.setRootTabs()
         window?.rootViewController = nc
-        IAPController.setupTransactionObserver()
+        IAPController.shared.setupTransactionObserver()
+        self.verifyPremium()
         FirebaseApp.configure()
         DataStorageProvider.loadSharedStores()
         let getFormfactorsFirebaseService = GetFormfactorsFirebaseService()
@@ -44,17 +45,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    private func verifySbscr() {
-        IAPController().verifySubscription { (result) in
+    private func verifyPremium() {
+        IAPController.shared.verifySubscription { (result) in
             guard let result = result else {
                 return
             }
 
             switch result {
-            case .purchased(_):
+            case .purchased:
                 self.context.currentUser.isPremium = true
                 
-            case .expired(_):
+            case .expired:
                 self.context.currentUser.isPremium = false
                 
             case .notPurchased:

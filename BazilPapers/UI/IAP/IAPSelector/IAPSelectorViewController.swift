@@ -48,11 +48,11 @@ class IAPSelectorViewController: ButtonTabViewController {
     }
     
     func setupPriceLabels() {
-        let onetime = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productId: IAPController.productIds[0]) ?? "$4.99")
+        let onetime = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(product: IAPController.shared.productForIndex(index: 0)) ?? "$4.99")
         firstPurchasePriceLabel.text = onetime
-        let monthTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productId: IAPController.productIds[1]) ?? "$1.99")
+        let monthTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(product: IAPController.shared.productForIndex(index: 1)) ?? "$1.99")
         secondPurchasePriceLabel.text = monthTitle
-        let yearTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(productId: IAPController.productIds[2]) ?? "$0.99")
+        let yearTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(product: IAPController.shared.productForIndex(index: 2)) ?? "$0.99")
         thirdPurchasePriceLabel.text = yearTitle
         
         let secondWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productId: IAPController.productIds[1], divider: 4.3) ?? "$0.49")
@@ -61,22 +61,27 @@ class IAPSelectorViewController: ButtonTabViewController {
         thirdPurchaseWeekPrice.text = thirdWeekPrice
     }
     
-    private func getFormattedPrice(productId: String) -> String? {
-        let product = IAPController.skProducts.first { (skp) -> Bool in
-            return skp.productIdentifier == productId
+    
+    
+    private func getFormattedPrice(product: SKProduct?) -> String? {
+        guard let product = product else {
+            return nil
         }
-        guard let p = product else { return nil }
+        
+        let locale = product.priceLocale
         
         let nb = NumberFormatter()
         nb.numberStyle = .currency
-        nb.locale = p.priceLocale
-        return nb.string(from: p.price)
+        nb.locale = locale
+        let p = product.price
+        return nb.string(from: p)
     }
     
     private func getWeekPrice(productId: String, divider: NSDecimalNumber) -> String? {
-        let product = IAPController.skProducts.first { (skp) -> Bool in
+        let product = IAPController.shared.skProducts.first { (skp) -> Bool in
             return skp.productIdentifier == productId
         }
+        
         guard let p = product else { return nil }
         
         let nb = NumberFormatter()

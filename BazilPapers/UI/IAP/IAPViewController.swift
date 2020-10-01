@@ -25,13 +25,12 @@ class IAPViewController: UIViewController {
         return selectorViewController?.selectedIndex ?? 1
     }
     
-    let iapController = IAPController()
-    
     weak var delegate: IAPViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        iapController.delegate = self
+        IAPController.shared.delegate = self
+        IAPController.shared.getProductsInfo()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,12 +42,12 @@ class IAPViewController: UIViewController {
     }
 
     @IBAction func becomePremiumPressed(_ sender: Any) {
-        iapController.purchaseProduct(index: selectedSubscription)
+        IAPController.shared.purchaseProduct(index: selectedSubscription)
         Analytics.logEvent("become_premium_pressed", parameters: [ : ])
     }
     
     @IBAction func restorePurchasesButtonDidPressed(_ sender: UIButton) {
-        iapController.restorePurchases()
+        IAPController.shared.restorePurchases()
         Analytics.logEvent("restore_sbscr_pressed", parameters: [ : ])
     }
     
