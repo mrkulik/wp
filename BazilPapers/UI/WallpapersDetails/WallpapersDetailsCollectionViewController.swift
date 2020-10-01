@@ -24,8 +24,9 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<MOWallpaperInfo> = {
         let fetchRequest: NSFetchRequest<MOWallpaperInfo> = MOWallpaperInfo.fetchRequest()
         
-        let sortDescriptor = NSSortDescriptor(key: #keyPath(MOWallpaperInfo.order), ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        let catDescriptor = NSSortDescriptor(key: #keyPath(MOWallpaperInfo.category.title), ascending: true)
+        let orderDescriptor = NSSortDescriptor(key: #keyPath(MOWallpaperInfo.order), ascending: true)
+        fetchRequest.sortDescriptors = [catDescriptor, orderDescriptor]
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.catalogContext, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -84,11 +85,11 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return self.fetchedResultsController.sections?.count ?? 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.numberOfWallpapers
+        return self.fetchedResultsController.sections?[section].objects?.count ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -236,19 +237,22 @@ extension WallpapersDetailsCollectionViewController {
     func successPressed(alert: UIAlertAction!) {
         self.presentedViewController?.dismiss(animated: true)
     }
-}
-
-
-extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewControllerActionPerformer {
     
-    func didPressedSaveButton(_ sender: UIButton) {
+    private func saveImage() {
         if let ip = self.collectionView.centerCellIndexPath,
             let c = self.collectionView.cellForItem(at: ip) as? WallpapersDetailsCollectionViewCell,
         let image = c.imageView.image {
             saveImageToAlbum(image, name: Constant.assetCollectionName)
             Analytics.logEvent("image_downloaded", parameters: ["image_id" : NSNumber(value: fetchedResultsController.object(at: ip).id)])
         }
-        
+    }
+}
+
+
+extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewControllerActionPerformer {
+    
+    func didPressedSaveButton(_ sender: UIButton) {
+
     }
     
 }
