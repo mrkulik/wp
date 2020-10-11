@@ -13,6 +13,7 @@ def external_pods
   pod 'SwiftyStoreKit'
   pod 'SVProgressHUD'
   pod 'NewPopMenu'
+  pod 'Google-Mobile-Ads-SDK'
 end
 
 target 'BazilPapers' do

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SVProgressHUD
+import GoogleMobileAds
 
 
 @UIApplicationMain
@@ -41,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         SVProgressHUD.setMinimumDismissTimeInterval(0.7)
         SVProgressHUD.setMaximumDismissTimeInterval(0.7)
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }
     
