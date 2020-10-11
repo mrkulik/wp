@@ -67,7 +67,7 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     }
     
     private func createAndLoadRewardedAd() -> GADRewardedAd? {
-        rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
+        rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-6281357556198242/4870633862")
         rewardedAd?.load(GADRequest()) { error in
             if let error = error {
                 print("Loading failed: \(error)")
