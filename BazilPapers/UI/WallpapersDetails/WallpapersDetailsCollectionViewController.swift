@@ -38,8 +38,6 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     weak var category: MOCategory?
     weak var wallpaperInfo: MOWallpaperInfo?
     
-    var rewardedAd: GADRewardedAd?
-    
     private var numberOfWallpapers: Int {
         return fetchedResultsController.fetchedObjects?.count ?? 0
     }
@@ -63,19 +61,7 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
         swipeDown.direction = .down
         collectionView.addGestureRecognizer(swipeDown)
         
-        rewardedAd = createAndLoadRewardedAd()
-    }
-    
-    private func createAndLoadRewardedAd() -> GADRewardedAd? {
-        rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-6281357556198242/4870633862")
-        rewardedAd?.load(GADRequest()) { error in
-            if let error = error {
-                print("Loading failed: \(error)")
-            } else {
-                print("Loading Succeeded")
-            }
-        }
-        return rewardedAd
+        
     }
     
     override func viewWillLayoutSubviews() {
@@ -267,20 +253,18 @@ extension WallpapersDetailsCollectionViewController {
 extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewControllerActionPerformer {
     
     func didPressedSaveButton(_ sender: UIButton) {
-        if rewardedAd?.isReady == true {
-           rewardedAd?.present(fromRootViewController: self, delegate:self)
-        }
+        let vc = AdsPopUpViewController.initial()
+        vc.modalPresentationStyle = .fullScreen
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
     }
     
 }
 
-extension WallpapersDetailsCollectionViewController: GADRewardedAdDelegate {
-    func rewardedAd(_ rewardedAd: GADRewardedAd, userDidEarn reward: GADAdReward) {
-        self.saveImage()
-    }
-    
-    func rewardedAdDidDismiss(_ rewardedAd: GADRewardedAd) {
-        self.rewardedAd = createAndLoadRewardedAd()
+extension WallpapersDetailsCollectionViewController: AdsPopUpViewControllerDelegate {
+    func gotReward() {
+        self.dismiss(animated: true, completion: nil)
+        saveImage()
     }
     
 }
