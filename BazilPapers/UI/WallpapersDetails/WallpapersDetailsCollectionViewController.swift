@@ -253,10 +253,15 @@ extension WallpapersDetailsCollectionViewController {
 extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewControllerActionPerformer {
     
     func didPressedSaveButton(_ sender: UIButton) {
-        let vc = AdsPopUpViewController.initial()
-        vc.modalPresentationStyle = .fullScreen
-        vc.delegate = self
-        self.present(vc, animated: true, completion: nil)
+        if let ip = self.collectionView.centerCellIndexPath {
+                let vc = AdsPopUpViewController.initial()
+                vc.wallpaperInfo = self.fetchedResultsController.object(at: ip)
+                vc.modalPresentationStyle = .fullScreen
+                vc.modalTransitionStyle = .crossDissolve
+                vc.delegate = self
+                self.present(vc, animated: true, completion: nil)
+        }
+        
     }
     
 }

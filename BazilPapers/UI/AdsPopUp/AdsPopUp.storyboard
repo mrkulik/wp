@@ -16,9 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="123" translatesAutoresizingMaskIntoConstraints="NO" id="pZl-NP-Qaj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pZl-NP-Qaj">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pF-lt-rFc">
+                                <rect key="frame" x="8.5" y="46.5" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30035316780821919" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44p-gW-LhD">
+                                <rect key="frame" x="16" y="54" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="44p-gW-LhD" secondAttribute="height" multiplier="1:1" id="cNk-07-o8j"/>
+                                    <constraint firstAttribute="width" constant="15" id="hcn-VI-b2e"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="cross"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="Xai-7P-6Cb" eventType="touchUpInside" id="ZaH-QV-GQM"/>
+                                </connections>
+                            </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoH-8y-Ub1">
                                 <rect key="frame" x="0.0" y="696" width="414" height="200"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1sS-fR-pvy">
@@ -33,8 +54,23 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WiB-Ys-OrX">
                                 <rect key="frame" x="16" y="735" width="382" height="122"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxZ-WD-qUo">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD6-M8-5E6">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="yhp-od-StV"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="28"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="watchPressed:" destination="Xai-7P-6Cb" eventType="touchUpInside" id="RL0-YV-67i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxZ-WD-qUo">
+                                        <rect key="frame" x="0.0" y="66" width="382" height="56"/>
                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="S6x-fZ-7fv"/>
@@ -49,25 +85,10 @@
                                             <action selector="sbscPressed:" destination="Xai-7P-6Cb" eventType="touchUpInside" id="S8a-Gp-99Z"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD6-M8-5E6">
-                                        <rect key="frame" x="0.0" y="66" width="382" height="56"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="yhp-od-StV"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="28"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="watchPressed:" destination="Xai-7P-6Cb" eventType="touchUpInside" id="RL0-YV-67i"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="98n-20-12y" userLabel="Labels Stack View">
-                                <rect key="frame" x="137" y="810.5" width="140" height="37.5"/>
+                                <rect key="frame" x="137" y="744.5" width="140" height="37.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfB-dp-eah">
                                         <rect key="frame" x="44" y="0.0" width="52" height="20.5"/>
@@ -84,7 +105,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-tR-jaL" userLabel="Labels Stack View">
-                                <rect key="frame" x="155" y="744.5" width="104.5" height="37.5"/>
+                                <rect key="frame" x="155" y="810.5" width="104.5" height="37.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try Premium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3B-fj-Vve">
                                         <rect key="frame" x="0.0" y="0.0" width="104.5" height="20.5"/>
@@ -103,12 +124,17 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="44p-gW-LhD" firstAttribute="width" secondItem="44p-gW-LhD" secondAttribute="height" multiplier="1:1" id="1LR-HJ-Bju"/>
+                            <constraint firstItem="44p-gW-LhD" firstAttribute="top" secondItem="XC7-cK-Fb0" secondAttribute="top" constant="10" id="77j-Lc-RJj"/>
                             <constraint firstItem="WiB-Ys-OrX" firstAttribute="leading" secondItem="XC7-cK-Fb0" secondAttribute="leading" constant="16" id="7es-Zq-FQG"/>
                             <constraint firstItem="tD6-M8-5E6" firstAttribute="centerX" secondItem="98n-20-12y" secondAttribute="centerX" id="9ST-Xe-0Et"/>
                             <constraint firstAttribute="bottom" secondItem="pZl-NP-Qaj" secondAttribute="bottom" id="CXO-XQ-zi0"/>
+                            <constraint firstItem="0pF-lt-rFc" firstAttribute="centerX" secondItem="44p-gW-LhD" secondAttribute="centerX" id="Gdj-tq-Bum"/>
                             <constraint firstAttribute="bottom" secondItem="yoH-8y-Ub1" secondAttribute="bottom" id="KAg-zA-Sc2"/>
                             <constraint firstItem="DxZ-WD-qUo" firstAttribute="centerY" secondItem="Xx4-tR-jaL" secondAttribute="centerY" id="QyS-L1-6mR"/>
+                            <constraint firstItem="44p-gW-LhD" firstAttribute="leading" secondItem="tP0-wE-UYx" secondAttribute="leading" constant="16" id="Xu8-hu-dQW"/>
                             <constraint firstAttribute="trailing" secondItem="yoH-8y-Ub1" secondAttribute="trailing" id="ZQp-BI-39r"/>
+                            <constraint firstItem="0pF-lt-rFc" firstAttribute="height" secondItem="44p-gW-LhD" secondAttribute="height" multiplier="2" id="dyR-xn-3Ko"/>
                             <constraint firstItem="WiB-Ys-OrX" firstAttribute="centerX" secondItem="yoH-8y-Ub1" secondAttribute="centerX" id="eaW-6F-Cl0"/>
                             <constraint firstItem="XC7-cK-Fb0" firstAttribute="trailing" secondItem="pZl-NP-Qaj" secondAttribute="trailing" id="ejo-sw-7WD"/>
                             <constraint firstItem="tD6-M8-5E6" firstAttribute="centerY" secondItem="98n-20-12y" secondAttribute="centerY" id="fkl-jU-PWq"/>
@@ -117,11 +143,14 @@
                             <constraint firstItem="WiB-Ys-OrX" firstAttribute="centerY" secondItem="yoH-8y-Ub1" secondAttribute="centerY" id="jfd-f7-Cej"/>
                             <constraint firstItem="XC7-cK-Fb0" firstAttribute="trailing" secondItem="WiB-Ys-OrX" secondAttribute="trailing" constant="16" id="odh-8I-9jC"/>
                             <constraint firstItem="yoH-8y-Ub1" firstAttribute="leading" secondItem="tP0-wE-UYx" secondAttribute="leading" id="sYi-l0-S0M"/>
+                            <constraint firstItem="0pF-lt-rFc" firstAttribute="centerY" secondItem="44p-gW-LhD" secondAttribute="centerY" id="t5B-sK-Ix9"/>
+                            <constraint firstItem="0pF-lt-rFc" firstAttribute="width" secondItem="44p-gW-LhD" secondAttribute="width" multiplier="2" id="uMN-Qj-cm3"/>
                             <constraint firstItem="pZl-NP-Qaj" firstAttribute="top" secondItem="tP0-wE-UYx" secondAttribute="top" id="xHk-vb-kw2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XC7-cK-Fb0"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="44p-gW-LhD" id="7Ay-0q-xjH"/>
                         <outlet property="imageView" destination="pZl-NP-Qaj" id="56d-Q7-7VT"/>
                         <outlet property="watchLabel" destination="WfB-dp-eah" id="mOB-S7-flH"/>
                         <outlet property="watchSubtitleLabel" destination="jqZ-4d-Adt" id="uzv-Ve-jUI"/>
@@ -133,6 +162,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="123" width="431" height="245"/>
+        <image name="cross" width="142" height="141"/>
     </resources>
 </document>

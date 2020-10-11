@@ -431,6 +431,7 @@
 		0064926C23BFC33500DE8E71 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				00464C1D2525210400003220 /* AdsPopUp */,
 				009CF89E243B17FA00003FB5 /* IAP */,
 				00F4C72223BFDE3000239BAA /* LikedWallpapers */,
 				0087ECBD23FB2A760026EFC1 /* WallpapersDetails */,
@@ -529,7 +530,6 @@
 		009CF89E243B17FA00003FB5 /* IAP */ = {
 			isa = PBXGroup;
 			children = (
-				00464C1D2525210400003220 /* AdsPopUp */,
 				00F5B5982449015200156004 /* IAPCollection */,
 				009CF89F243B181000003FB5 /* IAPSelector */,
 				00E772C6243B3EF5006250FF /* IAP.storyboard */,

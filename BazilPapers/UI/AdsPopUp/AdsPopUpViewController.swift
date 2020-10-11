@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMobileAds
+import SDWebImage
+import Firebase
 
 
 protocol AdsPopUpViewControllerDelegate: class {
@@ -17,14 +19,25 @@ protocol AdsPopUpViewControllerDelegate: class {
 
 class AdsPopUpViewController: UIViewController {
 
+    private let gsReference = Storage.storage().reference(forURL: C.storageURL)
+    
     private var rewardedAd: GADRewardedAd?
     
     weak var delegate: AdsPopUpViewControllerDelegate?
+    
+    weak var wallpaperInfo: MOWallpaperInfo?
     
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var watchLabel: UILabel!
     @IBOutlet weak var watchSubtitleLabel: UILabel!
+    
+    @IBOutlet weak var backButton: UIButton!
+    
+    
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
     
     @IBAction func sbscPressed(_ sender: UIButton) {
         let vc = IAPViewController.initial()
@@ -46,6 +59,14 @@ class AdsPopUpViewController: UIViewController {
         self.watchSubtitleLabel.text = NSLocalizedString("please, wait", comment: "please, wait")
         
         rewardedAd = createAndLoadRewardedAd()
+        fillData()
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
+        swipeUp.direction = .up
+        self.view.addGestureRecognizer(swipeUp)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
+        swipeDown.direction = .down
+        self.view.addGestureRecognizer(swipeDown)
         // Do any additional setup after loading the view.
     }
     
@@ -62,6 +83,22 @@ class AdsPopUpViewController: UIViewController {
             }
         }
         return rewardedAd
+    }
+    
+    private func fillData() {
+        if let url = self.wallpaperInfo?.sourceURL {
+            let islandRef = gsReference.child(url)
+            self.imageView.sd_imageIndicator = SDWebImageActivityIndicator.whiteLarge
+            self.imageView.sd_setImage(with: islandRef)
+        }
+    }
+    
+    @objc func swiped(_ recognizer: UISwipeGestureRecognizer) {
+        if recognizer.state == .ended {
+            if recognizer.direction == .down || recognizer.direction == .up {
+                self.dismiss(animated: true)
+            }
+        }
     }
 
     /*
