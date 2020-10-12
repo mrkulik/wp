@@ -253,6 +253,11 @@ extension WallpapersDetailsCollectionViewController {
 extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewControllerActionPerformer {
     
     func didPressedSaveButton(_ sender: UIButton) {
+        guard !catalogContext.currentUser.isPremium else {
+            saveImage()
+            return
+        }
+        
         if let ip = self.collectionView.centerCellIndexPath {
                 let vc = AdsPopUpViewController.initial()
                 vc.wallpaperInfo = self.fetchedResultsController.object(at: ip)
