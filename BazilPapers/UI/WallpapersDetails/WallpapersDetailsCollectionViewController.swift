@@ -61,7 +61,12 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
         swipeDown.direction = .down
         collectionView.addGestureRecognizer(swipeDown)
         
-        
+        if let startObject = self.wallpaperInfo,
+            let startIP = self.fetchedResultsController.indexPath(forObject: startObject) {
+            DispatchQueue.main.async {
+                self.collectionView.scrollToItem(at: startIP, at: .centeredHorizontally, animated: false)
+            }
+        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -72,12 +77,6 @@ class WallpapersDetailsCollectionViewController: UICollectionViewController, UIC
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let startObject = self.wallpaperInfo,
-            let startIP = self.fetchedResultsController.indexPath(forObject: startObject) {
-            DispatchQueue.main.async {
-                self.collectionView.scrollToItem(at: startIP, at: .centeredHorizontally, animated: false)
-            }
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
