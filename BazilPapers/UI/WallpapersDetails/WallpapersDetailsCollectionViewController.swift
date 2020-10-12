@@ -259,12 +259,12 @@ extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewContro
         }
         
         if let ip = self.collectionView.centerCellIndexPath {
-                let vc = AdsPopUpViewController.initial()
-                vc.wallpaperInfo = self.fetchedResultsController.object(at: ip)
-                vc.modalPresentationStyle = .fullScreen
-                vc.modalTransitionStyle = .crossDissolve
-                vc.delegate = self
-                self.present(vc, animated: true, completion: nil)
+            let vc = AdsPopUpViewController.initial()
+            vc.wallpaperInfo = self.fetchedResultsController.object(at: ip)
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            vc.delegate = self
+            self.present(vc, animated: true, completion: nil)
         }
         
     }
