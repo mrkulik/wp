@@ -21,10 +21,6 @@ class IAPSelectorViewController: ButtonTabViewController {
     }
     @IBOutlet weak var firstPurchasePriceLabel: UILabel!
     @IBOutlet weak var secondPurchasePriceLabel: UILabel!
-    @IBOutlet weak var thirdPurchasePriceLabel: UILabel!
-    
-    @IBOutlet weak var secondPurchaseWeekPrice: UILabel!
-    @IBOutlet weak var thirdPurchaseWeekPrice: UILabel!
     
     var selectedIndex: Int {
         return tabButtons.firstIndex(where: { $0.isSelected }) ?? 1
@@ -48,20 +44,11 @@ class IAPSelectorViewController: ButtonTabViewController {
     }
     
     func setupPriceLabels() {
-        let onetime = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(product: IAPController.shared.productForIndex(index: 0)) ?? "$4.99")
+        let onetime = String(format: NSLocalizedString("%@", comment: ""), getFormattedPrice(product: IAPController.shared.productForIndex(index: 0)) ?? "")
         firstPurchasePriceLabel.text = onetime
-        let monthTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(product: IAPController.shared.productForIndex(index: 1)) ?? "$1.99")
+        let monthTitle = String(format: NSLocalizedString("%@/week", comment: ""), getFormattedPrice(product: IAPController.shared.productForIndex(index: 1)) ?? "")
         secondPurchasePriceLabel.text = monthTitle
-        let yearTitle = String(format: NSLocalizedString("%@\n", comment: ""), getFormattedPrice(product: IAPController.shared.productForIndex(index: 2)) ?? "$0.99")
-        thirdPurchasePriceLabel.text = yearTitle
-        
-        let secondWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productId: IAPController.productIds[1], divider: 4.3) ?? "$0.49")
-        secondPurchaseWeekPrice.text = secondWeekPrice
-        let thirdWeekPrice = String(format: NSLocalizedString("%@/week", comment: ""), getWeekPrice(productId: IAPController.productIds[2], divider: 1) ?? "$0.99")
-        thirdPurchaseWeekPrice.text = thirdWeekPrice
     }
-    
-    
     
     private func getFormattedPrice(product: SKProduct?) -> String? {
         guard let product = product else {
@@ -77,25 +64,11 @@ class IAPSelectorViewController: ButtonTabViewController {
         return nb.string(from: p)
     }
     
-    private func getWeekPrice(productId: String, divider: NSDecimalNumber) -> String? {
-        let product = IAPController.shared.skProducts.first { (skp) -> Bool in
-            return skp.productIdentifier == productId
-        }
-        
-        guard let p = product else { return nil }
-        
-        let nb = NumberFormatter()
-        nb.numberStyle = .currency
-        nb.locale = p.priceLocale
-        let price = p.price.dividing(by: divider)
-        return nb.string(from: price)
-    }
-    
     private func setupSelectedUI(at index: Int) {
         componentRootViews.forEach {
             $0.borderColor = .white
         }
-        componentRootViews[selectedIndex].borderColor = #colorLiteral(red: 0.9512905478, green: 0.6862642765, blue: 0.1313454807, alpha: 1)
+        componentRootViews[selectedIndex].borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
     }
 }
 

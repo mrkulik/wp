@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zez-se-y3H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zez-se-y3H">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,10 +58,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zb4-Ji-URV">
-                                <rect key="frame" x="0.0" y="20" width="375" height="377.5"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="428"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHi-sy-pH3">
-                                        <rect key="frame" x="0.0" y="61" width="375" height="255.5"/>
+                                        <rect key="frame" x="0.0" y="61" width="375" height="306"/>
                                         <connections>
                                             <segue destination="Bt4-SS-88m" kind="embed" id="55u-fv-MCS"/>
                                         </connections>
@@ -69,11 +69,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREMIUM MEMBERSHIP" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2Z-iV-8p8">
                                         <rect key="frame" x="51" y="16" width="273.5" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                        <color key="textColor" red="0.9512905478" green="0.68626427649999999" blue="0.13134548069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get 500+ premium wallpapers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQU-dc-Eu2">
-                                        <rect key="frame" x="69" y="332.5" width="237.5" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium content, Daily updates, ADS free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQU-dc-Eu2">
+                                        <rect key="frame" x="23" y="383" width="329.5" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -93,10 +93,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KII-t0-qOu">
-                                <rect key="frame" x="0.0" y="397.5" width="375" height="183.5"/>
+                                <rect key="frame" x="0.0" y="448" width="375" height="133"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0a-Ch-BEj">
-                                        <rect key="frame" x="16" y="0.0" width="343" height="183.5"/>
+                                        <rect key="frame" x="16" y="0.0" width="343" height="133"/>
                                         <connections>
                                             <segue destination="1Al-cD-9YK" kind="embed" id="VxF-BK-Qac"/>
                                         </connections>
@@ -104,7 +104,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="KII-t0-qOu" secondAttribute="height" multiplier="1920:940" id="ANk-0D-HpY"/>
+                                    <constraint firstAttribute="width" secondItem="KII-t0-qOu" secondAttribute="height" multiplier="1920:680" id="ANk-0D-HpY"/>
                                     <constraint firstAttribute="bottom" secondItem="i0a-Ch-BEj" secondAttribute="bottom" id="SF1-hV-AFg"/>
                                     <constraint firstAttribute="trailing" secondItem="i0a-Ch-BEj" secondAttribute="trailing" constant="16" id="ag0-cK-FQg"/>
                                     <constraint firstItem="i0a-Ch-BEj" firstAttribute="leading" secondItem="KII-t0-qOu" secondAttribute="leading" constant="16" id="ioF-gU-pqQ"/>
@@ -122,7 +122,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-oJ-SkH">
                                         <rect key="frame" x="16" y="5" width="343" height="50"/>
-                                        <color key="backgroundColor" red="0.9512905478" green="0.68626427649999999" blue="0.13134548069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Gxp-T4-JSf"/>
                                         </constraints>
@@ -132,19 +132,19 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="12"/>
+                                                <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.9512905478" green="0.68626427649999999" blue="0.13134548069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="2"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="2" height="2"/>
+                                                <size key="value" width="0.0" height="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -182,6 +182,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tyy-Kk-eHf"/>
                     </view>
+                    <connections>
+                        <outlet property="premiumButton" destination="IBm-oJ-SkH" id="tts-tP-5zF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vnr-EN-79D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

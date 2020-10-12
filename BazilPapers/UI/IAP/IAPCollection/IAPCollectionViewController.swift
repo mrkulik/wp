@@ -49,7 +49,7 @@ class IAPCollectionViewController: UICollectionViewController, UICollectionViewD
         let co = collectionView.contentOffset.x
         let no = co + 1
 
-        UIView.animate(withDuration: 0.016, delay: 0, options: .curveEaseInOut, animations: { [weak self]() -> Void in
+        UIView.animate(withDuration: 0.0001, delay: 0, options: .curveEaseInOut, animations: { [weak self]() -> Void in
             self?.collectionView.contentOffset = CGPoint(x: no, y: 0)
             }) { [weak self](finished) -> Void in
                 self?.autoScroll()

@@ -34,6 +34,7 @@
 		004CD87723CD1730002B8092 /* GetCategoriesFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004CD87623CD1730002B8092 /* GetCategoriesFirebaseService.swift */; };
 		004CD87B23CD1756002B8092 /* RemoteCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004CD87A23CD1756002B8092 /* RemoteCategory.swift */; };
 		004CD87D23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004CD87C23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift */; };
+		0052ACDB253450D500238E74 /* PulseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052ACDA253450D500238E74 /* PulseButton.swift */; };
 		0064923623BFC02800DE8E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064923523BFC02800DE8E71 /* AppDelegate.swift */; };
 		0064923F23BFC02E00DE8E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0064923E23BFC02E00DE8E71 /* Assets.xcassets */; };
 		0064924D23BFC02E00DE8E71 /* BazilPapersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064924C23BFC02E00DE8E71 /* BazilPapersTests.swift */; };
@@ -137,6 +138,7 @@
 		004CD87623CD1730002B8092 /* GetCategoriesFirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesFirebaseService.swift; sourceTree = "<group>"; };
 		004CD87A23CD1756002B8092 /* RemoteCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCategory.swift; sourceTree = "<group>"; };
 		004CD87C23CD18EC002B8092 /* GetWallpapersListFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWallpapersListFirebaseService.swift; sourceTree = "<group>"; };
+		0052ACDA253450D500238E74 /* PulseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseButton.swift; sourceTree = "<group>"; };
 		0064923223BFC02800DE8E71 /* Wallpapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallpapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0064923523BFC02800DE8E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0064923E23BFC02E00DE8E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 			children = (
 				00E772CC243B4D27006250FF /* UseBottomButton */,
 				0048C3EF23C0F6FD0086D9D3 /* ButtonTabViewController */,
+				0052ACDA253450D500238E74 /* PulseButton.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -921,6 +924,7 @@
 			files = (
 				0087ED6823FF1AF00026EFC1 /* UIImage+GIF.swift in Sources */,
 				0087ECBF23FB2BA70026EFC1 /* WallpapersDetailsViewController.swift in Sources */,
+				0052ACDB253450D500238E74 /* PulseButton.swift in Sources */,
 				00F5B59D2449018300156004 /* IAPCollectionViewController.swift in Sources */,
 				00A964F323D8EFD2005E0417 /* FormFactors.xcdatamodeld in Sources */,
 				0048C3F123C0F7130086D9D3 /* ButtonTabViewController.swift in Sources */,

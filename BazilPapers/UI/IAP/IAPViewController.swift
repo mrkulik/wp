@@ -16,6 +16,7 @@ protocol IAPViewControllerDelegate: class {
 
 class IAPViewController: UIViewController {
     @IBOutlet weak var rootView: UIStackView!
+    @IBOutlet weak var premiumButton: UIButton!
     
     private let context = DataStorageProvider.sharedCatalogModelController.container.viewContext
     
@@ -31,6 +32,9 @@ class IAPViewController: UIViewController {
         super.viewDidLoad()
         IAPController.shared.delegate = self
         IAPController.shared.getProductsInfo()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            self.premiumButton.setupPulseAnimation(toValue: 1.05)
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -32,7 +32,7 @@ class IAPController {
     
     weak var delegate: IAPControllerDelegate?
     private let sharedSecret = "7d1ffdfce2f94ff591476219892ce9be"
-    static let productIds = ["premiumforever", "month1.99", "week0.99"]
+    static let productIds = ["premiumforever", "week0.99"]
     
     var skProducts: [SKProduct] = [] {
         didSet {
@@ -69,7 +69,7 @@ class IAPController {
         let productsForInfo = Set(IAPController.productIds)
         SwiftyStoreKit.retrieveProductsInfo(productsForInfo) { [weak self] (result) in
             self?.skProducts = result.retrievedProducts.sorted(by: { (sk1, sk2) -> Bool in
-                return sk1.price.floatValue < sk2.price.floatValue
+                return sk1.price.floatValue > sk2.price.floatValue
             })
         }
     }

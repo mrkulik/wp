@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T50-rd-2ZU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T50-rd-2ZU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="SF-Pro-Text-Semibold.otf">
-            <string>SFProText-Semibold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Selector View Controller-->
         <scene sceneID="B3C-pD-FAK">
@@ -25,39 +20,33 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="185"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXG-W2-xON" userLabel="Component Root View">
-                                        <rect key="frame" x="0.0" y="0.0" width="121" height="185"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="184.5" height="185"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cZ6-4C-NBO">
-                                                <rect key="frame" x="0.0" y="12" width="121" height="161"/>
+                                                <rect key="frame" x="0.0" y="12" width="184.5" height="161"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special offer!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyC-X2-hRU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREMIUM FOREVER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAt-8E-H09" userLabel="PREMIUM FOREVER">
-                                                        <rect key="frame" x="0.0" y="25" width="121" height="59.5"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="184.5" height="64"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4.99  " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzb-WM-tJt" userLabel="$19.99">
-                                                        <rect key="frame" x="0.0" y="84.5" width="121" height="54"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
+                                                        <rect key="frame" x="0.0" y="64" width="184.5" height="64.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay once" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULI-wk-eah" userLabel="pay once">
-                                                        <rect key="frame" x="0.0" y="138.5" width="121" height="22.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <rect key="frame" x="0.0" y="128.5" width="184.5" height="32.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv0-Ru-0DQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="121" height="185"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="185"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.75" green="0.040000000000000001" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </button>
@@ -86,39 +75,33 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZ6-65-8LB" userLabel="Component Root View">
-                                        <rect key="frame" x="127" y="0.0" width="121" height="185"/>
+                                        <rect key="frame" x="190.5" y="0.0" width="184.5" height="185"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="jA9-hQ-KGd">
-                                                <rect key="frame" x="0.0" y="12" width="121" height="161"/>
+                                                <rect key="frame" x="0.0" y="12" width="184.5" height="161"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAVE 50%!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0e-Tw-2HR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="25.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                        <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 MONTH" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w49-rK-jcC">
-                                                        <rect key="frame" x="0.0" y="25.5" width="121" height="57"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 WEEK" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w49-rK-jcC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="184.5" height="64"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.99 " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKS-Ha-hpf">
-                                                        <rect key="frame" x="0.0" y="82.5" width="121" height="55.5"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
+                                                        <rect key="frame" x="0.0" y="64" width="184.5" height="64.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.49/week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUo-7L-yAS">
-                                                        <rect key="frame" x="0.0" y="138" width="121" height="23"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 days trial!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUo-7L-yAS">
+                                                        <rect key="frame" x="0.0" y="128.5" width="184.5" height="32.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxK-Uj-rne">
-                                                <rect key="frame" x="0.0" y="0.0" width="121" height="185"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="185"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.75" green="0.040000000000000001" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </button>
@@ -133,67 +116,6 @@
                                             <constraint firstItem="jA9-hQ-KGd" firstAttribute="leading" secondItem="JZ6-65-8LB" secondAttribute="leading" id="Xp8-2y-REe"/>
                                             <constraint firstItem="mxK-Uj-rne" firstAttribute="leading" secondItem="JZ6-65-8LB" secondAttribute="leading" id="gni-gx-SyH"/>
                                             <constraint firstItem="jA9-hQ-KGd" firstAttribute="top" secondItem="JZ6-65-8LB" secondAttribute="top" constant="12" id="j8m-Zn-zyt"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.88300000000000001" green="0.88300000000000001" blue="0.88300000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buD-uE-35m" userLabel="Component Root View">
-                                        <rect key="frame" x="254" y="0.0" width="121" height="185"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="YBR-Tx-sHC">
-                                                <rect key="frame" x="0.0" y="12" width="121" height="161"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best choice!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckr-uA-thv" userLabel="Best choice!">
-                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="25.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 WEEK" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMN-p4-CqQ">
-                                                        <rect key="frame" x="0.0" y="25.5" width="121" height="57"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.99$  " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKY-6N-eNV">
-                                                        <rect key="frame" x="0.0" y="82.5" width="121" height="55.5"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.99/week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xED-6R-NxN">
-                                                        <rect key="frame" x="0.0" y="138" width="121" height="23"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4T-Vd-I3t">
-                                                <rect key="frame" x="0.0" y="0.0" width="121" height="185"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" red="0.75" green="0.040000000000000001" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="k4T-Vd-I3t" firstAttribute="top" secondItem="buD-uE-35m" secondAttribute="top" id="5qI-TT-37D"/>
-                                            <constraint firstItem="k4T-Vd-I3t" firstAttribute="leading" secondItem="buD-uE-35m" secondAttribute="leading" id="GqM-A9-eC8"/>
-                                            <constraint firstItem="YBR-Tx-sHC" firstAttribute="centerY" secondItem="buD-uE-35m" secondAttribute="centerY" id="Qan-8a-OD1"/>
-                                            <constraint firstItem="YBR-Tx-sHC" firstAttribute="top" secondItem="buD-uE-35m" secondAttribute="top" constant="12" id="iFH-aP-2LZ"/>
-                                            <constraint firstAttribute="bottom" secondItem="k4T-Vd-I3t" secondAttribute="bottom" id="k3D-Tg-wde"/>
-                                            <constraint firstAttribute="trailing" secondItem="k4T-Vd-I3t" secondAttribute="trailing" id="l9u-vb-ogE"/>
-                                            <constraint firstAttribute="trailing" secondItem="YBR-Tx-sHC" secondAttribute="trailing" id="ptF-Qw-grj"/>
-                                            <constraint firstItem="YBR-Tx-sHC" firstAttribute="leading" secondItem="buD-uE-35m" secondAttribute="leading" id="sgU-kH-TW9"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -223,15 +145,10 @@
                     <connections>
                         <outlet property="firstPurchasePriceLabel" destination="Hzb-WM-tJt" id="4HX-vb-dbY"/>
                         <outlet property="secondPurchasePriceLabel" destination="ZKS-Ha-hpf" id="PDn-yr-Zow"/>
-                        <outlet property="secondPurchaseWeekPrice" destination="cUo-7L-yAS" id="PRM-9K-I6n"/>
-                        <outlet property="thirdPurchasePriceLabel" destination="LKY-6N-eNV" id="A5K-lz-OsS"/>
-                        <outlet property="thirdPurchaseWeekPrice" destination="xED-6R-NxN" id="Zq0-lU-UGz"/>
                         <outletCollection property="subscriptionButtons" destination="Vv0-Ru-0DQ" collectionClass="NSMutableArray" id="a0K-2I-Unf"/>
                         <outletCollection property="subscriptionButtons" destination="mxK-Uj-rne" collectionClass="NSMutableArray" id="7Xt-i6-hU9"/>
-                        <outletCollection property="subscriptionButtons" destination="k4T-Vd-I3t" collectionClass="NSMutableArray" id="RUr-vr-9kv"/>
                         <outletCollection property="componentRootViews" destination="AXG-W2-xON" collectionClass="NSMutableArray" id="8Ne-57-BTP"/>
                         <outletCollection property="componentRootViews" destination="JZ6-65-8LB" collectionClass="NSMutableArray" id="SJE-nZ-aW5"/>
-                        <outletCollection property="componentRootViews" destination="buD-uE-35m" collectionClass="NSMutableArray" id="kUk-4p-IFb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAH-jm-k3a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
