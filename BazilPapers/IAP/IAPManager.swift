@@ -32,7 +32,7 @@ class IAPController {
     
     weak var delegate: IAPControllerDelegate?
     private let sharedSecret = "7d1ffdfce2f94ff591476219892ce9be"
-    static let productIds = ["premiumforever", "week0.99"]
+    static let productIds = ["premium_unlim", "week4.99_3d_trial"]
     
     var skProducts: [SKProduct] = [] {
         didSet {
