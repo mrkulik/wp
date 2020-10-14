@@ -37,6 +37,7 @@ class AdsPopUpViewController: UIViewController {
     
     @IBAction func backPressed(_ sender: UIButton) {
         self.dismiss(animated: true)
+        Analytics.logEvent("ads_popup_closed", parameters: [])
     }
     
     @IBAction func sbscPressed(_ sender: UIButton) {
@@ -44,12 +45,14 @@ class AdsPopUpViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         vc.delegate = self
         self.present(vc, animated: true, completion: nil)
+        Analytics.logEvent("ads_popup_sbscr", parameters: [])
         
     }
     
     @IBAction func watchPressed(_ sender: UIButton) {
         if rewardedAd?.isReady == true {
            rewardedAd?.present(fromRootViewController: self, delegate:self)
+            Analytics.logEvent("ads_popup_watch", parameters: [])
         }
     }
     
