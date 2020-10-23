@@ -252,8 +252,15 @@ extension WallpapersDetailsCollectionViewController {
 extension WallpapersDetailsCollectionViewController: WallpapersDetailsViewControllerActionPerformer {
     
     func didPressedSaveButton(_ sender: UIButton) {
-        guard !catalogContext.currentUser.isPremium else {
+        guard !catalogContext.currentUser.isPremium, !UserDefaults.checkTrialCompleteAndSetIfNot()
+            else {
             saveImage()
+            return
+        }
+        
+        guard !UserDefaults.checkSecondTrialCompleteAndSetIfNot() else {
+            saveImage()
+            SKStoreReviewController.requestReview()
             return
         }
         

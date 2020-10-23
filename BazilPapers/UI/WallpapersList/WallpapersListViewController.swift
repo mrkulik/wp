@@ -111,7 +111,9 @@ extension WallpapersListViewController: PopMenuViewControllerDelegate {
     }
     
     private func handleRate() {
-        SKStoreReviewController.requestReview()
+        if let url = URL(string: "itms-apps://itunes.apple.com/app/1502856671") {
+            UIApplication.shared.open(url)
+        }
     }
     
     private func handlePrivacyPolicy() {
