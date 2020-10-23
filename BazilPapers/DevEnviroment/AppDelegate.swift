@@ -14,9 +14,6 @@ import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    private let context = DataStorageProvider.sharedCatalogModelController.container.viewContext
-    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -25,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nc.setRootTabs()
         window?.rootViewController = nc
         IAPController.shared.setupTransactionObserver()
-        self.verifyPremium()
+        IAPController.shared.verifyPremium()
         FirebaseApp.configure()
         DataStorageProvider.loadSharedStores()
         let getFormfactorsFirebaseService = GetFormfactorsFirebaseService()
@@ -47,26 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    private func verifyPremium() {
-        IAPController.shared.verifySubscription { (result) in
-            guard let result = result else {
-                return
-            }
-
-            switch result {
-            case .purchased:
-                self.context.currentUser.isPremium = true
-                
-            case .expired:
-                self.context.currentUser.isPremium = false
-                
-            case .notPurchased:
-                self.context.currentUser.isPremium = false
-            }
-        
-            try? self.context.save()
-        }
-    }
+    
 
 }
 

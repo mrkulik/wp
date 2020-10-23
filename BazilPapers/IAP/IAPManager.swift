@@ -28,6 +28,8 @@ protocol IAPControllerDelegate: class {
 class IAPController {
     // MARK: - Property
     
+    private let context = DataStorageProvider.sharedCatalogModelController.container.viewContext
+    
     static let shared = IAPController()
     
     weak var delegate: IAPControllerDelegate?
@@ -106,7 +108,7 @@ class IAPController {
                 SwiftyStoreKit.verifyReceipt(using: self.appleValidator) { (verifyResult) in
                     switch verifyResult {
                     case .success(let receipt):
-                        self.verifyReceipt(receipt: receipt)
+                        self.delegate?.didRestorePurchases(message: NSLocalizedString("Your subscription restored", comment: ""))
                     case .error(let error):
                         self.delegate?.didFailRestorePurchases(message: error.localizedDescription)
                     }
@@ -131,32 +133,50 @@ class IAPController {
         }
     }
     
-    func verifyReceipt(receipt: ReceiptInfo) {
-    guard
-        let latestReceiptObjects = (receipt["latest_receipt_info"] as? [AnyObject]),
-        let receiptDict = latestReceiptObjects.last as? [String: AnyObject],
-        let productId = receiptDict["product_id"] as? String
-        else
-    {
-        delegate?.didFailRestorePurchases(message: NSLocalizedString("Receipt verification failed", comment: ""))
-        return
+    func verifyPurchase(completion: @escaping(VerifyPurchaseResult?) ->()) {
+        SwiftyStoreKit.verifyReceipt(using: appleValidator) { (result) in
+            switch result {
+            case .success(let receipt):
+                let purchaseResult = SwiftyStoreKit.verifyPurchase(productId: IAPController.productIds[0], inReceipt: receipt)
+                completion(purchaseResult)
+            case .error(_):
+                completion(nil)
+                break
+            }
+        }
     }
     
-    let varificationResult = SwiftyStoreKit.verifySubscription(ofType: .autoRenewable,
-                                                                   productId: productId,
-                                                                   inReceipt: receipt)
-        switch varificationResult {
-        case .purchased(let expiryDate, let items):
-            print("is valid until \(expiryDate)\n\(items)\n")
-            delegate?.didRestorePurchases(message: NSLocalizedString("Your subscription restored", comment: ""))
-            
-        case .expired(let expiryDate, let items):
-            print("expiried \(expiryDate)(expiryDate)\n\(items)\n")
-            delegate?.didFailRestorePurchases(message: NSLocalizedString("Your subscription has expired", comment: ""))
-            
-        case .notPurchased:
-            print("notPurchased")
-            delegate?.didFailRestorePurchases(message: NSLocalizedString("Not Purchased", comment: ""))
+    func verifyPremium() {
+        self.verifySubscription { (result) in
+            guard let result = result else {
+                return
+            }
+
+            switch result {
+            case .purchased:
+                self.context.currentUser.isPremium = true
+                
+            case .expired:
+                self.context.currentUser.isPremium = false
+                
+            case .notPurchased:
+                self.verifyPurchase { (r) in
+                    guard let r = r else {
+                        return
+                    }
+                    
+                    switch r {
+                    case .notPurchased:
+                        self.context.currentUser.isPremium = false
+                    default:
+                        self.context.currentUser.isPremium = true
+                    }
+                }
+                
+                
+            }
+        
+            try? self.context.save()
         }
     }
     
