@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nc.setRootTabs()
         window?.rootViewController = nc
         IAPController.shared.setupTransactionObserver()
-        IAPController.shared.verifyPremium()
+        //IAPController.shared.verifyPremium()
         FirebaseApp.configure()
         DataStorageProvider.loadSharedStores()
         let getFormfactorsFirebaseService = GetFormfactorsFirebaseService()

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="22n-dT-355">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sbscr View Controller-->
+        <scene sceneID="PRh-re-Qwv">
+            <objects>
+                <viewController id="22n-dT-355" customClass="SbscrViewController" customModule="Wallpapers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nCi-Qo-8QN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="subscriptions_background" translatesAutoresizingMaskIntoConstraints="NO" id="q6W-22-JEk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohd-hE-rIy">
+                                <rect key="frame" x="20" y="70" width="17" height="22"/>
+                                <state key="normal" image="subscriptions_exit_button"/>
+                                <connections>
+                                    <action selector="didPressedExitButton:" destination="22n-dT-355" eventType="touchUpInside" id="Kmn-PY-mKc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fh3-I7-uSf">
+                                <rect key="frame" x="271" y="69" width="127" height="30"/>
+                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
+                                <state key="normal" title="Restore Purchases">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressedRestorePurchasesButton:" destination="22n-dT-355" eventType="touchUpInside" id="BfN-ah-JDD"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mIw-0z-ig1">
+                                <rect key="frame" x="65" y="790" width="284" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2M-jg-tp4">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="30"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
+                                        <state key="normal" title="Terms of Use">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressedTermsOfUse:" destination="22n-dT-355" eventType="touchUpInside" id="PMN-C6-CWD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF6-Cc-hEI">
+                                        <rect key="frame" x="142" y="0.0" width="142" height="30"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
+                                        <state key="normal" title="Privacy Policy">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="deviceRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressedPrivacyPolicy:" destination="22n-dT-355" eventType="touchUpInside" id="kWC-tz-MeL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pUS-Zh-gdj"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAK-S7-veL">
+                                <rect key="frame" x="25" y="719" width="364" height="51"/>
+                                <color key="backgroundColor" red="0.44705882349999998" green="0.7725490196" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="o9c-6i-NQg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="3" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didPressedContinueButton:" destination="22n-dT-355" eventType="touchUpInside" id="opb-lj-78J"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QIf-ev-d08">
+                                <rect key="frame" x="5" y="686.5" width="404" height="17.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V70-7T-NiK">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Jk-xk-vhx">
+                                <rect key="frame" x="0.0" y="424.5" width="414" height="207"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="207" id="Cic-eX-hY0"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="22n-dT-355" id="Iw2-IJ-kSD"/>
+                                    <outlet property="delegate" destination="22n-dT-355" id="W09-BO-lWm"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q6-xH-MMK">
+                                <rect key="frame" x="32" y="314.5" width="199.5" height="75"/>
+                                <string key="text">Premium Plan
+Full Access</string>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SeD-2N-PHb"/>
+                        <color key="backgroundColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.08235294118" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="SeD-2N-PHb" firstAttribute="trailing" secondItem="Fh3-I7-uSf" secondAttribute="trailing" constant="16" id="514-ki-E8v"/>
+                            <constraint firstItem="mIw-0z-ig1" firstAttribute="leading" secondItem="SeD-2N-PHb" secondAttribute="leading" constant="65" id="6eK-ex-MLr"/>
+                            <constraint firstItem="SeD-2N-PHb" firstAttribute="bottom" secondItem="mIw-0z-ig1" secondAttribute="bottom" constant="42" id="D2i-x7-Vce"/>
+                            <constraint firstItem="SeD-2N-PHb" firstAttribute="trailing" secondItem="JAK-S7-veL" secondAttribute="trailing" constant="25" id="LV4-Bo-yuZ"/>
+                            <constraint firstItem="QIf-ev-d08" firstAttribute="top" secondItem="4Jk-xk-vhx" secondAttribute="bottom" constant="55" id="O7S-qa-u7B"/>
+                            <constraint firstItem="Fh3-I7-uSf" firstAttribute="top" secondItem="SeD-2N-PHb" secondAttribute="top" constant="25" id="RiN-2l-Hfq"/>
+                            <constraint firstItem="JAK-S7-veL" firstAttribute="leading" secondItem="SeD-2N-PHb" secondAttribute="leading" constant="25" id="UUT-59-3LF"/>
+                            <constraint firstItem="SeD-2N-PHb" firstAttribute="trailing" secondItem="mIw-0z-ig1" secondAttribute="trailing" constant="65" id="YFr-ya-tCs"/>
+                            <constraint firstItem="q6W-22-JEk" firstAttribute="leading" secondItem="SeD-2N-PHb" secondAttribute="leading" id="aDq-LH-0jj"/>
+                            <constraint firstItem="4Jk-xk-vhx" firstAttribute="top" secondItem="1q6-xH-MMK" secondAttribute="bottom" constant="35" id="aas-cz-Ock"/>
+                            <constraint firstItem="SeD-2N-PHb" firstAttribute="trailing" secondItem="4Jk-xk-vhx" secondAttribute="trailing" id="d7e-iy-NEa"/>
+                            <constraint firstItem="SeD-2N-PHb" firstAttribute="trailing" secondItem="QIf-ev-d08" secondAttribute="trailing" constant="5" id="gs5-Fm-TDw"/>
+                            <constraint firstItem="ohd-hE-rIy" firstAttribute="leading" secondItem="SeD-2N-PHb" secondAttribute="leading" constant="20" id="iPC-Ky-Ab1"/>
+                            <constraint firstItem="mIw-0z-ig1" firstAttribute="top" secondItem="JAK-S7-veL" secondAttribute="bottom" constant="20" id="kkQ-Pz-jLP"/>
+                            <constraint firstItem="JAK-S7-veL" firstAttribute="top" secondItem="QIf-ev-d08" secondAttribute="bottom" constant="15" id="m4c-2r-9zh"/>
+                            <constraint firstItem="q6W-22-JEk" firstAttribute="top" secondItem="nCi-Qo-8QN" secondAttribute="top" id="qiO-fW-OwP"/>
+                            <constraint firstItem="ohd-hE-rIy" firstAttribute="top" secondItem="SeD-2N-PHb" secondAttribute="top" constant="26" id="sZu-6e-j4I"/>
+                            <constraint firstItem="q6W-22-JEk" firstAttribute="trailing" secondItem="SeD-2N-PHb" secondAttribute="trailing" id="tKh-VS-kdQ"/>
+                            <constraint firstItem="4Jk-xk-vhx" firstAttribute="leading" secondItem="SeD-2N-PHb" secondAttribute="leading" id="xGz-wY-p1w"/>
+                            <constraint firstItem="QIf-ev-d08" firstAttribute="leading" secondItem="SeD-2N-PHb" secondAttribute="leading" constant="5" id="zpL-2f-EuU"/>
+                            <constraint firstItem="1q6-xH-MMK" firstAttribute="leading" secondItem="SeD-2N-PHb" secondAttribute="leading" constant="32" id="zv5-KJ-IEY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="JAK-S7-veL" id="7LJ-e2-qAQ"/>
+                        <outlet property="continueButtonBottomConstraint" destination="kkQ-Pz-jLP" id="XoM-E3-fP7"/>
+                        <outlet property="priceLabel" destination="V70-7T-NiK" id="4bj-Yu-Y2r"/>
+                        <outlet property="stackViewBottomConstraint" destination="D2i-x7-Vce" id="Cq4-Uq-M2L"/>
+                        <outlet property="tableView" destination="4Jk-xk-vhx" id="EnY-lw-ecI"/>
+                        <outlet property="tableViewBottomConstraint" destination="O7S-qa-u7B" id="jKz-Hc-GZZ"/>
+                        <outlet property="titleBottomConstraint" destination="aas-cz-Ock" id="pbJ-q1-Hmx"/>
+                        <outlet property="titleLabel" destination="1q6-xH-MMK" id="TMb-HC-ReX"/>
+                        <outlet property="titleLeadingConstraint" destination="zv5-KJ-IEY" id="gEf-XS-DZF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdF-ok-svd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500.00000000000006" y="90.401785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="subscriptions_background" width="375" height="550"/>
+        <image name="subscriptions_exit_button" width="17" height="17"/>
+    </resources>
+</document>

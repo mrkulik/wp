@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-BoldItalic.ttf">
+            <string>SFProText-BoldItalic</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="57" id="BID-Cg-vsi" customClass="SubscriptionsTableViewCell" customModule="Wallpapers" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BID-Cg-vsi" id="5pa-AP-FSD">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="subscriptions_checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="hhg-Tz-cQO">
+                        <rect key="frame" x="32" y="18.5" width="20" height="20"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBN-on-dWg">
+                        <rect key="frame" x="62" y="19" width="39.5" height="19"/>
+                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="16"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EACH MONTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zr-fK-dcp">
+                        <rect key="frame" x="104.5" y="19" width="106.5" height="19"/>
+                        <fontDescription key="fontDescription" name="SFProText-BoldItalic" family="SF Pro Text" pointSize="16"/>
+                        <color key="textColor" red="0.44705882349999998" green="0.7725490196" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="hhg-Tz-cQO" firstAttribute="centerY" secondItem="5pa-AP-FSD" secondAttribute="centerY" id="1wx-wd-Zaw"/>
+                    <constraint firstItem="eBN-on-dWg" firstAttribute="centerY" secondItem="5pa-AP-FSD" secondAttribute="centerY" id="CpW-QE-HGS"/>
+                    <constraint firstItem="hhg-Tz-cQO" firstAttribute="centerY" secondItem="5pa-AP-FSD" secondAttribute="centerY" id="ZB4-E2-Noe"/>
+                    <constraint firstItem="eBN-on-dWg" firstAttribute="leading" secondItem="hhg-Tz-cQO" secondAttribute="trailing" constant="10" id="fC7-zO-etq"/>
+                    <constraint firstItem="hhg-Tz-cQO" firstAttribute="centerY" secondItem="5pa-AP-FSD" secondAttribute="centerY" id="jid-gW-rzH"/>
+                    <constraint firstItem="hhg-Tz-cQO" firstAttribute="leading" secondItem="5pa-AP-FSD" secondAttribute="leading" constant="32" id="n59-E5-gbZ"/>
+                    <constraint firstItem="9zr-fK-dcp" firstAttribute="centerY" secondItem="5pa-AP-FSD" secondAttribute="centerY" id="uf3-VX-IuS"/>
+                    <constraint firstItem="9zr-fK-dcp" firstAttribute="leading" secondItem="eBN-on-dWg" secondAttribute="trailing" constant="3" id="wbU-pc-h72"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="RHA-jy-G8C"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="specialLabel" destination="9zr-fK-dcp" id="ltZ-RY-eeV"/>
+                <outlet property="titleLabel" destination="eBN-on-dWg" id="aqu-Of-IVc"/>
+                <outlet property="titleLeadingConstraint" destination="n59-E5-gbZ" id="Npb-d6-Pu7"/>
+            </connections>
+            <point key="canvasLocation" x="17" y="43"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="subscriptions_checkbox" width="20" height="20"/>
+    </resources>
+</document>

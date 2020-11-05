@@ -17,6 +17,12 @@
 		00138DE723D8E89100EBD787 /* RemoteWallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE623D8E89100EBD787 /* RemoteWallpaper.swift */; };
 		00138DE923D8E97B00EBD787 /* RemoteWallpaperSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00138DE823D8E97B00EBD787 /* RemoteWallpaperSource.swift */; };
 		0039F526254371960098EB06 /* UserDefaults+flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039F525254371960098EB06 /* UserDefaults+flags.swift */; };
+		0039F53525440E7C0098EB06 /* SbscrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039F53425440E7C0098EB06 /* SbscrViewController.swift */; };
+		0039F53D25440E870098EB06 /* Sbscr.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0039F53C25440E870098EB06 /* Sbscr.storyboard */; };
+		0039F54225440F550098EB06 /* Sbscr.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0039F54125440F550098EB06 /* Sbscr.xcassets */; };
+		0039F54925440FC30098EB06 /* SubscriptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039F54725440FC30098EB06 /* SubscriptionsTableViewCell.swift */; };
+		0039F54A25440FC30098EB06 /* SubscriptionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0039F54825440FC30098EB06 /* SubscriptionsTableViewCell.xib */; };
+		0039F552254410690098EB06 /* IAPBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039F551254410690098EB06 /* IAPBundle.swift */; };
 		004258C4244344B1000468F4 /* WallpaperSubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004258C3244344B1000468F4 /* WallpaperSubscriptionCollectionViewCell.swift */; };
 		004258C6244344BE000468F4 /* WallpaperSubscriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004258C5244344BE000468F4 /* WallpaperSubscriptionCollectionViewCell.xib */; };
 		00464C202525210500003220 /* AdsPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00464C1E2525210400003220 /* AdsPopUpViewController.swift */; };
@@ -122,6 +128,12 @@
 		00138DE623D8E89100EBD787 /* RemoteWallpaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWallpaper.swift; sourceTree = "<group>"; };
 		00138DE823D8E97B00EBD787 /* RemoteWallpaperSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWallpaperSource.swift; sourceTree = "<group>"; };
 		0039F525254371960098EB06 /* UserDefaults+flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+flags.swift"; sourceTree = "<group>"; };
+		0039F53425440E7C0098EB06 /* SbscrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SbscrViewController.swift; sourceTree = "<group>"; };
+		0039F53C25440E870098EB06 /* Sbscr.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sbscr.storyboard; sourceTree = "<group>"; };
+		0039F54125440F550098EB06 /* Sbscr.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sbscr.xcassets; sourceTree = "<group>"; };
+		0039F54725440FC30098EB06 /* SubscriptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsTableViewCell.swift; sourceTree = "<group>"; };
+		0039F54825440FC30098EB06 /* SubscriptionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionsTableViewCell.xib; sourceTree = "<group>"; };
+		0039F551254410690098EB06 /* IAPBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPBundle.swift; sourceTree = "<group>"; };
 		004258C3244344B1000468F4 /* WallpaperSubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperSubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		004258C5244344BE000468F4 /* WallpaperSubscriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperSubscriptionCollectionViewCell.xib; sourceTree = "<group>"; };
 		00464C1E2525210400003220 /* AdsPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsPopUpViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				000BCD89241D851800DE8207 /* IAPManager.swift */,
+				0039F551254410690098EB06 /* IAPBundle.swift */,
 			);
 			path = IAP;
 			sourceTree = "<group>";
@@ -277,6 +290,26 @@
 				0039F525254371960098EB06 /* UserDefaults+flags.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		0039F53325440E5D0098EB06 /* Sbscr */ = {
+			isa = PBXGroup;
+			children = (
+				0039F54625440FB00098EB06 /* Cell */,
+				0039F53425440E7C0098EB06 /* SbscrViewController.swift */,
+				0039F53C25440E870098EB06 /* Sbscr.storyboard */,
+				0039F54125440F550098EB06 /* Sbscr.xcassets */,
+			);
+			path = Sbscr;
+			sourceTree = "<group>";
+		};
+		0039F54625440FB00098EB06 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0039F54725440FC30098EB06 /* SubscriptionsTableViewCell.swift */,
+				0039F54825440FC30098EB06 /* SubscriptionsTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		004258C224434269000468F4 /* SubscriptionCell */ = {
@@ -445,6 +478,7 @@
 		0064926C23BFC33500DE8E71 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0039F53325440E5D0098EB06 /* Sbscr */,
 				00464C1D2525210400003220 /* AdsPopUp */,
 				009CF89E243B17FA00003FB5 /* IAP */,
 				00F4C72223BFDE3000239BAA /* LikedWallpapers */,
@@ -791,8 +825,11 @@
 				0048C3D623C0D0350086D9D3 /* WallpapersListTableViewCell.xib in Resources */,
 				00E772C7243B3EF5006250FF /* IAP.storyboard in Resources */,
 				0087ECC123FB2BB60026EFC1 /* WallpapersDetails.storyboard in Resources */,
+				0039F53D25440E870098EB06 /* Sbscr.storyboard in Resources */,
 				0073167A24498FA200A757DB /* WallpaperDetails.xcassets in Resources */,
 				00F5B59B2449016F00156004 /* IAPCollection.storyboard in Resources */,
+				0039F54225440F550098EB06 /* Sbscr.xcassets in Resources */,
+				0039F54A25440FC30098EB06 /* SubscriptionsTableViewCell.xib in Resources */,
 				000BCD87241D844E00DE8207 /* GoogleService-Info.plist in Resources */,
 				00464C212525210500003220 /* AdsPopUp.storyboard in Resources */,
 				00F4C72823BFDE6A00239BAA /* LikedWallpapers.storyboard in Resources */,
@@ -949,6 +986,7 @@
 				00876E4C2448FC840015CCB4 /* GetPremiumCategoriesFirebaseService.swift in Sources */,
 				00138DE723D8E89100EBD787 /* RemoteWallpaper.swift in Sources */,
 				0087ED5823FB37AE0026EFC1 /* NSFetchedResultsController+Utils.swift in Sources */,
+				0039F53525440E7C0098EB06 /* SbscrViewController.swift in Sources */,
 				004CD87723CD1730002B8092 /* GetCategoriesFirebaseService.swift in Sources */,
 				00F4C72623BFDE5A00239BAA /* WallpapersListViewController.swift in Sources */,
 				0039F526254371960098EB06 /* UserDefaults+flags.swift in Sources */,
@@ -957,9 +995,11 @@
 				0087ED5D23FB37AE0026EFC1 /* UITableViewHeaderFooterView+Table.swift in Sources */,
 				00138DE423D8E7FD00EBD787 /* DataStorageProvider.swift in Sources */,
 				0048C3E423C0D5A90086D9D3 /* WallpaperCollectionViewCell.swift in Sources */,
+				0039F552254410690098EB06 /* IAPBundle.swift in Sources */,
 				0064923623BFC02800DE8E71 /* AppDelegate.swift in Sources */,
 				0048C3EB23C0EA020086D9D3 /* WallpapersCollectionViewController.swift in Sources */,
 				00F4C71B23BFDBFB00239BAA /* RootTabsViewController.swift in Sources */,
+				0039F54925440FC30098EB06 /* SubscriptionsTableViewCell.swift in Sources */,
 				0087ED6223FB39A80026EFC1 /* UIView+Inspectable.swift in Sources */,
 				0087ED5923FB37AE0026EFC1 /* NSManagedObject+SyncManyRelationship.swift in Sources */,
 				0087ED5723FB37AE0026EFC1 /* NSManagedObject+Instance.swift in Sources */,
